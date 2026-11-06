@@ -1,0 +1,9 @@
+.git
+node_modules
+*.zip
+error_log
+.idea
+vendor
+scratch
+tests
+before

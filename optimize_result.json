@@ -1,0 +1,15 @@
+{
+    "filesize_bytes": 1541617,
+    "filesize_mb": 1.47,
+    "atoms": [
+        "ftyp (0 KB)",
+        "wide (0 KB)",
+        "mdat (1501.6 KB)",
+        "moov (3.9 KB)"
+    ],
+    "moov_index": 3,
+    "mdat_index": 2,
+    "already_fast_start": false,
+    "optimized_created": true,
+    "dest_size_mb": 1.47
+}

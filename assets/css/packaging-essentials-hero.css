@@ -1,0 +1,337 @@
+.pe-hero-section {
+    position: relative;
+    background-color: #0d1d33;
+    background-image: radial-gradient(circle at 50% 30%, #152b47 0%, #081120 100%);
+    padding: 90px 20px 70px 20px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+/* Wavy texture simulation */
+.pe-hero-section::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%; right: -50%; bottom: -50%;
+    background: repeating-linear-gradient(45deg, rgba(255,255,255,0.015) 0px, rgba(255,255,255,0.015) 2px, transparent 2px, transparent 4px),
+                repeating-linear-gradient(-45deg, rgba(255,255,255,0.015) 0px, rgba(255,255,255,0.015) 2px, transparent 2px, transparent 4px);
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Optional soft glowing blobs in background */
+.pe-hero-section::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(circle, rgba(55,142,230,0.08) 0%, transparent 60%);
+    filter: blur(60px);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.pe-hero-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Top Labels */
+.pe-top-labels {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
+.pe-subtitle {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #627b98;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.pe-subtitle .line {
+    width: 35px;
+    height: 1px;
+    background-color: #3b4e68;
+}
+
+.pe-status-pill {
+    background: rgba(26, 101, 194, 0.15);
+    border: 1px solid rgba(74, 141, 223, 0.3);
+    padding: 6px 16px;
+    border-radius: 20px;
+    color: #9abcec;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: uppercase;
+}
+
+.pe-status-pill .dot {
+    width: 6px;
+    height: 6px;
+    background-color: #5ba1f5;
+    border-radius: 50%;
+}
+
+/* Titles */
+.pe-main-title {
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0 0 25px 0;
+    text-transform: capitalize;
+}
+
+.pe-main-title .text-white {
+    color: #ffffff;
+}
+
+.pe-main-title .text-blue {
+    color: #82c3fc; /* Light blue matching image */
+}
+
+.pe-subtext {
+    color: #8fa0b3;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 45px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+/* Button */
+.pe-btn-register {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #db3434;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 16px 36px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 800;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 25px rgba(219, 52, 52, 0.4);
+    margin-bottom: 70px;
+}
+
+.pe-btn-register:hover {
+    background: #e53935;
+    box-shadow: 0 0 35px rgba(219, 52, 52, 0.6);
+    transform: translateY(-2px);
+}
+
+/* Countdown */
+.pe-countdown-section {
+    margin-top: 20px;
+}
+
+.countdown-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    color: #627b98;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.countdown-title .line {
+    width: 30px;
+    height: 1px;
+    background-color: #3b4e68;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.time-box {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    width: 95px;
+    height: 105px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(8px);
+    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.02);
+}
+
+.time-num {
+    font-size: 38px;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.time-label {
+    font-size: 10px;
+    color: #627b98;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.time-sep {
+    color: #3b4e68;
+    font-size: 20px;
+    font-weight: 900;
+    margin-top: -20px;
+}
+
+/* Bottom Info Bar */
+.pe-info-bar {
+    background-color: #162438;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 22px 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.info-bar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 0 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #8fa0b3;
+    font-size: 13px;
+}
+
+.info-item i {
+    color: #5ba1f5;
+    font-size: 16px;
+}
+
+.info-item strong {
+    color: #d1d9e2;
+    font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .pe-main-title {
+        font-size: 42px;
+    }
+    .countdown-timer {
+        gap: 8px;
+    }
+    .time-box {
+        width: 70px;
+        height: 80px;
+    }
+    .time-num {
+        font-size: 28px;
+    }
+    .info-bar-container {
+        gap: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .pe-hero-section {
+        padding: 40px 15px 35px 15px;
+    }
+    .pe-top-labels {
+        margin-bottom: 18px;
+        gap: 8px;
+        flex-direction: column;
+    }
+    .pe-subtitle {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
+    .pe-status-pill {
+        font-size: 8px;
+        padding: 5px 12px;
+        letter-spacing: 1px;
+    }
+    .pe-main-title {
+        font-size: 26px;
+        margin-bottom: 12px;
+        line-height: 1.2;
+    }
+    .pe-subtext {
+        font-size: 12px;
+        margin-bottom: 25px;
+    }
+    .pe-btn-register {
+        padding: 12px 28px;
+        font-size: 13px;
+        margin-bottom: 35px;
+        box-shadow: 0 0 15px rgba(219, 52, 52, 0.3);
+    }
+    .pe-countdown-section {
+        margin-top: 10px;
+    }
+    .countdown-title {
+        font-size: 9px;
+        margin-bottom: 15px;
+        letter-spacing: 2px;
+    }
+    .time-box {
+        width: 58px;
+        height: 65px;
+        border-radius: 8px;
+    }
+    .time-num {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    .time-label {
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+    .time-sep {
+        font-size: 16px;
+    }
+    /* Info bar below hero */
+    .pe-info-bar {
+        padding: 16px 0;
+    }
+    .info-item {
+        font-size: 11px;
+    }
+    .info-item i {
+        font-size: 13px;
+    }
+}

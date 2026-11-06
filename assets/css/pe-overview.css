@@ -1,0 +1,222 @@
+.pe-overview-section {
+    padding: 90px 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #ffffff;
+}
+
+.pe-overview-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 70px;
+    padding: 0 20px;
+}
+
+/* Left Column */
+.pe-overview-left {
+    flex: 1;
+}
+
+/* Section Header */
+.pe-overview-left .section-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.pe-overview-left .section-title {
+    color: #d32f2f;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.pe-overview-left .title-line {
+    height: 2px;
+    width: 40px;
+    background: #d32f2f;
+}
+
+.overview-main-title {
+    color: #081D33;
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+}
+
+/* Detail Items */
+.pe-overview-left .details-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.pe-overview-left .detail-item {
+    display: flex;
+    gap: 20px;
+    padding: 25px 0;
+    border-top: 1px solid #edf2f7;
+}
+
+.pe-overview-left .detail-item:last-of-type {
+    border-bottom: 1px solid #edf2f7;
+    margin-bottom: 35px;
+}
+
+.pe-overview-left .detail-icon {
+    width: 48px;
+    height: 48px;
+    background: #eff4fa;
+    color: #317ae2;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.pe-overview-left .detail-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.pe-overview-left .detail-label {
+    color: #8fa0b3;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+.pe-overview-left .detail-value {
+    color: #213547;
+    font-size: 18px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.pe-overview-left .detail-subtext {
+    color: #637381;
+    font-size: 15px;
+    margin: 0;
+}
+
+/* Info Box */
+.overview-info-box {
+    background: #f4f8fb;
+    border: 1px solid #e1ecf4;
+    border-radius: 16px;
+    padding: 40px;
+}
+
+.info-box-title {
+    color: #1a65c2;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+}
+
+.info-box-text {
+    color: #55606d;
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Right Column (Cards) */
+.pe-overview-right {
+    flex: 1.1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 5px;
+}
+
+.feature-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 30px;
+    display: flex;
+    gap: 25px;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.04);
+    transform: translateY(-3px);
+    border-color: #cbd5e1;
+}
+
+.feature-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+/* Custom icon colors based on the image */
+.icon-blue { background: #eef4fc; color: #4a8ddf; }
+.icon-green { background: #eff8f3; color: #48bb78; }
+.icon-red { background: #fcebeb; color: #e53e3e; }
+.icon-orange { background: #fef0e6; color: #ed8936; }
+.icon-purple { background: #f5eff9; color: #9f7aea; }
+
+.feature-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.feature-title {
+    color: #213547;
+    font-size: 19px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.feature-text {
+    color: #637381;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .pe-overview-container {
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .overview-main-title {
+        font-size: 36px;
+    }
+    
+    .feature-card {
+        padding: 20px;
+        gap: 15px;
+    }
+    
+    .overview-info-box {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .feature-card {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,338 @@
+.pe-pricing-section {
+    padding: 80px 0 100px 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #ffffff;
+}
+
+.pe-pricing-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.pricing-section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.enrolment-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    color: #d32f2f;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.enrolment-badge .line {
+    width: 30px;
+    height: 2px;
+    background-color: #d32f2f;
+}
+
+.pricing-main-title {
+    color: #081D33;
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+}
+
+.pricing-subtitle {
+    color: #637381;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Cards Wrapper */
+.pricing-cards-wrapper {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* Card General */
+.price-card {
+    flex: 1;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-top {
+    padding: 40px 35px;
+    color: #ffffff;
+}
+
+.badge-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.badge-pill .dot {
+    width: 6px;
+    height: 6px;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+.tier-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.8;
+    margin-bottom: 8px;
+}
+
+.tier-name {
+    font-size: 26px;
+    font-weight: 900;
+    margin: 0;
+}
+
+.card-bottom {
+    background: #ffffff;
+    padding: 40px 35px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.price-display {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.currency {
+    font-size: 24px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+.amount {
+    font-size: 68px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.cents {
+    font-size: 24px;
+    font-weight: 800;
+    margin-top: 38px;
+}
+
+.price-subtext {
+    color: #9cb2c9;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0 0 25px 0;
+}
+
+.divider {
+    height: 1px;
+    background-color: #edf2f7;
+    margin-bottom: 25px;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+    flex-grow: 1;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    color: #55606d;
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.feature-list li i {
+    color: #38a169; /* Green checkmark */
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+.btn-register-tier {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 18px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 800;
+    transition: all 0.3s ease;
+}
+
+/* Card Specifics - Member */
+.member-card .card-top {
+    background: #1860bf;
+}
+
+.member-card .badge-pill {
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.member-card .price-display {
+    color: #1860bf;
+}
+
+.member-card .btn-register-tier {
+    background: #1860bf;
+}
+.member-card .btn-register-tier:hover {
+    background: #124b96;
+}
+
+/* Card Specifics - Non-Member */
+.non-member-card .card-top {
+    background: #202d3f;
+}
+
+.non-member-card .badge-pill {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.non-member-card .price-display {
+    color: #202d3f;
+}
+
+.non-member-card .btn-register-tier {
+    background: #202d3f;
+}
+.non-member-card .btn-register-tier:hover {
+    background: #131b26;
+}
+
+/* Notes */
+.pricing-notes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.note-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #637381;
+    font-size: 13px;
+}
+
+.note-item p {
+    margin: 0;
+}
+
+.note-item a {
+    color: #1a65c2;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.note-item.highlight-blue {
+    color: #1a65c2;
+}
+
+.note-item.highlight-blue i {
+    font-size: 16px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .pricing-cards-wrapper {
+        flex-direction: column;
+    }
+    
+    .note-item {
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .note-item i {
+        margin-top: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pe-pricing-section {
+        padding: 50px 0 60px 0;
+    }
+
+    .pricing-section-header {
+        margin-bottom: 35px;
+    }
+
+    .pricing-main-title {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .pricing-subtitle {
+        font-size: 13px;
+    }
+
+    .card-top {
+        padding: 25px 20px;
+    }
+
+    .card-bottom {
+        padding: 25px 20px;
+    }
+
+    .amount {
+        font-size: 48px;
+    }
+
+    .currency,
+    .cents {
+        font-size: 18px;
+    }
+
+    .cents {
+        margin-top: 28px;
+    }
+
+    .tier-name {
+        font-size: 20px;
+    }
+
+    .btn-register-tier {
+        padding: 14px;
+        font-size: 14px;
+    }
+
+    .feature-list li {
+        font-size: 13px;
+        gap: 10px;
+        margin-bottom: 14px;
+    }
+
+    .note-item {
+        font-size: 12px;
+    }
+}

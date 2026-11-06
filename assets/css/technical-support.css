@@ -1,0 +1,1212 @@
+/* technological-support.css */
+:root {
+    --primary-blue: #0A58CA;
+    --deep-blue: #081D33;
+    --accent-red: #E11D48;
+    --text-main: #081D33;
+    --text-muted: #64748B;
+    --bg-light: #F8FAFC;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-main);
+}
+
+/* ---------------- HERO SECTION ---------------- */
+.ts-hero-section {
+    position: relative;
+    padding: 120px 5%;
+    background: url('../images/testing-qc.jpg') no-repeat center center / cover;
+    color: white;
+    overflow: hidden;
+}
+
+.ts-hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(8, 29, 51, 0.95) 0%, rgba(10, 88, 202, 0.85) 100%);
+    z-index: 1;
+}
+
+.ts-hero-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.ts-subtitle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #38BDF8;
+}
+
+.ts-subtitle.red {
+    color: var(--accent-red);
+}
+
+.ts-subtitle .dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-red);
+    border-radius: 50%;
+}
+
+.ts-subtitle .line {
+    width: 24px;
+    height: 2px;
+    background-color: var(--accent-red);
+    display: inline-block;
+}
+
+.ts-hero-title {
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.ts-hero-title .text-accent {
+    color: #38BDF8;
+}
+
+.ts-hero-desc {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 40px;
+    max-width: 800px;
+}
+
+.ts-hero-btns {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.btn-ts-primary, .btn-ts-outline {
+    padding: 16px 32px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.btn-ts-primary {
+    background: var(--primary-blue);
+    color: white;
+    border: 2px solid var(--primary-blue);
+}
+
+.btn-ts-primary:hover {
+    background: #0d6efd;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(10, 88, 202, 0.3);
+}
+
+.btn-ts-outline {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-ts-outline:hover {
+    background: white;
+    color: var(--deep-blue);
+    transform: translateY(-2px);
+}
+
+/* Stats Row */
+.ts-stats-row {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 25px;
+    flex-wrap: wrap;
+}
+
+.ts-stat-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.ts-stat-item i {
+    font-size: 1.5rem;
+    color: #38BDF8;
+}
+
+.ts-stat-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.ts-stat-value {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: white;
+}
+
+.ts-stat-label {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Contact Widget (Identical to testing-and-certification.php and dynamic-product.php) */
+.ts-contact-widget {
+    background: rgba(8, 29, 51, 0.6);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 40px;
+    color: white;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.ts-contact-widget .widget-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.ts-contact-widget .red-bar {
+    width: 30px;
+    height: 2px;
+    background-color: var(--accent-red);
+}
+
+.ts-contact-widget .widget-header h5 {
+    color: var(--accent-red);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.ts-contact-widget .widget-phone {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.ts-contact-widget .widget-email-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+    color: rgba(255,255,255,0.8);
+}
+
+.ts-contact-widget .widget-email-row a {
+    color: white;
+}
+
+.ts-contact-widget .btn-widget-submit {
+    width: 100%;
+    padding: 16px;
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.ts-contact-widget .btn-widget-submit:hover {
+    background: #0d6efd;
+    box-shadow: 0 5px 15px rgba(10, 88, 202, 0.4);
+}
+
+/* ---------------- CATEGORIES SECTION ---------------- */
+.ts-categories-section {
+    padding: 80px 5%;
+    background: white;
+}
+
+.ts-categories-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    margin-bottom: 32px;
+    text-align: left;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    text-align: left;
+    font-weight: 600;
+    color: #081D33;
+    margin-top: 0;
+    margin-bottom: 8px;
+    line-height: 1.25;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ts-disciplines-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.discipline-card {
+    background: white;
+    border-radius: 12px;
+    padding: 30px 20px;
+    border: 1px solid #E2E8F0;
+    transition: all 0.3s;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.discipline-card:hover {
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+    transform: translateY(-5px);
+    border-color: var(--primary-blue);
+}
+
+.card-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    background: #F0F9FF;
+    color: var(--primary-blue);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.discipline-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--deep-blue);
+    margin-bottom: 10px;
+}
+
+.discipline-card p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* ---------------- FACILITIES / CAPABILITIES SECTION ---------------- */
+.ts-facilities-section {
+    padding: 80px 5%;
+    background: var(--bg-light);
+}
+
+.ts-facilities-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.facility-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-5px);
+}
+
+.fc-image-container {
+    position: relative;
+    height: 200px;
+}
+
+.fc-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fc-overlay-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #0A58CA 0%, #0284c7 100%);
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+}
+
+.fc-overlay-title i {
+    color: #ffffff;
+    font-size: 1.1rem;
+}
+
+.fc-overlay-title h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0;
+    color: #ffffff;
+}
+
+.fc-content {
+    padding: 20px;
+}
+
+.fc-content p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ---------------- SERVICES WE OFFER ---------------- */
+.ts-services-section {
+    padding: 60px 5%;
+    background: #f8f9fa;
+}
+
+.ts-services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 0;
+}
+
+.service-card {
+    background: white;
+    border-radius: 10px;
+    padding: 28px 24px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(2, 132, 199, 0.15);
+    border-color: #0284c7;
+}
+
+.sc-icon {
+    width: 48px;
+    height: 48px;
+    background: #F0F9FF;
+    color: #0284c7;
+    border: 1px solid #bae6fd;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    margin-bottom: 16px;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .sc-icon {
+    background: #0284c7;
+    color: #ffffff;
+}
+
+.service-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 12px;
+    margin-top: 0;
+    line-height: 1.3;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.service-card p {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin: 0;
+}
+
+.service-card ul {
+    padding-left: 18px !important;
+    color: var(--text-muted) !important;
+    font-size: 0.875rem !important;
+    line-height: 1.7 !important;
+    margin: 0 !important;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ---------------- ACCREDITED BY ---------------- */
+.ts-accredited-section {
+    padding: 40px 5% 80px;
+    background: white;
+    text-align: center;
+}
+
+.ts-accredited-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    border-top: 1px solid #E2E8F0;
+    padding-top: 40px;
+}
+
+.ts-accredited-container h5 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.accredited-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    opacity: 0.6;
+    filter: grayscale(100%);
+    transition: all 0.3s;
+}
+
+.accredited-logos:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+.accredited-logos span {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--deep-blue);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ---------------- CERTIFIED BY ---------------- */
+.ts-certified-section {
+    padding: 0 5% 80px;
+    background: white;
+    text-align: center;
+}
+
+.ts-certified-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.ts-certified-container h5 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.certified-certificates {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.certified-certificates img {
+    height: 180px;
+    object-fit: contain;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.certified-certificates img:hover {
+    transform: translateY(-5px);
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+/* ---------------- BOOKING SECTION ---------------- */
+.ts-booking-section {
+    padding: 80px 5%;
+    background: #F8FAFC;
+}
+
+.ts-booking-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.booking-left h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #081D33;
+    margin-top: 0;
+    margin-bottom: 8px;
+    line-height: 1.25;
+}
+
+.booking-left p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.booking-features {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.bf-card {
+    background: white;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.bf-card i {
+    color: #F59E0B;
+    background: #FFFBEB;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+
+.bf-card i.fa-lock {
+    color: #10B981;
+    background: #D1FAE5;
+}
+
+.bf-content h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--deep-blue);
+    margin-bottom: 5px;
+}
+
+.bf-content p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.booking-right {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    overflow: hidden;
+    border: 1px solid #E2E8F0;
+}
+
+.booking-form-header {
+    background: var(--primary-blue);
+    color: white;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.booking-form-header i {
+    font-size: 1.5rem;
+}
+
+.booking-form-header h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+}
+
+.booking-form-header p {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.8);
+    margin: 0;
+}
+
+.booking-form-body {
+    padding: 30px;
+}
+
+.form-section-title {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.form-section-title:first-child {
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--deep-blue);
+    margin-bottom: 8px;
+}
+
+.form-group label span {
+    color: var(--accent-red);
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #E2E8F0;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    color: var(--text-main);
+    background: #F8FAFC;
+    font-family: inherit;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(10, 88, 202, 0.1);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.file-upload-area {
+    border: 2px dashed #CBD5E1;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    background: #F8FAFC;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.file-upload-area:hover {
+    border-color: var(--primary-blue);
+    background: #F0F9FF;
+}
+
+.file-upload-area i {
+    font-size: 2rem;
+    color: #94A3B8;
+    margin-bottom: 10px;
+}
+
+.file-upload-area p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.btn-book-submit {
+    width: 100%;
+    padding: 16px;
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-book-submit:hover {
+    background: #0d6efd;
+}
+
+/* ---------------- FAQ SECTION ---------------- */
+.ts-faq-section {
+    padding: 80px 5%;
+    background: white;
+}
+
+.ts-faq-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+}
+
+.faq-left h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #081D33;
+    margin-top: 0;
+    margin-bottom: 8px;
+    line-height: 1.25;
+}
+
+.faq-support-card {
+    background: var(--deep-blue);
+    border-radius: 12px;
+    padding: 40px;
+    color: white;
+}
+
+.faq-support-card i {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.faq-support-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.faq-support-card h3 span {
+    font-style: italic;
+    color: #38BDF8;
+}
+
+.faq-support-card p {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.faq-contact {
+    margin-bottom: 30px;
+}
+
+.faq-contact span {
+    display: block;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 5px;
+}
+
+.faq-contact a {
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.btn-faq-contact {
+    width: 100%;
+    padding: 15px;
+    background: white;
+    color: var(--deep-blue);
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-faq-contact:hover {
+    background: var(--primary-blue);
+    color: white;
+}
+
+.faq-item {
+    background: white;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.faq-header-toggle {
+    padding: 20px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--deep-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-header-toggle i {
+    color: #64748B;
+    background: #F1F5F9;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    transition: all 0.3s;
+}
+
+.faq-body {
+    padding: 0 25px 25px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    display: none;
+}
+
+.faq-feedback {
+    margin-top: 20px;
+    padding: 15px;
+    background: #F8FAFC;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-feedback span {
+    font-weight: 600;
+    color: var(--primary-blue);
+    font-size: 0.9rem;
+}
+
+.faq-feedback-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.faq-feedback-icons i {
+    color: var(--primary-blue);
+    background: #F0F9FF;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.faq-feedback-icons i:hover {
+    background: var(--primary-blue);
+    color: white;
+}
+
+/* ---------------- FINAL CTA SECTION ---------------- */
+.ts-final-cta {
+    background: var(--primary-blue);
+    padding: 60px 5%;
+}
+
+.ts-final-cta-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.cta-text {
+    max-width: 600px;
+}
+
+.cta-text h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 8px;
+    text-transform: none;
+    line-height: 1.25;
+}
+
+.cta-text p {
+    font-size: 16px;
+    color: rgba(255,255,255,0.9);
+    line-height: 1.7;
+    margin-top: 0;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.cta-buttons .btn-light {
+    background: white;
+    color: var(--primary-blue);
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s;
+}
+
+.cta-buttons .btn-outline {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s;
+}
+
+.cta-buttons .btn-light:hover {
+    background: #F8FAFC;
+    transform: translateY(-2px);
+}
+
+.cta-buttons .btn-outline:hover {
+    background: white;
+    color: var(--primary-blue);
+    transform: translateY(-2px);
+}
+
+/* ── RESPONSIVE ─────────────────────────────────────────────── */
+
+/* Tablet — 992px */
+@media (max-width: 992px) {
+    .ts-hero-container {
+        grid-template-columns: 1fr;
+    }
+    .ts-disciplines-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .facilities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    .ts-booking-container,
+    .ts-faq-container {
+        grid-template-columns: 1fr;
+    }
+    .ts-final-cta-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .cta-text .ts-subtitle {
+        justify-content: center;
+    }
+    .ts-hero-title {
+        font-size: 2.6rem;
+    }
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Mobile — 768px */
+@media (max-width: 768px) {
+    /* Hero */
+    .ts-hero-section {
+        padding-top: 80px;
+        min-height: auto;
+    }
+    .ts-hero-title {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    .ts-hero-desc {
+        font-size: 0.95rem;
+    }
+    .ts-hero-content {
+        padding: 0 5%;
+        margin-bottom: 40px;
+    }
+
+    /* Stats strip */
+    .ts-stats-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    /* Section headers */
+    .section-header {
+        margin-bottom: 20px;
+    }
+    .section-header h2 {
+        font-size: 1.4rem;
+    }
+
+    /* Grids → 1 column */
+    .ts-disciplines-grid {
+        grid-template-columns: 1fr;
+    }
+    .facilities-grid {
+        grid-template-columns: 1fr;
+    }
+    .services-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px;
+    }
+    .ts-booking-container,
+    .ts-faq-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    /* Section padding */
+    .ts-categories-section,
+    .ts-facilities-section,
+    .ts-services-section,
+    .ts-booking-section,
+    .ts-faq-section,
+    .ts-accredited-section,
+    .ts-certified-section {
+        padding: 40px 5%;
+    }
+
+    /* Booking form */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    .booking-left h2 {
+        font-size: 1.5rem;
+    }
+    .booking-form-body {
+        padding: 20px;
+    }
+
+    /* FAQ */
+    .faq-left h2 {
+        font-size: 1.5rem;
+    }
+    .faq-support-card {
+        padding: 24px;
+    }
+
+    /* CTA */
+    .ts-final-cta {
+        padding: 40px 5%;
+    }
+    .cta-text h2 {
+        font-size: 26px;
+    }
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    .cta-buttons a {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Certs */
+    .accredited-logos {
+        gap: 20px;
+    }
+    .certified-certificates img {
+        height: 120px;
+    }
+
+    /* Service cards */
+    .service-card {
+        padding: 20px 18px;
+    }
+}
+
+/* Small phones — 480px */
+@media (max-width: 480px) {
+    .ts-hero-title {
+        font-size: 1.65rem;
+    }
+    .ts-subtitle {
+        font-size: 0.68rem;
+        letter-spacing: 1.5px;
+    }
+    .section-header h2 {
+        font-size: 1.25rem;
+    }
+    .sc-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        margin-bottom: 12px;
+    }
+    .service-card h3 {
+        font-size: 0.9rem;
+    }
+    .service-card ul {
+        font-size: 0.82rem !important;
+    }
+    .ts-final-cta-container {
+        gap: 20px;
+    }
+    .cta-text h2 {
+        font-size: 24px;
+    }
+    .discipline-card {
+        padding: 20px 15px;
+    }
+    .faq-header-toggle {
+        font-size: 0.9rem;
+        padding: 15px 18px;
+    }
+}

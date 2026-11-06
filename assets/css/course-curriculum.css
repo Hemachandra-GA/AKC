@@ -1,0 +1,253 @@
+.course-curriculum-section {
+    padding: 20px 0 80px 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #ffffff;
+}
+
+.course-curriculum-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.curriculum-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+}
+
+.curriculum-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 40px 30px 40px;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.curriculum-title-area {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.curriculum-title-area .section-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 0;
+}
+
+.curriculum-title-area .section-title {
+    color: #d32f2f;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.curriculum-title-area .title-line {
+    height: 2px;
+    width: 40px;
+    background: #d32f2f;
+}
+
+.curriculum-main-title {
+    color: #081D33;
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.curriculum-badge {
+    background: #f4f7fb;
+    border: 1px solid #e2e8f0;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #1a2a3a;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.curriculum-badge i {
+    color: #4a8ddf;
+}
+
+.curriculum-badge strong {
+    color: #1a65c2;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.curriculum-content {
+    display: flex;
+    padding: 40px;
+    gap: 60px;
+}
+
+.curriculum-module {
+    flex: 1;
+}
+
+.module-title {
+    color: #8fa0b3;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.accordion-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #edf2f7;
+}
+
+.accordion-header {
+    display: flex;
+    align-items: center;
+    padding: 25px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.accordion-header:hover {
+    opacity: 0.8;
+}
+
+.accordion-num {
+    color: #9cb2c9;
+    font-size: 14px;
+    font-weight: 800;
+    width: 35px;
+    flex-shrink: 0;
+}
+
+.accordion-title {
+    color: #213547;
+    font-size: 16px;
+    font-weight: 800;
+    margin: 0;
+    flex-grow: 1;
+    transition: color 0.3s ease;
+}
+
+.accordion-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #f4f7fb;
+    color: #4a8ddf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.accordion-body {
+    display: none;
+    padding: 0 0 25px 35px;
+    color: #55606d;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.accordion-body ul {
+    margin: 0;
+    padding-left: 20px;
+    list-style-type: none;
+}
+
+.accordion-body li {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.accordion-body li:last-child {
+    margin-bottom: 0;
+}
+
+.accordion-body li::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 8px;
+    width: 6px;
+    height: 6px;
+    background-color: #4a8ddf;
+    border-radius: 50%;
+}
+
+/* Open State */
+.accordion-item.open .accordion-title {
+    color: #1a65c2;
+}
+
+.accordion-item.open .accordion-icon {
+    background: #1a65c2;
+    color: #ffffff;
+}
+
+.accordion-item.open .accordion-body {
+    display: block;
+    animation: fadeInDown 0.3s ease-out forwards;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+    .curriculum-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .curriculum-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 30px;
+    }
+    
+    .curriculum-content {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .curriculum-header,
+    .curriculum-content {
+        padding: 20px;
+    }
+    
+    .accordion-body {
+        padding-left: 0;
+    }
+    
+    .curriculum-main-title {
+        font-size: 26px;
+    }
+}

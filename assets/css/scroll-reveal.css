@@ -1,0 +1,277 @@
+/* ========================================================
+   AKC Scroll Reveal, Text Animations & Smooth Scrolling
+   ======================================================== */
+
+/* Smooth Scrolling across the entire document */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Base Reveal Element: default fade-in and slide-up */
+.reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Modifiers for direction & scale */
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-scale {
+    opacity: 0;
+    transform: scale(0.92);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.reveal-scale.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.reveal-fade {
+    opacity: 0;
+    transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity;
+}
+
+.reveal-fade.active {
+    opacity: 1;
+}
+
+/* ========================================================
+   Text-Reveal Animations
+   ======================================================== */
+
+.text-reveal,
+.reveal-text {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.text-reveal.active,
+.reveal-text.active,
+.reveal.active .text-reveal,
+.reveal.active .reveal-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered text reveals within section headers */
+.section-header.reveal .section-badge,
+.section-header.reveal .universal-section-label,
+.section-header.reveal .pr-section-label,
+.section-header.reveal .section-subtitle,
+.section-header.reveal .ts-subtitle {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: 0.05s;
+}
+
+.section-header.reveal h2,
+.section-header.reveal .universal-section-heading,
+.section-header.reveal .section-title,
+.section-header.reveal .pr-section-title,
+.section-header.reveal .curriculum-main-title,
+.section-header.reveal .overview-main-title,
+.section-header.reveal .pricing-main-title {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: 0.14s;
+}
+
+.section-header.reveal p,
+.section-header.reveal .section-desc,
+.section-header.reveal .lead,
+.section-header.reveal .pr-hero-desc {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: 0.22s;
+}
+
+.section-header.reveal.active .section-badge,
+.section-header.reveal.active .universal-section-label,
+.section-header.reveal.active .pr-section-label,
+.section-header.reveal.active .section-subtitle,
+.section-header.reveal.active .ts-subtitle,
+.section-header.reveal.active h2,
+.section-header.reveal.active .universal-section-heading,
+.section-header.reveal.active .section-title,
+.section-header.reveal.active .pr-section-title,
+.section-header.reveal.active .curriculum-main-title,
+.section-header.reveal.active .overview-main-title,
+.section-header.reveal.active .pricing-main-title,
+.section-header.reveal.active p,
+.section-header.reveal.active .section-desc,
+.section-header.reveal.active .lead,
+.section-header.reveal.active .pr-hero-desc {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========================================================
+   Staggered Child Reveal for Grids & Cards
+   ======================================================== */
+.reveal-group .reveal-child {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.reveal-group.active .reveal-child {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger delay presets */
+.delay-1  { transition-delay: 0.06s !important; }
+.delay-2  { transition-delay: 0.12s !important; }
+.delay-3  { transition-delay: 0.18s !important; }
+.delay-4  { transition-delay: 0.24s !important; }
+.delay-5  { transition-delay: 0.30s !important; }
+.delay-6  { transition-delay: 0.36s !important; }
+.delay-7  { transition-delay: 0.42s !important; }
+.delay-8  { transition-delay: 0.48s !important; }
+.delay-9  { transition-delay: 0.54s !important; }
+.delay-10 { transition-delay: 0.60s !important; }
+.delay-11 { transition-delay: 0.66s !important; }
+.delay-12 { transition-delay: 0.72s !important; }
+
+/* Immediate Hero Load Animation (Above the fold) */
+.hero-content h1,
+.hero-content p,
+.hero-content .hero-actions,
+.hero-content .trust-bar,
+.ts-hero-title,
+.ts-hero-desc,
+.qc-hero-title,
+.qc-hero-desc,
+.pe-main-title,
+.pe-subtext,
+.tc-title,
+.tc-desc {
+    animation: heroFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-content h1,
+.ts-hero-title,
+.qc-hero-title,
+.pe-main-title,
+.tc-title {
+    animation-delay: 0.1s;
+}
+
+.hero-content p,
+.ts-hero-desc,
+.qc-hero-desc,
+.pe-subtext,
+.tc-desc {
+    animation-delay: 0.22s;
+}
+
+.hero-content .hero-actions,
+.hero-content .trust-bar,
+.qc-hero-btns,
+.ts-stats-strip {
+    animation: heroFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: 0.35s;
+}
+
+@keyframes heroFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ensure card hover transitions function cleanly when active */
+.reveal-group.active .service-card:hover,
+.reveal-group.active .cert-card:hover,
+.reveal-group.active .vm-card:hover,
+.reveal-group.active .value-card:hover,
+.reveal-group.active .team-card:hover,
+.reveal-group.active .pr-product-card:hover,
+.reveal-group.active .pr-test-card:hover,
+.reveal-group.active .facility-card:hover {
+    transform: translateY(-6px) !important;
+}
+
+/* Prevent horizontal scrollbars during entrance transforms */
+html, body {
+    overflow-x: hidden;
+}
+
+/* Accessibility: Respect Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto !important;
+    }
+    .reveal,
+    .reveal-left,
+    .reveal-right,
+    .reveal-scale,
+    .reveal-fade,
+    .reveal-text,
+    .text-reveal,
+    .reveal-group .reveal-child {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+    .hero-content h1,
+    .hero-content p,
+    .hero-content .hero-actions,
+    .hero-content .trust-bar,
+    .ts-hero-title,
+    .ts-hero-desc,
+    .qc-hero-title,
+    .qc-hero-desc,
+    .pe-main-title,
+    .pe-subtext,
+    .tc-title,
+    .tc-desc,
+    .qc-hero-btns,
+    .ts-stats-strip {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}

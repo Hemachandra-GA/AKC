@@ -1,0 +1,221 @@
+/* Hero Slider Section */
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    background: #000;
+}
+
+.slides-container {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.slide {
+    width: 33.333%; /* Match the 300% container width */
+    height: 100%;
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.slide-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slide-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: 1;
+}
+
+/* Slide Content */
+.slide-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 900px;
+    padding: 0 40px;
+}
+
+.slide-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.label-line {
+    width: 40px;
+    height: 2px;
+    background: #ff3b3b; /* Red line */
+}
+
+.slide-content h2 {
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.slide-content h2 span {
+    color: #1e88e5; /* Light blue */
+}
+
+.slide-content p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-know-more {
+    display: inline-block;
+    padding: 15px 40px;
+    background: #1e88e5;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn-know-more:hover {
+    background: #1565c0;
+}
+
+/* Controls */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 3;
+    transition: all 0.3s ease;
+}
+
+.slider-arrow:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.arrow-prev { left: 30px; }
+.arrow-next { right: 30px; }
+
+.slider-dots {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    z-index: 3;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: white;
+    width: 30px;
+    border-radius: 10px;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .hero-slider { height: 500px; }
+    .slide-content h2 { font-size: 56px; }
+}
+
+@media (max-width: 768px) {
+    .hero-slider { height: 450px; }
+    .slide-content h2 { font-size: 42px; }
+    .slide-content p { font-size: 16px; }
+    .slider-arrow { display: none; }
+}
+
+@media (max-width: 480px) {
+    .hero-slider {
+        height: 480px;
+    }
+    .slide-content {
+        padding: 0 15px;
+    }
+    .slide-label {
+        font-size: 11px;
+        margin-bottom: 15px;
+        gap: 10px;
+    }
+    .label-line {
+        width: 25px;
+    }
+    .slide-content h2 {
+        font-size: 26px;
+        margin-bottom: 15px;
+        line-height: 1.3;
+    }
+    .slide-content p {
+        font-size: 13px;
+        margin-bottom: 25px;
+        line-height: 1.5;
+    }
+    .btn-know-more {
+        padding: 10px 25px;
+        font-size: 13px;
+    }
+    .slider-dots {
+        bottom: 20px;
+        gap: 10px;
+    }
+    .dot {
+        width: 8px;
+        height: 8px;
+    }
+    .dot.active {
+        width: 20px;
+    }
+}
+

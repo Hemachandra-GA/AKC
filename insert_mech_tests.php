@@ -1,0 +1,49 @@
+<?php
+require 'includes/db_connect.php'; 
+
+$testNames = [
+    "Tensile test",
+    "Compressional test",
+    "Impact resistance",
+    "Tear test",
+    "Hardness Test",
+    "Rub Test",
+    "Seal Strength",
+    "Burst Strength",
+    "Hot Tack",
+    "Gelbo test",
+    "Torque test",
+    "Endurance test",
+    "Abrasion test",
+    "Leak test"
+];
+
+// Get Mechanical discipline ID
+$mechId = $conn->query("SELECT id FROM disciplines WHERE slug='mechanical'")->fetchColumn();
+if (!$mechId) die("Mechanical discipline not found.");
+
+// Get all product IDs
+$productIds = $conn->query("SELECT id FROM products")->fetchAll(PDO::FETCH_COLUMN);
+
+$count = 0;
+foreach ($testNames as $name) {
+    // Insert test if not exists
+    $stmt = $conn->prepare("SELECT id FROM tests WHERE name = ? AND discipline_id = ?");
+    $stmt->execute([$name, $mechId]);
+    $testId = $stmt->fetchColumn();
+    
+    if (!$testId) {
+        $insert = $conn->prepare("INSERT INTO tests (name, discipline_id) VALUES (?, ?)");
+        $insert->execute([$name, $mechId]);
+        $testId = $conn->lastInsertId();
+    }
+    
+    // Map to all products
+    foreach ($productIds as $pId) {
+        $mapStmt = $conn->prepare("INSERT IGNORE INTO product_test (product_id, test_id) VALUES (?, ?)");
+        $mapStmt->execute([$pId, $testId]);
+    }
+    $count++;
+}
+
+echo "Successfully added $count tests and mapped them to all products under Mechanical.\n";

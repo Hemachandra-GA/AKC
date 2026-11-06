@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    --primary-blue: #0056b3;
+    --text-dark: #1e1e1e;
+    --text-gray: #555555;
+    --white: #ffffff;
+    --bg-light: #f8f9fa;
+    --border-color: #e0e0e0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    max-width: 100%;
+}
+
+main {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+/* Typography based on user requirements */
+h1,
+.heading-xl {
+    font-size: 64px;
+    font-weight: 700;
+}
+
+h2,
+.section-heading {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #081D33;
+}
+
+h3,
+.sub-heading {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+p,
+.text-large,
+.text-regular {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: rgb(100, 116, 139);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .banner-content h1 {
+        font-size: 32px !important;
+    }
+}
+.card-content {
+    transition: transform 0.4s ease;
+    transform: translateY(30px);
+}
+/* Hover effects only for Desktop */
+@media (min-width: 769px) {
+    .service-card:hover .card-hover-content {
+        max-height: 200px; /* enough to contain the content */
+        opacity: 1;
+        margin-top: 5px;
+    }
+    .service-card:hover .card-content {
+        transform: translateY(0);
+    }
+}
+
+/* On mobile, keep it center-aligned and disable hover expansion */
+@media (max-width: 768px) {
+    .card-content {
+        transform: translateY(0);
+    }
+    .service-card:hover {
+        transform: none;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+    style attribute {
+    font-size: 32px;
+    line-height: normal;
+}
+
+}
+/* Hide scrollbar for horizontally scrolling logo containers */
+.scroll-logos-container::-webkit-scrollbar { display: none; }
+
+/* ==========================================================================
+   GLOBAL SECTION HEADER VERTICAL SPACING (Unified Across Entire Website)
+   Slightly reduced vertical gap between section label/title, heading, and sub-text
+   ========================================================================== */
+.universal-section-label,
+.section-badge,
+.section-subtitle,
+.support-label,
+.training-label,
+.browse-label,
+.ts-subtitle,
+.pr-section-label,
+.qc-subtitle,
+.chemical-subtitle {
+    margin-top: 0 !important;
+    margin-bottom: 8px !important;
+}
+
+.universal-section-heading,
+.section-title,
+.section-heading,
+.section-header h2,
+.categories-section-header h2,
+.trusted-content-col h2,
+.faq-intro .section-title,
+.pr-section-title,
+.facility-container h2,
+.training-content h2,
+.support-content h2,
+.voices-header h2,
+.who-we-are-content h2,
+.qc-facility-container h2,
+.overview-main-title,
+.pricing-main-title,
+.curriculum-main-title,
+.tc-courses-header h2,
+.tc-bottom-cta-title h2,
+.cta-text h2,
+.booking-left h2,
+.faq-left h2,
+.pr-faq-title {
+    font-size: 32px !important;
+    font-weight: 600 !important;
+    line-height: 1.25 !important;
+    color: #081D33;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+    margin-top: 0 !important;
+    margin-bottom: 8px !important;
+}
+
+.universal-section-heading.on-dark,
+.on-dark,
+.testing-process .section-header h2,
+.cta-text h2,
+.tc-bottom-cta-title h2,
+.cta-left h2 {
+    color: #ffffff !important;
+}
+
+/* Sub-text paragraph immediately following heading */
+.universal-section-heading + p,
+.universal-section-heading + div,
+.universal-section-heading + .section-desc,
+.universal-section-label + h2 + p,
+.section-title + p,
+.section-title + .section-desc,
+.section-title + .faq-intro-desc,
+.section-header h2 + p,
+.categories-section-header h2 + p,
+.section-badge + h2 + p,
+.section-badge + h2 + .lead,
+.support-content h2 + p,
+.training-content h2 + p,
+.facility-container h2 + p,
+.about-container h2 + .about-content > p:first-child,
+.section-header p,
+.voices-header p,
+.who-we-are-content p,
+.qc-facility-container p,
+.overview-main-title + p,
+.pricing-main-title + p,
+.pricing-subtitle,
+.pr-section-title + p,
+.tc-courses-header p,
+.section-desc,
+.pr-hero-desc,
+.faq-intro-desc {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+    margin-top: 0 !important;
+}
+
+
+
+
+/* Gradient background for Key R&D Badge */
+.mou-badge.green {
+    background: linear-gradient(135deg, #0284c7, #38bdf8) !important;
+    color: #ffffff !important;
+}
+
+/* Academic Accreditation, Certification & Implementation Card */
+.akc-acad-card .card-header {
+    background: #0284c7 !important;
+    color: #ffffff !important;
+}
+
+.akc-acad-card .card-sub-banner {
+    background: #f0f9ff !important;
+    color: #0369a1 !important;
+    border-bottom: 1px solid #bae6fd !important;
+}
+
+.akc-acad-card .icon,
+.akc-acad-card .icon i {
+    color: #0284c7 !important;
+}

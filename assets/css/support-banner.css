@@ -1,0 +1,103 @@
+/* Support Banner Section */
+.support-banner {
+    position: relative;
+    width: 100%;
+    height: 550px;
+    background: url('../images/support-bg.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.support-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(13, 31, 55, 0.9) 0%, rgba(13, 31, 55, 0.4) 100%);
+    z-index: 1;
+}
+
+.support-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.support-content {
+    max-width: 700px;
+    color: white;
+    text-align: left;
+}
+
+.support-label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.support-label .label-line {
+    width: 30px;
+    height: 2px;
+    background: #ff3b3b;
+}
+
+.support-content h2 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-top: 0;
+    margin-bottom: 8px;
+    text-transform: none;
+}
+
+.support-content h2 span {
+    color: #1e88e5;
+}
+
+.support-content p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.btn-view-services {
+    display: inline-block;
+    padding: 15px 35px;
+    background: #1e88e5;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.btn-view-services:hover {
+    background: #1565c0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .support-banner { height: 450px; }
+    .support-content h2 { font-size: 30px; }
+}
+
+@media (max-width: 768px) {
+    .support-banner { height: auto; padding: 80px 0; }
+    .support-content h2 { font-size: 26px; }
+    .support-content p { font-size: 15px; }
+}
