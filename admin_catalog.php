@@ -39,6 +39,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $messageType = 'error';
         }
     }
+    // 2b. Delete Individual Test
+    elseif (isset($_POST['delete_test'])) {
+        $test_id = (int)$_POST['test_id'];
+        try {
+            $conn->prepare("DELETE FROM product_test WHERE test_id = ?")->execute([$test_id]);
+            $stmt = $conn->prepare("DELETE FROM tests WHERE id = ?");
+            if ($stmt->execute([$test_id])) {
+                $message = "Test deleted successfully!";
+            }
+        } catch (PDOException $e) {
+            $message = "Error deleting test: " . $e->getMessage();
+            $messageType = 'error';
+        }
+    }
     // 3. Add Test
     elseif (isset($_POST['add_test'])) {
         $discipline_id = $_POST['discipline_id'];
@@ -484,6 +498,52 @@ $totalMappingsCount = count($mappings);
                             </tbody>
                         </table>
                     </div>
+                </div>
+            </div>
+
+            <!-- Tests Directory Table with Delete Actions -->
+            <div class="card table-card" style="margin-top: 25px;">
+                <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
+                    <h3><i class="fa-solid fa-flask" style="color: #10b981; margin-right: 8px;"></i> Tests Directory (Delete / Manage Tests by Category)</h3>
+                    <span class="badge-sub"><?php echo count($allTests); ?> Total Tests</span>
+                </div>
+                <div class="table-responsive table-scroll-container" style="max-height: 420px;">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 50px;">ID</th>
+                                <th>Category / Discipline</th>
+                                <th>Test Name</th>
+                                <th>Standard / Protocol</th>
+                                <th>Description</th>
+                                <th style="text-align: center; width: 90px;">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php if (!empty($allTests)): ?>
+                                <?php foreach($allTests as $t): ?>
+                                <tr>
+                                    <td>#<?php echo $t['id']; ?></td>
+                                    <td><span class="badge-type"><?php echo htmlspecialchars($t['discipline_name'] ?? 'General'); ?></span></td>
+                                    <td><strong><?php echo htmlspecialchars($t['name']); ?></strong></td>
+                                    <td><code><?php echo htmlspecialchars($t['standards'] ?: 'N/A'); ?></code></td>
+                                    <td style="max-width: 250px; font-size: 13px; color: #64748b;"><?php echo htmlspecialchars($t['description'] ?: 'No description'); ?></td>
+                                    <td style="text-align: center;">
+                                        <form method="POST" style="display:inline;" onsubmit="return confirm('Permanently delete test: <?php echo addslashes(htmlspecialchars($t['name'])); ?>?');">
+                                            <input type="hidden" name="delete_test" value="1">
+                                            <input type="hidden" name="test_id" value="<?php echo $t['id']; ?>">
+                                            <button type="submit" class="btn-table-del" title="Delete Test">
+                                                <i class="fa-solid fa-trash"></i> Delete
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <?php endforeach; ?>
+                            <?php else: ?>
+                                <tr><td colspan="6" class="empty-state">No tests found in the database.</td></tr>
+                            <?php endif; ?>
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
