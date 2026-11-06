@@ -6,13 +6,10 @@ $metaDescription = "Real time assistance and expert support designed to ensure s
 $metaKeywords = "technical support, lab support, quality assurance support";
 include 'includes/header.php';
 
-// Fetch all disciplines for the dropdown in custom order (strictly 4 official categories)
+// Fetch all disciplines dynamically from database for the dropdown
 $disciplinesStmt = $conn->query("
     SELECT id, name, slug 
     FROM disciplines 
-    WHERE id IN (1, 2, 4, 5) 
-       OR slug IN ('chemical', 'mechanical', 'biological', 'electrical')
-       OR LOWER(name) IN ('chemical', 'mechanical', 'biological', 'electrical')
     ORDER BY CASE WHEN LOWER(name) LIKE '%chem%' THEN 1
                   WHEN LOWER(name) LIKE '%mech%' THEN 2
                   WHEN LOWER(name) LIKE '%bio%' THEN 3
