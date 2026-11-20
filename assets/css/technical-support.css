@@ -254,6 +254,13 @@ body {
     text-align: left;
 }
 
+.section-header.center,
+.section-header.center h2,
+.section-header.text-center,
+.section-header.text-center h2 {
+    text-align: center !important;
+}
+
 .section-header h2 {
     font-size: 32px;
     text-align: left;

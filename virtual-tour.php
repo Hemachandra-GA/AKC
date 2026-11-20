@@ -135,6 +135,10 @@ include 'includes/header.php';
             font-size: 32px;
         }
     }
+    .section-header.center,
+    .section-header.center h2 {
+        text-align: center !important;
+    }
 </style>
 
 <main>
@@ -157,7 +161,7 @@ include 'includes/header.php';
                 <div class="ts-subtitle red" style="display: inline-flex; align-items: center; gap: 8px;">
                     <span class="line"></span> 360° LAB WALKTHROUGH
                 </div>
-                <h2 style="font-size: 32px; font-weight: 700; color: #081D33; margin-top: 8px;">Explore Our Advanced Laboratories</h2>
+                <h2 style="font-size: 32px; font-weight: 700; color: #081D33; margin-top: 8px; text-align: center !important;">Explore Our Advanced Laboratories</h2>
                 <p style="color: #64748b; font-size: 16px; max-width: 750px; margin: 10px auto 0;">Take a walkthrough of our world-class research infrastructure, showcasing state-of-the-art testing stations, climate-controlled testing bays, and precision analytical instruments.</p>
             </div>
 
@@ -177,7 +181,7 @@ include 'includes/header.php';
                 <div class="ts-subtitle red" style="display: inline-flex; align-items: center; gap: 8px;">
                     <span class="line"></span> INFRASTRUCTURE HIGHLIGHTS
                 </div>
-                <h2 style="font-size: 32px; font-weight: 700; color: #081D33; margin-top: 8px;">Key Testing &amp; Research Zones</h2>
+                <h2 style="font-size: 32px; font-weight: 700; color: #081D33; margin-top: 8px; text-align: center !important;">Key Testing &amp; Research Zones</h2>
             </div>
 
             <div class="vt-zones-grid reveal-group">
@@ -211,11 +215,11 @@ include 'includes/header.php';
     <!-- Our Facilities / Capabilities Section (Shifted from Advisory Services) -->
     <section class="ts-facilities-section" style="padding: 90px 20px; background: #ffffff;">
         <div class="ts-facilities-container">
-            <div class="section-header reveal" style="text-align: center; margin-bottom: 30px;">
+            <div class="section-header center reveal" style="text-align: center; margin-bottom: 30px;">
                 <div class="ts-subtitle red" style="display: inline-flex; align-items: center; gap: 8px;">
                     <span class="line"></span> OUR CAPABILITIES
                 </div>
-                <h2 style="font-size: 32px; font-weight: 700; color: #081D33; margin-top: 8px;">Our Facilities</h2>
+                <h2 style="font-size: 32px; font-weight: 700; color: #081D33; margin-top: 8px; text-align: center !important;">Our Facilities</h2>
                 <p style="color: #64748b; font-size: 16px; max-width: 750px; margin: 10px auto 0;">Comprehensively equipped facilities spanning inspection, calibration, prototyping, reverse engineering, and advanced materials development.</p>
             </div>
 
