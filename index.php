@@ -315,7 +315,7 @@ include 'includes/header.php';
     </section>
 
     <!-- About AKC Section -->
-    <section class="about-section" style="padding: 95px 20px; background: white;">
+    <section class="about-section" style="padding: 75px 20px 25px; background: white;">
         <div class="about-container reveal" style="text-align: center; max-width: 1080px; margin: 0 auto;">
             <div class="universal-section-label">WHO WE ARE</div>
             <h2 class="universal-section-heading" style="margin-top: 0; margin-bottom: 8px;">Built by Industry, Designed
@@ -339,7 +339,7 @@ include 'includes/header.php';
     </section>
 
     <!-- Vision Section -->
-    <section class="vision-section" style="padding: 95px 20px; background: #fff; border-bottom: 1px solid #eee;">
+    <section class="vision-section" style="padding: 25px 20px 75px; background: #fff; border-bottom: 1px solid #eee;">
         <div style="max-width: 1200px; margin: 0 auto;">
 
             <!-- Logos and Title -->
