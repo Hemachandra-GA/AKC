@@ -386,19 +386,19 @@
             gap: 10px;
         }
 
-        /* ---- INQUIRY & VALUES SECTION ---- */
-        .contact-inquiry {
+        /* ---- ENQUIRY & VALUES SECTION ---- */
+        .contact-enquiry {
             background-color: var(--bg-light);
         }
 
-        .inquiry-grid {
+        .enquiry-grid {
             display: grid;
             grid-template-columns: 1.4fr 1fr;
             gap: 40px;
             align-items: start;
         }
 
-        .inquiry-form-card {
+        .enquiry-form-card {
             background: var(--white);
             border: 1px solid #e2e8f0;
             border-radius: 16px;
@@ -498,7 +498,7 @@
         }
 
         /* Value Cards Right Column */
-        .inquiry-values {
+        .enquiry-values {
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -1074,7 +1074,7 @@
                 font-size: 44px;
             }
 
-            .inquiry-grid,
+            .enquiry-grid,
             .location-grid,
             .hours-grid,
             .faq-grid {
@@ -1117,7 +1117,7 @@
                 grid-column: span 1;
             }
 
-            .inquiry-form-card {
+            .enquiry-form-card {
                 padding: 25px;
             }
 

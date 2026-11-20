@@ -5,13 +5,12 @@ require_once __DIR__ . '/includes/db_connect.php';
 $hashMamatha = password_hash('Mamatha@123', PASSWORD_DEFAULT);
 $hashAdmin = password_hash('Admin@123', PASSWORD_DEFAULT);
 
-// 1. Client: mamatha14031995@gmail.com -> Mamatha@123
+
 $conn->prepare("UPDATE users SET password = :h WHERE LOWER(email) = 'mamatha14031995@gmail.com' OR LOWER(username) = 'mamatha14031995@gmail.com'")->execute(['h' => $hashMamatha]);
 
-// 2. Super Admin: mamathasurekha8@gmail.com / superadmin -> Admin@123
+
 $conn->prepare("UPDATE users SET password = :h WHERE LOWER(email) = 'mamathasurekha8@gmail.com' OR LOWER(username) = 'superadmin'")->execute(['h' => $hashAdmin]);
 
-// 3. Admin: mamathasurekha14@gmail.com / admin -> Mamatha@123
 $conn->prepare("UPDATE users SET password = :h WHERE LOWER(email) = 'mamathasurekha14@gmail.com' OR LOWER(username) = 'admin' OR LOWER(username) = 'mamatha-admin'")->execute(['h' => $hashMamatha]);
 
 $stmt = $conn->query("SELECT id, username, email, role, password FROM users ORDER BY id ASC");

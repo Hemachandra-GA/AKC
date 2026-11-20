@@ -19,9 +19,8 @@ include 'includes/header.php';
         <div class="banner-container">
             <div class="banner-content">
                 <h1>Where Precision Meets Polymer Science</h1>
-                <p>India's most advanced packaging and polymer research centre — delivering NABL-accredited testing,
-                    material characterisation, and industry-driven R&D solutions trusted by manufacturers across 15+
-                    sectors.</p>
+                <p>Transforming industry challenges into opportunities through NABL-accredited testing, 
+                    scientific excellence and technical expertise across polymers and allied materials.</p>
                 <div class="hero-actions">
                     <a href="#" class="btn-primary">Explore Our Testing Services</a>
                     <a href="#" class="btn-secondary">Request a Test</a>
@@ -46,41 +45,53 @@ include 'includes/header.php';
     <section class="services-section">
         <div class="services-container">
             <div class="service-card">
-                <div class="card-bg"><img src="assets/images/testing-qc.jpg" alt="Testing QC Analysis"></div>
+                <div class="card-bg"><img src="assets/images/testing-qc.jpg" alt="Testing & Certification"></div>
                 <div class="card-overlay"></div>
                 <div class="card-content">
                     <div class="card-icon"><i class="fa-solid fa-microscope"></i></div>
-                    <h3>Testing & QC Analysis</h3>
+                    <h3>Testing &amp; Certification</h3>
                     <div class="card-hover-content">
                         <p>Comprehensive chemical, mechanical, and physical testing for polymers, packaging, and
                             industrial materials — delivered with precision and NABL-backed accuracy.</p>
-                        <a href="#">Explore Testing Services <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="testing-and-certification.php">Explore Testing Services <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
             <div class="service-card">
-                <div class="card-bg"><img src="assets/images/support-services.jpg" alt="Support Services"></div>
+                <div class="card-bg"><img src="assets/images/support-services.jpg" alt="Advisory Services"></div>
                 <div class="card-overlay"></div>
                 <div class="card-content">
                     <div class="card-icon"><i class="fa-solid fa-phone-volume"></i></div>
-                    <h3>Support Services</h3>
+                    <h3>Advisory Services</h3>
                     <div class="card-hover-content">
                         <p>End-to-end technical support including consultancy, regulatory compliance guidance, and
                             industrial problem-solving for manufacturers and R&D teams.</p>
-                        <a href="#">View Support Services <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="advisory-service.php">View Support Services <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
             <div class="service-card">
-                <div class="card-bg"><img src="assets/images/education-training.jpg" alt="Education Training"></div>
+                <div class="card-bg"><img src="assets/images/education-training.jpg" alt="Academic & Upskilling"></div>
                 <div class="card-overlay"></div>
                 <div class="card-content">
                     <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                    <h3>Education & Training Courses</h3>
+                    <h3>Academic &amp; Upskilling</h3>
                     <div class="card-hover-content">
                         <p>Industry-relevant training programmes in polymer science, quality control, and advanced
                             testing methodologies — designed for professionals and academic institutions.</p>
-                        <a href="#">View Courses <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="training-courses.php">View Courses <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="card-bg"><img src="assets/images/facility_lab_work.png" alt="Applied Research"></div>
+                <div class="card-overlay"></div>
+                <div class="card-content">
+                    <div class="card-icon"><i class="fa-solid fa-flask-vial"></i></div>
+                    <h3>Applied Research</h3>
+                    <div class="card-hover-content">
+                        <p>Pioneering innovative materials, sustainable polymer formulations, and cutting-edge industrial R&amp;D for real-world solutions.</p>
+                        <a href="contact-us.php">View Details <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -387,10 +398,9 @@ include 'includes/header.php';
                 style="color: #0d47a1; font-weight: bold; letter-spacing: 1px; margin-bottom: 15px;">STATE-OF-THE-ART
                 INFRASTRUCTURE</div>
             <h2 style="font-size: 36px; margin-bottom: 20px;">Labs Built for Accuracy. Equipped for Tomorrow.</h2>
-            <p style="font-size: 18px; color: #555; line-height: 1.6;">AKC operates one of India's most comprehensively
+            <p style="font-size: 18px; color: #555; line-height: 1.6;">AKC-PTARC operates one of India's most comprehensively
                 equipped polymer and packaging research facilities — featuring advanced instrumentation across chemical,
-                mechanical, thermal, electrical, and optical testing domains. Our labs are ISO 17025 compliant and
-                NABL-accredited, ensuring every result meets international standards.</p>
+                mechanical, biological, and electrical testing domains. Our labs are NABL-accredited, ensuring accurate, reliable, and internationally recognized results.</p>
         </div>
     </section>
 
@@ -402,12 +412,9 @@ include 'includes/header.php';
                     style="justify-content: center; font-weight: bold; letter-spacing: 1px; margin-bottom: 15px; color: #90caf9;">
                     <span class="label-line"></span> BUILD CAPABILITY
                 </div>
-                <h2 style="font-size: 36px; margin-bottom: 20px; color: white;">Training Programmes That Create
+                <h2 style="font-size: 36px; margin-bottom: 20px; color: white;">Academic &amp; Upskilling That Create
                     Industry-Ready Experts</h2>
-                <p style="font-size: 18px; line-height: 1.6; margin-bottom: 30px; color: rgba(255,255,255,0.9);">Our
-                    professional training courses are designed in collaboration with industry experts and academic
-                    partners. From foundational polymer science to advanced quality assurance, our programmes prepare
-                    engineers, technicians, and researchers to perform at the highest level.</p>
+                <p style="font-size: 18px; line-height: 1.6; margin-bottom: 30px; color: rgba(255,255,255,0.9);">Industry-driven training programmes, developed with industry experts and academic partners, equipping engineers, technicians and researchers with practical, job-ready skills from polymer science to advanced quality assurance.</p>
                 <a href="#" class="btn-view-courses"
                     style="display: inline-block; padding: 14px 35px; background: #0d47a1; color: white; font-weight: bold; border-radius: 6px; text-decoration: none;">View
                     Training Courses</a>

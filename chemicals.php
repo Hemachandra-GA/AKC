@@ -170,15 +170,14 @@
             <div class="section-subtitle">
                 <span class="line"></span> CONTACT US
             </div>
-            <h2 class="contact-phone"><a href="tel:+918860407220" style="color: inherit; text-decoration: none;">+91
-                    88604 07220</a></h2>
+            <h2 class="contact-phone"><a href="tel:+911234567890" style="color: inherit; text-decoration: none;">+91 12345 67890</a></h2>
             <hr class="card-divider">
             <div class="contact-links">
                 <a href="mailto:info@akc-ptarc.com" class="contact-email" style="text-decoration: none;">
                     <i class="bi bi-envelope"></i> Email Us: info@akc-ptarc.com
                 </a>
             </div>
-            <a href="mailto:info@akc-ptarc.com?subject=Inquiry from Chemicals Testing Page"
+            <a href="mailto:info@akc-ptarc.com?subject=Enquiry from Chemicals Testing Page"
                 class="btn btn-primary btn-full">Send us a request</a>
         </div>
     </div>

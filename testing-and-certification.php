@@ -1,7 +1,7 @@
 <?php
 require_once 'includes/db_connect.php';
 $pageTitle = "Testing & QC Analysis | NABL-Accredited Laboratory Testing Services – AKC";
-$metaDescription = "AKC offers precision laboratory testing and quality assurance services across plastics, rubber, textiles, leather, toys, recyclate, pharmaceuticals, medical devices, dyes/coatings, food/agri, water, and electrical product categories. Globally certified. Scientifically proven. Request a Test today";
+$metaDescription = "AKC-PTARC offers precision laboratory testing and quality assurance services across plastics, rubber, textiles, leather, toys, recyclate, pharmaceuticals, medical devices, dyes/coatings, food/agri, water, and electrical product categories. Globally certified. Scientifically proven. Request a Test today";
 $metaKeywords = "laboratory testing services India, QC testing and analysis, NABL-accredited testing lab, quality assurance lab, industrial testing certification";
 include 'includes/header.php';
 ?>
@@ -34,8 +34,8 @@ include 'includes/header.php';
                         onclick="event.preventDefault(); const target = document.getElementById('categories'); const offset = 80; const bodyRect = document.body.getBoundingClientRect().top; const elementRect = target.getBoundingClientRect().top; const elementPosition = elementRect - bodyRect; const offsetPosition = elementPosition - offset; window.scrollTo({ top: offsetPosition, behavior: 'smooth' });">
                         Explore Testing
                     </a>
-                    <a href="mailto:info@akc.com" class="btn-qc-outline">
-                        Request a Test
+                    <a href="contact-us.php#enquiry" class="btn-qc-outline">
+                        Send us enquiry
                     </a>
                 </div>
 
@@ -72,8 +72,7 @@ include 'includes/header.php';
                     <h5>CONTACT US</h5>
                 </div>
 
-                <h3 class="widget-phone"><a href="tel:+918860407220" style="color: inherit; text-decoration: none;">+91
-                        88604 07220</a></h3>
+                <h3 class="widget-phone"><a href="tel:+911234567890" style="color: inherit; text-decoration: none;">+91 12345 67890</a></h3>
 
                 <div class="widget-email-row">
                     <i class="fa-regular fa-envelope"></i>
@@ -81,8 +80,8 @@ include 'includes/header.php';
                 </div>
 
                 <button class="btn-widget-submit"
-                    onclick="window.location.href='mailto:info@akc-ptarc.com?subject=Inquiry from QC Analysis Page'">
-                    Send us a request
+                    onclick="window.location.href='contact-us.php#enquiry'">
+                    Send us enquiry
                 </button>
             </div>
 
@@ -153,12 +152,13 @@ include 'includes/header.php';
             <div class="who-we-are-content">
                 <div class="qc-subtitle red">— WHO WE ARE</div>
                 <h2>Your Total Quality Assurance Partner</h2>
-                <p>AKC – Packaging Technology & Research Centre provides comprehensive testing, inspection,
+                <p>AKC – Polymer Technology & Applied Research Centre provides comprehensive testing, inspection,
                     certification, and quality assurance solutions that help industries maintain the highest standards
                     of safety, reliability, and sustainability. Our accredited laboratories and experienced team deliver
                     the scientific rigour that modern industry demands.</p>
                 <p>Whether you are a manufacturer seeking product certification, an R&D team requiring advanced material
-                    analysis, or a procurement team validating supplier compliance — AKC is your single-source quality
+                    analysis, or a procurement team validating supplier compliance — AKC-PTARC is your single-source
+                    quality
                     assurance partner.</p>
 
                 <div class="who-we-are-stats">
@@ -178,7 +178,7 @@ include 'includes/header.php';
                     </div>
                 </div>
 
-                <a href="about.php#team-members" class="btn-qc-primary">Learn More About AKC</a>
+                <a href="about.php#team-members" class="btn-qc-primary">Learn More About AKC-PTARC</a>
             </div>
         </div>
     </section>
@@ -188,7 +188,7 @@ include 'includes/header.php';
         <div class="qc-facility-container">
             <div class="qc-subtitle red">— CHECK OUR FACILITIES</div>
             <h2>Facility</h2>
-            <p>AKC's testing and QC facility spans four specialised laboratory disciplines, each equipped with
+            <p>AKC-PTARC's testing and QC facility spans four specialised laboratory disciplines, each equipped with
                 precision instruments maintained to international calibration standards:</p>
 
             <div class="facility-tabs">
@@ -216,10 +216,10 @@ include 'includes/header.php';
                     all testing disciplines.</p>
             </div>
             <div class="cta-right">
-                <a href="mailto:info@akc.com" class="btn-cta-light">
-                    Request a Test
+                <a href="contact-us.php#enquiry" class="btn-cta-light">
+                    Send us enquiry
                 </a>
-                <a href="#" class="btn-cta-outline">
+                <a href="contact-us.php" class="btn-cta-outline">
                     Contact Our Experts
                 </a>
             </div>

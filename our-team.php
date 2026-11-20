@@ -288,7 +288,7 @@ include 'includes/header.php';
                     </div>
                     <div class="team-card reveal-child">
                         <h4>Dr. Meenakshi Tanwar</h4>
-                        <p class="designation">Senior Scientist & Quality Manager (QM)</p>
+                        <p class="designation">Academic &amp; Upskilling Head &amp; Sr. Scientist</p>
                         <p class="qual">Ph.D. in Chemistry</p>
                         <p class="email"><a href="mailto:meenakshi.srsqm@akc-ptarc.com" style="color: inherit;">meenakshi.srsqm@akc-ptarc.com</a></p>
                     </div>
@@ -306,16 +306,22 @@ include 'includes/header.php';
                 <h3 class="reveal">Scientific & Technical Team</h3>
                 <div class="team-grid reveal-group">
                     <div class="team-card reveal-child">
-                        <h4>Dr. Tushar Kanta Nayak</h4>
+                        <h4>Dr. Tusharkanta Nayak</h4>
                         <p class="designation">Scientist</p>
                         <p class="qual">Ph.D. in Chemistry</p>
                         <p class="email"><a href="mailto:tushar.sci@akc-ptarc.com" style="color: inherit;">tushar.sci@akc-ptarc.com</a></p>
                     </div>
                     <div class="team-card reveal-child">
                         <h4>Vishakha Gaur</h4>
-                        <p class="designation">Technical Officer</p>
+                        <p class="designation">Technical Officer (Strategy &amp; Business Development)</p>
                         <p class="qual">M.Tech. in Chemical Engineering</p>
                         <p class="email"><a href="mailto:vishakha.to@akc-ptarc.com" style="color: inherit;">vishakha.to@akc-ptarc.com</a></p>
+                    </div>
+                    <div class="team-card reveal-child">
+                        <h4>Akankshya Rath</h4>
+                        <p class="designation">Technical Officer</p>
+                        <p class="qual">M.Sc. Tech. in Material Science and Engineering</p>
+                        <p class="email"><a href="mailto:akankshya.to@akc-ptarc.com" style="color: inherit;">akankshya.to@akc-ptarc.com</a></p>
                     </div>
                     <div class="team-card reveal-child">
                         <h4>Shubham Pandey</h4>
@@ -332,12 +338,12 @@ include 'includes/header.php';
                     <div class="team-card reveal-child">
                         <h4>Balkrishna Tripathi</h4>
                         <p class="designation">Assistant Technical Officer</p>
-                        <p class="qual">M.Sc. Tech.</p>
+                        <p class="qual">M.Sc. Tech. in Material Science and Engineering</p>
                         <p class="email"><a href="mailto:balkrishna.ato@akc-ptarc.com" style="color: inherit;">balkrishna.ato@akc-ptarc.com</a></p>
                     </div>
                     <div class="team-card reveal-child">
                         <h4>Anshul Sharma</h4>
-                        <p class="designation">Junior Technical Officer</p>
+                        <p class="designation">Analyst</p>
                         <p class="qual">B.Sc. in Biotechnology</p>
                         <p class="email"><a href="mailto:anshul.jto@akc-ptarc.com" style="color: inherit;">anshul.jto@akc-ptarc.com</a></p>
                     </div>
@@ -352,10 +358,9 @@ include 'includes/header.php';
                         <h4>Shivam Kumar</h4>
                         <p class="designation">Laboratory Analyst</p>
                         <p class="qual">B.Sc. (PCM)</p>
-                        <p class="email">+91 72478 12566</p>
                     </div>
                     <div class="team-card reveal-child">
-                        <h4>Puspanjali</h4>
+                        <h4>Pushpanjali</h4>
                         <p class="designation">Front Desk Executive</p>
                         <p class="qual">Bachelor's Degree</p>
                         <p class="email"><a href="mailto:info@akc-ptarc.com" style="color: inherit;">info@akc-ptarc.com</a></p>

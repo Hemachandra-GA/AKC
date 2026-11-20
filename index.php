@@ -1,12 +1,12 @@
 <?php
-$pageTitle = "AKC | Polymer & Packaging Testing, Research & Certification - UFlex";
-$metaDescription = "AKC is India's premier polymer and packaging research centre. NABL-accredited labs, advanced material characterisation, R&D, and industry training - backed by UFlex. Request a Test today.";
+$pageTitle = "AKC-PTARC | Polymer Technology & Applied Research Centre - UFlex";
+$metaDescription = "AKC-PTARC is India's premier polymer and packaging research centre. NABL-accredited labs, advanced material characterisation, R&D, and industry training - backed by UFlex. Request a Test today.";
 $metaKeywords = "polymer testing lab India, packaging material testing, NABL-accredited testing centre, chemical testing and certification, material characterisation, UFlex research centre";
 include 'includes/header.php';
 ?>
 
 <!-- Preload banner video for instantaneous playback with zero glitch -->
-<link rel="preload" href="assets/videos/home-page-banner-fast.mp4" as="video" type="video/mp4">
+<link rel="preload" href="https://akc-two.vercel.app/assets/videos/home-page-banner-fast.mp4" as="video" type="video/mp4">
 
 <main>
 
@@ -14,36 +14,32 @@ include 'includes/header.php';
     <section class="hero-banner">
         <!-- Right side video with overlay -->
         <div class="banner-image-area" style="background: #0d47a1;">
-            <video autoplay loop muted playsinline webkit-playsinline="true" preload="auto" disablepictureinpicture disableremoteplayback style="opacity: 0; transition: opacity 0.35s ease-in; width: 100%; height: 100%; object-fit: cover;">
-                <!-- Direct CDN MP4 stream: plays instantly on Vercel CDN & local -->
+            <video autoplay loop muted playsinline webkit-playsinline="true" preload="auto" disablepictureinpicture
+                disableremoteplayback
+                style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                <source src="https://akc-two.vercel.app/assets/videos/home-page-banner-fast.mp4" type="video/mp4">
                 <source src="assets/videos/home-page-banner-fast.mp4" type="video/mp4">
             </video>
             <script>
-                // Instant video playback with zero static-image glitch
-                (function() {
+                (function () {
                     var v = document.querySelector('.banner-image-area video');
                     if (v) {
                         v.muted = true;
-                        function reveal() {
-                            v.style.opacity = '1';
-                        }
-                        function playAndReveal() {
-                            reveal();
-                            var p = v.play();
-                            if (p !== undefined) p.catch(function() {});
-                        }
-                        v.addEventListener('playing', reveal, { once: true });
-                        v.addEventListener('timeupdate', reveal, { once: true });
-                        v.addEventListener('canplay', playAndReveal, { once: true });
-                        v.addEventListener('loadeddata', playAndReveal, { once: true });
-                        
-                        // Immediate play kickoff
-                        var promise = v.play();
-                        if (promise !== undefined) {
-                            promise.then(reveal).catch(function() {});
-                        }
-                        document.addEventListener('touchstart', playAndReveal, { once: true });
-                        document.addEventListener('click', playAndReveal, { once: true });
+                        v.defaultMuted = true;
+                        var startPlay = function () {
+                            if (v.paused) {
+                                var p = v.play();
+                                if (p !== undefined) {
+                                    p.catch(function () {});
+                                }
+                            }
+                        };
+                        v.addEventListener('canplay', startPlay);
+                        v.addEventListener('loadeddata', startPlay);
+                        startPlay();
+                        ['click', 'touchstart', 'scroll', 'mousemove'].forEach(function(evt) {
+                            window.addEventListener(evt, startPlay, { once: true, passive: true });
+                        });
                     }
                 })();
             </script>
@@ -54,9 +50,8 @@ include 'includes/header.php';
         <div class="banner-container">
             <div class="banner-content">
                 <h1 style="font-size: 42px; font-weight: 600;">Where Precision Meets<br>Polymer Technology</h1>
-                <p>India's most advanced packaging and polymer research centre - delivering NABL-accredited testing,
-                    material characterisation, and industry-driven R&D solutions trusted by manufacturers across 15+
-                    sectors.</p>
+                <p>Transforming industry challenges into opportunities through NABL-accredited testing, 
+                    scientific excellence and technical expertise across polymers and allied materials.</p>
                 <div class="hero-cta-wrapper" style="width: 295px; max-width: 100%; display: block;">
                     <div class="hero-actions" style="margin-bottom: 22px; width: 100%; display: block;">
                         <a href="testing-and-certification.php" class="btn-primary"
@@ -275,31 +270,44 @@ include 'includes/header.php';
                     </div>
                 </div>
             </div>
-            <div class="service-card reveal-child" onclick="window.location.href='technical-services.php';"
+            <div class="service-card reveal-child" onclick="window.location.href='advisory-service.php';"
                 style="cursor: pointer;">
                 <div class="card-bg"><img src="assets/images/support-services.jpg" alt="Support Services"></div>
                 <div class="card-overlay"></div>
                 <div class="card-content">
                     <div class="card-icon"><i class="fa-solid fa-phone-volume"></i></div>
-                    <h3 style="font-size: 24px; font-weight: 500;">Testing, Quality Control and Certifications</h3>
+                    <h3 style="font-size: 24px; font-weight: 500;">Advisory Services</h3>
                     <div class="card-hover-content">
                         <p>End-to-end technical support including consultancy, regulatory compliance guidance, and
                             industrial problem-solving for manufacturers and R&D teams.</p>
-                        <a href="technical-services.php">View Details <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="advisory-service.php">View Details <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
             <div class="service-card reveal-child" onclick="window.location.href='training-courses.php';"
                 style="cursor: pointer;">
-                <div class="card-bg"><img src="assets/images/education-training.jpg" alt="Education Training"></div>
+                <div class="card-bg"><img src="assets/images/education-training.jpg" alt="Academic & Upskilling"></div>
                 <div class="card-overlay"></div>
                 <div class="card-content">
                     <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                    <h3 style="font-size: 24px; font-weight: 500;">Up-skilling, Academic & Applied Research</h3>
+                    <h3 style="font-size: 24px; font-weight: 500;">Academic & Upskilling</h3>
                     <div class="card-hover-content">
                         <p>Industry-relevant training programmes in polymer science, quality control, and advanced
                             testing methodologies - designed for professionals and academic institutions.</p>
                         <a href="training-courses.php">View Details <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="service-card reveal-child" onclick="window.location.href='contact-us.php';"
+                style="cursor: pointer;">
+                <div class="card-bg"><img src="assets/images/facility_lab_work.png" alt="Applied Research"></div>
+                <div class="card-overlay"></div>
+                <div class="card-content">
+                    <div class="card-icon"><i class="fa-solid fa-flask-vial"></i></div>
+                    <h3 style="font-size: 24px; font-weight: 500;">Applied Research</h3>
+                    <div class="card-hover-content">
+                        <p>Pioneering innovative materials, sustainable polymer formulations, and cutting-edge industrial R&amp;D for real-world solutions.</p>
+                        <a href="contact-us.php">View Details <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -315,16 +323,121 @@ include 'includes/header.php';
             <div class="about-content" style="font-size: 16px; font-weight: 400; line-height: 1.7; color: #555;">
                 <p
                     style="font-size: 16px !important; font-weight: 400; line-height: 1.7; color: #555; margin-bottom: 22px;">
-                    AKC is established to bridge the gap between industrial demands and advanced scientific research.<br
-                        class="about-line-break"> We are India's first integrated centre combining polymer testing,
+                    AKC-PTARC is established to bridge the gap between industrial demands and advanced scientific
+                    research.<br class="about-line-break"> We are India's first integrated centre combining polymer
+                    testing,
                     quality assurance, R&D, and skill development under one roof.</p>
                 <p
                     style="font-size: 16px !important; font-weight: 400; line-height: 1.7; color: #555; margin-bottom: 35px; max-width: 900px; margin-left: auto; margin-right: auto;">
-                    PTARC aims to evolve from an advanced R&D and testing laboratory into an internationally recognized
+                    AKC-PTARC aims to evolve from an advanced R&D and testing laboratory into an internationally recognized
                     Institute and global centre of excellence in polymer, packaging, and material science.</p>
                 <a href="about.php" class="btn-primary"
                     style="background: #0d47a1; color: white; padding: 16px 40px; border-radius: 6px; text-decoration: none; display: inline-block; font-weight: 500; font-size: 16px;">Learn
                     More About Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="vision-section" style="padding: 95px 20px; background: #fff; border-bottom: 1px solid #eee;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+
+            <!-- Logos and Title -->
+            <div class="reveal" style="text-align: center; margin-bottom: 40px;">
+                <div class="universal-section-label">VISION &amp; PURPOSE</div>
+                <h2 class="universal-section-heading" style="margin-top: 0; margin-bottom: 8px;">Vision</h2>
+            </div>
+
+            <!-- Vision Quote Box -->
+            <div class="reveal-scale"
+                style="background: linear-gradient(135deg, #e3f2fd, #bbdefb); border-radius: 20px; padding: 55px 40px; position: relative; overflow: hidden; margin-bottom: 50px; box-shadow: 0 10px 30px rgba(0,86,179,0.08); text-align: center; border: 1px solid rgba(0,86,179,0.1);">
+                <i class="fa-solid fa-quote-left"
+                    style="position: absolute; top: 20px; left: 30px; font-size: 60px; color: rgba(0,86,179,0.15);"></i>
+
+                <p
+                    style="font-size: 18px; color: var(--primary-blue); font-weight: 500; line-height: 1.6; max-width: 900px; margin: 0 auto; position: relative; z-index: 1;">
+                    To be a <strong style="font-weight: 600; font-size: 18px;">globally recognized centre of
+                        excellence</strong> in polymer, packaging, and material science, driving innovation,
+                    sustainability and industrial growth through cutting-edge research, testing, training and
+                    collaborative solutions.
+                </p>
+
+                <i class="fa-solid fa-quote-right"
+                    style="position: absolute; bottom: 20px; right: 30px; font-size: 60px; color: rgba(0,86,179,0.15);"></i>
+            </div>
+
+            <!-- 4 Pillars Cards -->
+            <div class="reveal-group"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px;">
+
+                <!-- Card 1: Testing & Certification -->
+                <div class="reveal-child"
+                    style="background: linear-gradient(145deg, var(--primary-blue) 0%, #003a8c 100%); color: white; border-radius: 12px; padding: 30px 20px; text-align: center; box-shadow: 0 8px 20px rgba(0,86,179,0.25); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; align-items: center;"
+                    onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 25px rgba(0,86,179,0.35)';"
+                    onmouseout="this.style.transform='none'; this.style.boxShadow='0 8px 20px rgba(0,86,179,0.25)';">
+                    <div
+                        style="background: white; color: var(--primary-blue); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; margin: 0 auto 20px; flex-shrink: 0;">
+                        <i class="fa-solid fa-clipboard-check"></i>
+                    </div>
+                    <h3
+                        style="font-size: 16px; font-weight: 500; color: #ffffff; min-height: 44px; display: flex; align-items: center; justify-content: center; margin-bottom: 8px; line-height: 1.3;">
+                        Testing &amp; Certification</h3>
+                    <p
+                        style="font-size: 14px; margin: 0; color: rgba(255, 255, 255, 0.88) !important; line-height: 1.5; font-weight: 400;">
+                        Reliable testing. Trusted quality. Global compliance.</p>
+                </div>
+
+                <!-- Card 2: Advisory Services -->
+                <div class="reveal-child"
+                    style="background: linear-gradient(145deg, var(--primary-blue) 0%, #003a8c 100%); color: white; border-radius: 12px; padding: 30px 20px; text-align: center; box-shadow: 0 8px 20px rgba(0,86,179,0.25); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; align-items: center;"
+                    onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 25px rgba(0,86,179,0.35)';"
+                    onmouseout="this.style.transform='none'; this.style.boxShadow='0 8px 20px rgba(0,86,179,0.25)';">
+                    <div
+                        style="background: white; color: var(--primary-blue); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; margin: 0 auto 20px; flex-shrink: 0;">
+                        <i class="fa-solid fa-cogs"></i>
+                    </div>
+                    <h3
+                        style="font-size: 16px; font-weight: 500; color: #ffffff; min-height: 44px; display: flex; align-items: center; justify-content: center; margin-bottom: 8px; line-height: 1.3;">
+                        Advisory Services</h3>
+                    <p
+                        style="font-size: 14px; margin: 0; color: rgba(255, 255, 255, 0.88) !important; line-height: 1.5; font-weight: 400;">
+                        Expertise for a stronger industry.</p>
+                </div>
+
+                <!-- Card 3: Academic & Upskilling -->
+                <div class="reveal-child"
+                    style="background: linear-gradient(145deg, var(--primary-blue) 0%, #003a8c 100%); color: white; border-radius: 12px; padding: 30px 20px; text-align: center; box-shadow: 0 8px 20px rgba(0,86,179,0.25); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; align-items: center;"
+                    onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 25px rgba(0,86,179,0.35)';"
+                    onmouseout="this.style.transform='none'; this.style.boxShadow='0 8px 20px rgba(0,86,179,0.25)';">
+                    <div
+                        style="background: white; color: var(--primary-blue); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; margin: 0 auto 20px; flex-shrink: 0;">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3
+                        style="font-size: 16px; font-weight: 500; color: #ffffff; min-height: 44px; display: flex; align-items: center; justify-content: center; margin-bottom: 8px; line-height: 1.3;">
+                        Academic &amp; Upskilling</h3>
+                    <p
+                        style="font-size: 14px; margin: 0; color: rgba(255, 255, 255, 0.88) !important; line-height: 1.5; font-weight: 400;">
+                        Knowledge today. Skilled tomorrow.</p>
+                </div>
+
+                <!-- Card 4: Applied Research -->
+                <div class="reveal-child"
+                    style="background: linear-gradient(145deg, var(--primary-blue) 0%, #003a8c 100%); color: white; border-radius: 12px; padding: 30px 20px; text-align: center; box-shadow: 0 8px 20px rgba(0,86,179,0.25); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; align-items: center;"
+                    onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 25px rgba(0,86,179,0.35)';"
+                    onmouseout="this.style.transform='none'; this.style.boxShadow='0 8px 20px rgba(0,86,179,0.25)';">
+                    <div
+                        style="background: white; color: var(--primary-blue); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; margin: 0 auto 20px; flex-shrink: 0;">
+                        <i class="fa-solid fa-microscope"></i>
+                    </div>
+                    <h3
+                        style="font-size: 16px; font-weight: 500; color: #ffffff; min-height: 44px; display: flex; align-items: center; justify-content: center; margin-bottom: 8px; line-height: 1.3;">
+                        Applied Research</h3>
+                    <p
+                        style="font-size: 14px; margin: 0; color: rgba(255, 255, 255, 0.88) !important; line-height: 1.5; font-weight: 400;">
+                        Innovative materials. Real-world solutions.</p>
+                </div>
+
             </div>
         </div>
     </section>
@@ -336,8 +449,7 @@ include 'includes/header.php';
             <h2 class="universal-section-heading" style="margin-top: 0; margin-bottom: 8px;">NABL Scope</h2>
             <p
                 style="font-size: 16px; font-weight: 400; color: #64748b; max-width: 700px; margin: 0 auto; line-height: 1.6;">
-                Comprehensive testing and evaluation capabilities across chemical, mechanical, biological and electrical
-                domains.</p>
+                *certification is pending</p>
         </div>
         <div class="stats-container reveal-group"
             style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; text-align: center;">
@@ -470,16 +582,35 @@ include 'includes/header.php';
     <!-- We are certified by Section -->
     <style>
         .cert-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
         }
 
         .cert-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12) !important;
+            box-shadow: 0 16px 35px rgba(13, 71, 161, 0.12) !important;
+            border-color: #cbd5e1 !important;
         }
 
-        .cert-card:hover img {
-            transform: scale(1.02);
+        .cert-card:hover .cert-icon-container img {
+            transform: scale(1.08);
+        }
+
+        .cert-view-btn {
+            font-size: 13.5px;
+            color: var(--primary-blue);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 16px;
+            background: rgba(13, 71, 161, 0.06);
+            border-radius: 20px;
+            transition: all 0.25s ease;
+        }
+
+        .cert-card:hover .cert-view-btn {
+            background: var(--primary-blue);
+            color: #ffffff;
         }
     </style>
     <section class="certified-by-section"
@@ -501,76 +632,61 @@ include 'includes/header.php';
                 <!-- ISO 9001 -->
                 <div class="cert-card reveal-child"
                     onclick="openCertModal('assets/images/certificates/AKC PTARC_ISO 9001_page-0001.jpg', 'ISO 9001:2015 Certificate - Quality Management System')"
-                    style="background: #ffffff; padding: 15px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; display: flex; flex-direction: column; align-items: center; width: 255px; cursor: pointer;">
-                    <div
-                        style="width: 100%; height: 330px; overflow: hidden; border-radius: 8px; border: 1px solid #eef2f6; background: #f8fafc; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
-                        <img src="assets/images/certificates/AKC PTARC_ISO 9001_page-0001.jpg"
-                            alt="ISO 9001:2015 Certificate"
-                            style="width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.3s ease;">
+                    style="background: #ffffff; padding: 24px 20px; border-radius: 14px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid #e2e8f0; display: flex; flex-direction: column; align-items: center; width: 250px; cursor: pointer;">
+                    <div class="cert-icon-container"
+                        style="width: 100%; height: 130px; border-radius: 10px; background: #f8fafc; border: 1px solid #eef2f6; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; padding: 15px;">
+                        <img src="assets/images/iso-9001.png"
+                            alt="ISO 9001:2015 Icon"
+                            style="max-width: 95px; max-height: 95px; object-fit: contain; transition: transform 0.3s ease;">
                     </div>
-                    <h4 style="font-size: 17px; font-weight: 500; color: #0f172a; margin: 0 0 5px 0;">ISO 9001:2015</h4>
-                    <span style="font-size: 14px; color: #64748b; font-weight: 400; margin-bottom: 10px;">Quality
-                        Management</span>
-                    <span
-                        style="font-size: 14px; color: var(--primary-blue); font-weight: 500; display: flex; align-items: center; gap: 5px;"><i
-                            class="fa-solid fa-magnifying-glass-plus"></i> View Certificate</span>
+                    <h4 style="font-size: 18px; font-weight: 600; color: #0f172a; margin: 0 0 6px 0;">ISO 9001:2015</h4>
+                    <span style="font-size: 14px; color: #64748b; font-weight: 400; margin-bottom: 14px; min-height: 38px; display: flex; align-items: center; justify-content: center; text-align: center;">Quality Management</span>
+                    <span class="cert-view-btn"><i class="fa-solid fa-magnifying-glass-plus"></i> View Certificate</span>
                 </div>
 
                 <!-- ISO 14001 -->
                 <div class="cert-card reveal-child"
                     onclick="openCertModal('assets/images/certificates/AKC PTARC_ISO 14001_page-0001.jpg', 'ISO 14001:2015 Certificate - Environmental Management System')"
-                    style="background: #ffffff; padding: 15px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; display: flex; flex-direction: column; align-items: center; width: 255px; cursor: pointer;">
-                    <div
-                        style="width: 100%; height: 330px; overflow: hidden; border-radius: 8px; border: 1px solid #eef2f6; background: #f8fafc; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
-                        <img src="assets/images/certificates/AKC PTARC_ISO 14001_page-0001.jpg"
-                            alt="ISO 14001:2015 Certificate"
-                            style="width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.3s ease;">
+                    style="background: #ffffff; padding: 24px 20px; border-radius: 14px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid #e2e8f0; display: flex; flex-direction: column; align-items: center; width: 250px; cursor: pointer;">
+                    <div class="cert-icon-container"
+                        style="width: 100%; height: 130px; border-radius: 10px; background: #f8fafc; border: 1px solid #eef2f6; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; padding: 15px;">
+                        <img src="assets/images/iso-14001.png"
+                            alt="ISO 14001:2015 Icon"
+                            style="max-width: 95px; max-height: 95px; object-fit: contain; transition: transform 0.3s ease;">
                     </div>
-                    <h4 style="font-size: 17px; font-weight: 500; color: #0f172a; margin: 0 0 5px 0;">ISO 14001:2015
-                    </h4>
-                    <span style="font-size: 14px; color: #64748b; font-weight: 400; margin-bottom: 10px;">Environmental
-                        Management</span>
-                    <span
-                        style="font-size: 14px; color: var(--primary-blue); font-weight: 500; display: flex; align-items: center; gap: 5px;"><i
-                            class="fa-solid fa-magnifying-glass-plus"></i> View Certificate</span>
+                    <h4 style="font-size: 18px; font-weight: 600; color: #0f172a; margin: 0 0 6px 0;">ISO 14001:2015</h4>
+                    <span style="font-size: 14px; color: #64748b; font-weight: 400; margin-bottom: 14px; min-height: 38px; display: flex; align-items: center; justify-content: center; text-align: center;">Environmental Management</span>
+                    <span class="cert-view-btn"><i class="fa-solid fa-magnifying-glass-plus"></i> View Certificate</span>
                 </div>
 
                 <!-- ISO 45001 -->
                 <div class="cert-card reveal-child"
                     onclick="openCertModal('assets/images/certificates/AKC PTARC_ISO 45001_page-0001.jpg', 'ISO 45001:2018 Certificate - Occupational Health & Safety Management')"
-                    style="background: #ffffff; padding: 15px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; display: flex; flex-direction: column; align-items: center; width: 255px; cursor: pointer;">
-                    <div
-                        style="width: 100%; height: 330px; overflow: hidden; border-radius: 8px; border: 1px solid #eef2f6; background: #f8fafc; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
-                        <img src="assets/images/certificates/AKC PTARC_ISO 45001_page-0001.jpg"
-                            alt="ISO 45001:2018 Certificate"
-                            style="width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.3s ease;">
+                    style="background: #ffffff; padding: 24px 20px; border-radius: 14px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid #e2e8f0; display: flex; flex-direction: column; align-items: center; width: 250px; cursor: pointer;">
+                    <div class="cert-icon-container"
+                        style="width: 100%; height: 130px; border-radius: 10px; background: #f8fafc; border: 1px solid #eef2f6; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; padding: 15px;">
+                        <img src="assets/images/iso-45001.png"
+                            alt="ISO 45001:2018 Icon"
+                            style="max-width: 95px; max-height: 95px; object-fit: contain; transition: transform 0.3s ease;">
                     </div>
-                    <h4 style="font-size: 17px; font-weight: 500; color: #0f172a; margin: 0 0 5px 0;">ISO 45001:2018
-                    </h4>
-                    <span style="font-size: 14px; color: #64748b; font-weight: 400; margin-bottom: 10px;">Occupational
-                        Health &amp; Safety</span>
-                    <span
-                        style="font-size: 14px; color: var(--primary-blue); font-weight: 500; display: flex; align-items: center; gap: 5px;"><i
-                            class="fa-solid fa-magnifying-glass-plus"></i> View Certificate</span>
+                    <h4 style="font-size: 18px; font-weight: 600; color: #0f172a; margin: 0 0 6px 0;">ISO 45001:2018</h4>
+                    <span style="font-size: 14px; color: #64748b; font-weight: 400; margin-bottom: 14px; min-height: 38px; display: flex; align-items: center; justify-content: center; text-align: center;">Occupational Health &amp; Safety</span>
+                    <span class="cert-view-btn"><i class="fa-solid fa-magnifying-glass-plus"></i> View Certificate</span>
                 </div>
 
                 <!-- ISO 21001 -->
                 <div class="cert-card reveal-child"
                     onclick="openCertModal('assets/images/certificates/AKC PTARC_ISO 21001_page-0001.jpg', 'ISO 21001:2018 Certificate - Educational Organizations Management')"
-                    style="background: #ffffff; padding: 15px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; display: flex; flex-direction: column; align-items: center; width: 255px; cursor: pointer;">
-                    <div
-                        style="width: 100%; height: 330px; overflow: hidden; border-radius: 8px; border: 1px solid #eef2f6; background: #f8fafc; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
-                        <img src="assets/images/certificates/AKC PTARC_ISO 21001_page-0001.jpg"
-                            alt="ISO 21001:2018 Certificate"
-                            style="width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.3s ease;">
+                    style="background: #ffffff; padding: 24px 20px; border-radius: 14px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid #e2e8f0; display: flex; flex-direction: column; align-items: center; width: 250px; cursor: pointer;">
+                    <div class="cert-icon-container"
+                        style="width: 100%; height: 130px; border-radius: 10px; background: #f8fafc; border: 1px solid #eef2f6; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; padding: 15px;">
+                        <img src="assets/images/iso-21001.png"
+                            alt="ISO 21001:2018 Icon"
+                            style="max-width: 95px; max-height: 95px; object-fit: contain; transition: transform 0.3s ease;">
                     </div>
-                    <h4 style="font-size: 17px; font-weight: 500; color: #0f172a; margin: 0 0 5px 0;">ISO 21001:2018
-                    </h4>
-                    <span style="font-size: 14px; color: #64748b; font-weight: 400; margin-bottom: 10px;">Educational
-                        Organizations</span>
-                    <span
-                        style="font-size: 14px; color: var(--primary-blue); font-weight: 500; display: flex; align-items: center; gap: 5px;"><i
-                            class="fa-solid fa-magnifying-glass-plus"></i> View Certificate</span>
+                    <h4 style="font-size: 18px; font-weight: 600; color: #0f172a; margin: 0 0 6px 0;">ISO 21001:2018</h4>
+                    <span style="font-size: 14px; color: #64748b; font-weight: 400; margin-bottom: 14px; min-height: 38px; display: flex; align-items: center; justify-content: center; text-align: center;">Educational Organizations</span>
+                    <span class="cert-view-btn"><i class="fa-solid fa-magnifying-glass-plus"></i> View Certificate</span>
                 </div>
             </div>
         </div>
@@ -619,184 +735,11 @@ include 'includes/header.php';
         }
     </script>
 
-    <!-- Accredited Library & Sectors We Support Section -->
-    <section class="industries-section" style="background: #f4f7fb; padding: 95px 20px;">
-        <div class="industries-container" style="max-width: 1200px; margin: 0 auto; text-align: center;">
-            <?php
-            $managementStandards = [
-                ['icon' => 'fa-solid fa-gear', 'code' => 'ISO 9001:2015'],
-                ['icon' => 'fa-solid fa-leaf', 'code' => 'ISO 14001:2015'],
-                ['icon' => 'fa-solid fa-helmet-safety', 'code' => 'ISO 45001:2018'],
-                ['icon' => 'fa-solid fa-utensils', 'code' => 'ISO 22000:2018'],
-                ['icon' => 'fa-solid fa-lock', 'code' => 'ISO/IEC 27001:2022'],
-                ['icon' => 'fa-solid fa-desktop', 'code' => 'ISO 20000-1:2018'],
-                ['icon' => 'fa-solid fa-plus-square', 'code' => 'ISO/IEC 13485:2016'],
-                ['icon' => 'fa-solid fa-bolt', 'code' => 'ISO 50001:2018'],
-                ['icon' => 'fa-solid fa-brain', 'code' => 'ISO 42001:2023'],
-                ['icon' => 'fa-solid fa-user-shield', 'code' => 'ISO 27701:2019'],
-                ['icon' => 'fa-solid fa-handshake-slash', 'code' => 'ISO 37001:2016'],
-                ['icon' => 'fa-solid fa-network-wired', 'code' => 'ISO/IEC 22301:2019'],
-                ['icon' => 'fa-solid fa-building', 'code' => 'ISO 41001:2018'],
-                ['icon' => 'fa-solid fa-graduation-cap', 'code' => 'ISO 21001:2018'],
-                ['icon' => 'fa-solid fa-database', 'code' => 'ISO 55001:2014'],
-                ['icon' => 'fa-solid fa-chart-line', 'code' => 'ISO 31001:2018'],
-                ['icon' => 'fa-solid fa-car', 'code' => 'IATF 16949:2016'],
-                ['icon' => 'fa-solid fa-wheat-awn', 'code' => 'FSSC 22000'],
-                ['icon' => 'fa-solid fa-bottle-droplet', 'code' => 'ISO 22716'],
-                ['icon' => 'fa-solid fa-server', 'code' => 'ISO 16363:2025'],
-                ['icon' => 'fa-solid fa-plane', 'code' => 'AS 9100'],
-            ];
-
-            // Assign uniform theme colors
-            foreach ($managementStandards as &$std) {
-                $std['color'] = '#0d47a1'; // Primary dark blue
-                $std['bg'] = '#f1f5f9'; // Light slate background
-            }
-            unset($std);
-
-            $academicAccreditations = [
-                ['code' => 'NAAC', 'name' => 'National Assessment and Accreditation Council', 'icon' => 'fa-solid fa-award'],
-                ['code' => 'NBA', 'name' => 'National Board of Accreditation', 'icon' => 'fa-solid fa-certificate'],
-                ['code' => 'AICTE', 'name' => 'All India Council for Technical Education', 'icon' => 'fa-solid fa-cogs'],
-                ['code' => 'NIRF', 'name' => 'National Institutional Ranking Framework', 'icon' => 'fa-solid fa-ranking-star'],
-                ['code' => 'IQAC', 'name' => 'Internal Quality Assurance Cell', 'icon' => 'fa-solid fa-user-graduate'],
-                ['code' => 'EQAC', 'name' => 'External Quality Assurance Cell', 'icon' => 'fa-solid fa-file-signature'],
-                ['code' => 'ACBSP', 'name' => 'Accreditation Council for Business Schools and Programs', 'icon' => 'fa-solid fa-briefcase'],
-                ['code' => 'ASHE', 'name' => 'Association for the Study of Higher Education', 'icon' => 'fa-solid fa-book-open'],
-                ['code' => 'ACSC', 'name' => 'Accreditation Council for Skills and Competencies', 'icon' => 'fa-solid fa-globe'],
-                ['code' => 'NEP 2020', 'name' => 'National Education Policy 2020', 'icon' => 'fa-solid fa-book-open-reader'],
-            ];
-
-            foreach ($academicAccreditations as &$acc) {
-                $acc['color'] = '#0284c7'; // Academic accreditation accent color
-            }
-            unset($acc);
-            ?>
-            <div class="akc-standards-section" style="margin-top: 0; text-align: left;">
-                <!-- Main Section Header -->
-                <div class="reveal" style="text-align: center; margin-bottom: 50px;">
-                    <div class="universal-section-label">
-                        MANAGEMENT SYSTEMS &amp; ACCREDITATIONS
-                    </div>
-                    <h2 class="universal-section-heading" style="margin-top: 0; margin-bottom: 8px;">
-                        Management System Audit, Training &amp; Certification Services
-                    </h2>
-
-                </div>
-
-                <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 35px; align-items: start;">
-
-                    <!-- Left Column: Management System Standards -->
-                    <div class="akc-mgt-card reveal-left"
-                        style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
-                        <div style="background: #0d47a1; color: white; padding: 12px 20px; text-align: center;">
-                            <h3 style="margin: 0; font-size: 16px; font-weight: 600; color: white;">Our Management
-                                System Standards</h3>
-                        </div>
-
-                        <div style="padding: 15px 20px;">
-                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px 12px;">
-                                <?php foreach ($managementStandards as $std): ?>
-                                    <div style="position: relative; width: 100%; height: 36px; transition: transform 0.2s ease; cursor: default;"
-                                        onmouseover="this.style.transform='translateX(3px)';"
-                                        onmouseout="this.style.transform='none';">
-                                        <!-- Icon Section -->
-                                        <div
-                                            style="position: absolute; left: 0; top: 0; width: 45px; height: 100%; background: <?php echo $std['color']; ?>; color: white; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0 100%); border-radius: 16px 0 0 16px; z-index: 2;">
-                                            <i class="<?php echo $std['icon']; ?>" style="margin-right: 4px;"></i>
-                                        </div>
-                                        <!-- Text Section -->
-                                        <div
-                                            style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: <?php echo $std['bg']; ?>; display: flex; align-items: center; padding-left: 52px; clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 50%, calc(100% - 12px) 100%, 0 100%); border-radius: 16px 0 0 16px; font-weight: 500; color: #1e293b; font-size: 0.85rem; z-index: 1;">
-                                            <?php echo $std['code']; ?>
-                                        </div>
-                                    </div>
-                                <?php endforeach; ?>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Right Column: Academic Accreditation -->
-                    <div class="akc-acad-card reveal-right"
-                        style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
-                        <div class="card-header"
-                            style="background: #0284c7; color: #ffffff; padding: 12px 20px; text-align: center;">
-                            <h3 style="margin: 0; font-size: 16px; font-weight: 600; color: #ffffff;">Academic
-                                Accreditation, Certification &amp; Implementation</h3>
-                        </div>
-                        <div class="card-sub-banner"
-                            style="background: #f0f9ff; color: #0369a1; text-align: center; padding: 10px 20px; font-size: 12px; font-weight: 500; border-bottom: 1px solid #bae6fd;">
-                            Supporting institutions for quality education, research and academic excellence
-                        </div>
-
-                        <div style="padding: 20px;">
-                            <div class="akc-acad-grid"
-                                style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-                                <?php foreach ($academicAccreditations as $acc): ?>
-                                    <div style="border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px 15px; display: flex; align-items: center; gap: 12px; background: white; transition: all 0.3s ease; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"
-                                        onmouseover="this.style.boxShadow='0 4px 10px rgba(0,0,0,0.06)'; this.style.borderColor='#cbd5e1';"
-                                        onmouseout="this.style.boxShadow='0 1px 3px rgba(0,0,0,0.02)'; this.style.borderColor='#e2e8f0';">
-                                        <div class="icon"
-                                            style="display: flex; justify-content: center; align-items: center; color: <?php echo $acc['color']; ?>; font-size: 1.5rem; flex-shrink: 0; width: 35px;">
-                                            <i class="<?php echo $acc['icon']; ?>"></i>
-                                        </div>
-                                        <div>
-                                            <div
-                                                style="font-weight: 600; color: #0f172a; font-size: 0.95rem; line-height: 1.2; text-align: left;">
-                                                <?php echo $acc['code']; ?>
-                                            </div>
-                                            <div
-                                                style="font-size: 0.65rem; color: #64748b; margin-top: 3px; line-height: 1.3; text-align: left;">
-                                                <?php echo $acc['name']; ?>
-                                            </div>
-                                        </div>
-                                    </div>
-                                <?php endforeach; ?>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <!-- Add responsive styles -->
-            <style>
-                /* Academic Accreditation, Certification & Implementation Card */
-                .akc-acad-card .card-header {
-                    background: #0284c7 !important;
-                    color: #ffffff !important;
-                }
-
-                .akc-acad-card .card-sub-banner {
-                    background: #f0f9ff !important;
-                    color: #0369a1 !important;
-                    border-bottom: 1px solid #bae6fd !important;
-                }
-
-                .akc-acad-card .icon,
-                .akc-acad-card .icon i {
-                    color: #0284c7 !important;
-                }
-
-                @media (max-width: 992px) {
-                    .akc-standards-section>div:nth-child(2) {
-                        grid-template-columns: 1fr !important;
-                    }
-                }
-
-                @media (max-width: 576px) {
-                    .akc-acad-grid {
-                        grid-template-columns: 1fr !important;
-                    }
-                }
-            </style>
-        </div>
-    </section>
-
     <!-- Support / CTA Full-Width Section -->
     <section style="position: relative; min-height: 520px; overflow: hidden; display: flex; align-items: center;">
 
         <!-- Full-Width Background Image -->
-        <img src="assets/images/support-services.jpg" alt="Technical Support"
+        <img src="assets/images/support-services.jpg" alt="Advisory Services"
             style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
 
         <!-- Dark Gradient Overlay (stronger on left) -->
@@ -813,7 +756,7 @@ include 'includes/header.php';
                 </div>
                 <h2 class="universal-section-heading on-dark"
                     style="margin-top: 0; margin-bottom: 8px; color: #ffffff !important;">
-                    Technical Support
+                    Advisory Services
                 </h2>
                 <p
                     style="font-size: 16px; font-weight: 400; line-height: 1.6; color: rgba(255,255,255,0.85); margin-bottom: 35px; max-width: 800px; margin-left: auto; margin-right: auto;">
@@ -821,7 +764,7 @@ include 'includes/header.php';
                     navigate regulatory compliance, and work alongside your teams to resolve complex material and
                     process challenges.
                 </p>
-                <a href="technical-services.php"
+                <a href="advisory-service.php"
                     style="display: inline-block; padding: 14px 32px; background: #0A58CA; color: white; font-weight: 500; font-size: 16px; border-radius: 6px; text-decoration: none;"
                     onmouseover="this.style.background='#0d6efd'" onmouseout="this.style.background='#0A58CA'">
                     View Services
@@ -837,11 +780,12 @@ include 'includes/header.php';
             <div class="universal-section-label">STATE-OF-THE-ART INFRASTRUCTURE</div>
             <h2 class="universal-section-heading" style="margin-top: 0; margin-bottom: 8px;">Labs Built for Accuracy.
                 Equipped for Tomorrow.</h2>
-            <p style="font-size: 16px; font-weight: 400; color: #555; line-height: 1.7;">AKC operates one of India's
+            <p style="font-size: 16px; font-weight: 400; color: #555; line-height: 1.7;">AKC-PTARC operates one of
+                India's
                 most comprehensively
                 equipped research and testing facilities, featuring advanced instrumentation across chemical,
-                mechanical, thermal, electrical, and optical testing domains. Our laboratories are
-                <strong>NABL-accredited</strong> and <strong>ISO 17025 compliant</strong>, ensuring accurate, reliable,
+                mechanical, biological, and electrical testing domains. Our laboratories are
+                <strong>NABL-accredited</strong>, ensuring accurate, reliable,
                 and internationally recognized results across diverse industry sectors.
             </p>
         </div>
@@ -854,136 +798,17 @@ include 'includes/header.php';
                 <div class="universal-section-label on-dark">
                     BUILD CAPABILITY
                 </div>
-                <h2 class="universal-section-heading on-dark" style="margin-top: 0; margin-bottom: 8px;">Training
-                    Programmes That Create
+                <h2 class="universal-section-heading on-dark" style="margin-top: 0; margin-bottom: 8px;">Academic &amp; Upskilling That Create
                     Industry-Ready Experts</h2>
                 <p
                     style="font-size: 16px; font-weight: 400; line-height: 1.65; margin-bottom: 35px; color: rgba(255,255,255,0.9);">
-                    Our
-                    professional training courses are designed in collaboration with industry experts and academic
-                    partners. From foundational polymer science to advanced quality assurance, our programmes prepare
-                    engineers, technicians, and researchers to perform at the highest level.</p>
+                    Industry-driven training programmes, developed with industry experts and academic partners, equipping engineers, technicians and researchers with practical, job-ready skills from polymer science to advanced quality assurance.</p>
                 <a href="training-courses.php" class="btn-view-courses"
                     style="display: inline-block; padding: 14px 35px; background: #0d47a1; color: white; font-weight: 500; font-size: 16px; border-radius: 6px; text-decoration: none;">View
                     Training Courses</a>
             </div>
         </div>
     </section>
-
-    <!-- Vision Section -->
-    <section class="vision-section" style="padding: 95px 20px; background: #fff; border-bottom: 1px solid #eee;">
-        <div style="max-width: 1200px; margin: 0 auto;">
-
-            <!-- Logos and Title -->
-            <div class="reveal" style="text-align: center; margin-bottom: 40px;">
-                <div class="universal-section-label">VISION &amp; PURPOSE</div>
-                <h2 class="universal-section-heading" style="margin-top: 0; margin-bottom: 8px;">Vision</h2>
-            </div>
-
-            <!-- Vision Quote Box -->
-            <div class="reveal-scale"
-                style="background: linear-gradient(135deg, #e3f2fd, #bbdefb); border-radius: 20px; padding: 55px 40px; position: relative; overflow: hidden; margin-bottom: 50px; box-shadow: 0 10px 30px rgba(0,86,179,0.08); text-align: center; border: 1px solid rgba(0,86,179,0.1);">
-                <i class="fa-solid fa-quote-left"
-                    style="position: absolute; top: 20px; left: 30px; font-size: 60px; color: rgba(0,86,179,0.15);"></i>
-
-                <!-- Watermark Text -->
-                <!--<div
-                    style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%) rotate(-90deg); opacity: 0.05; font-size: 50px; font-weight: 900; color: var(--primary-blue); white-space: nowrap; pointer-events: none;">
-                    INNOVATION &nbsp; TESTING &nbsp; SKILLS &nbsp; SUSTAINABILITY
-                </div>-->
-
-                <p
-                    style="font-size: 18px; color: var(--primary-blue); font-weight: 500; line-height: 1.6; max-width: 900px; margin: 0 auto; position: relative; z-index: 1;">
-                    To be a <strong style="font-weight: 600; font-size: 18px;">globally recognized centre of
-                        excellence</strong> in polymer, packaging, and material science, driving innovation,
-                    sustainability and industrial growth through cutting-edge research, testing, training and
-                    collaborative solutions.
-                </p>
-
-                <i class="fa-solid fa-quote-right"
-                    style="position: absolute; bottom: 20px; right: 30px; font-size: 60px; color: rgba(0,86,179,0.15);"></i>
-            </div>
-
-            <!-- 4 Pillars Cards -->
-            <div class="reveal-group"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px;">
-
-                <!-- Card 1 -->
-                <div class="reveal-child"
-                    style="background: linear-gradient(145deg, var(--primary-blue) 0%, #003a8c 100%); color: white; border-radius: 12px; padding: 30px 20px; text-align: center; box-shadow: 0 8px 20px rgba(0,86,179,0.25); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; align-items: center;"
-                    onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 25px rgba(0,86,179,0.35)';"
-                    onmouseout="this.style.transform='none'; this.style.boxShadow='0 8px 20px rgba(0,86,179,0.25)';">
-                    <div
-                        style="background: white; color: var(--primary-blue); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; margin: 0 auto 20px; flex-shrink: 0;">
-                        <i class="fa-solid fa-clipboard-check"></i>
-                    </div>
-                    <h3
-                        style="font-size: 16px; font-weight: 500; color: #ffffff; min-height: 44px; display: flex; align-items: center; justify-content: center; margin-bottom: 8px; line-height: 1.3;">
-                        Quality Control, Testing &amp; Certification</h3>
-                    <p
-                        style="font-size: 14px; margin: 0; color: rgba(255, 255, 255, 0.88) !important; line-height: 1.5; font-weight: 400;">
-                        Reliable
-                        testing. Trusted quality. Global compliance.</p>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="reveal-child"
-                    style="background: linear-gradient(145deg, var(--primary-blue) 0%, #003a8c 100%); color: white; border-radius: 12px; padding: 30px 20px; text-align: center; box-shadow: 0 8px 20px rgba(0,86,179,0.25); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; align-items: center;"
-                    onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 25px rgba(0,86,179,0.35)';"
-                    onmouseout="this.style.transform='none'; this.style.boxShadow='0 8px 20px rgba(0,86,179,0.25)';">
-                    <div
-                        style="background: white; color: var(--primary-blue); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; margin: 0 auto 20px; flex-shrink: 0;">
-                        <i class="fa-solid fa-microscope"></i>
-                    </div>
-                    <h3
-                        style="font-size: 16px; font-weight: 500; color: #ffffff; min-height: 44px; display: flex; align-items: center; justify-content: center; margin-bottom: 8px; line-height: 1.3;">
-                        Applied Research</h3>
-                    <p
-                        style="font-size: 14px; margin: 0; color: rgba(255, 255, 255, 0.88) !important; line-height: 1.5; font-weight: 400;">
-                        Innovative
-                        materials. Real-world solutions.</p>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="reveal-child"
-                    style="background: linear-gradient(145deg, var(--primary-blue) 0%, #003a8c 100%); color: white; border-radius: 12px; padding: 30px 20px; text-align: center; box-shadow: 0 8px 20px rgba(0,86,179,0.25); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; align-items: center;"
-                    onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 25px rgba(0,86,179,0.35)';"
-                    onmouseout="this.style.transform='none'; this.style.boxShadow='0 8px 20px rgba(0,86,179,0.25)';">
-                    <div
-                        style="background: white; color: var(--primary-blue); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; margin: 0 auto 20px; flex-shrink: 0;">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                    </div>
-                    <h3
-                        style="font-size: 16px; font-weight: 500; color: #ffffff; min-height: 44px; display: flex; align-items: center; justify-content: center; margin-bottom: 8px; line-height: 1.3;">
-                        Academic &amp; Upskilling</h3>
-                    <p
-                        style="font-size: 14px; margin: 0; color: rgba(255, 255, 255, 0.88) !important; line-height: 1.5; font-weight: 400;">
-                        Knowledge
-                        today. Skilled tomorrow.</p>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="reveal-child"
-                    style="background: linear-gradient(145deg, var(--primary-blue) 0%, #003a8c 100%); color: white; border-radius: 12px; padding: 30px 20px; text-align: center; box-shadow: 0 8px 20px rgba(0,86,179,0.25); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; align-items: center;"
-                    onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 25px rgba(0,86,179,0.35)';"
-                    onmouseout="this.style.transform='none'; this.style.boxShadow='0 8px 20px rgba(0,86,179,0.25)';">
-                    <div
-                        style="background: white; color: var(--primary-blue); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; margin: 0 auto 20px; flex-shrink: 0;">
-                        <i class="fa-solid fa-cogs"></i>
-                    </div>
-                    <h3
-                        style="font-size: 16px; font-weight: 500; color: #ffffff; min-height: 44px; display: flex; align-items: center; justify-content: center; margin-bottom: 8px; line-height: 1.3;">
-                        Technical Consultancy &amp; Services</h3>
-                    <p
-                        style="font-size: 14px; margin: 0; color: rgba(255, 255, 255, 0.88) !important; line-height: 1.5; font-weight: 400;">
-                        Expertise
-                        for a stronger industry.</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
 
     <!-- Compliance Section -->
     <section class="compliance-section" style="padding: 95px 20px; background: #f4f7fb;">

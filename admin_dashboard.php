@@ -326,6 +326,7 @@ try {
             overflow-y: auto !important;
             max-height: calc(100vh - 180px) !important;
             padding: 20px 25px !important;
+            scrollbar-width: thin;
         }
 
         /* File Upload Area */
@@ -1298,7 +1299,7 @@ try {
 
     <!-- Edit Status Modal -->
     <div id="editModal" class="modal">
-        <div class="modal-content">
+        <div class="modal-content" style="width: 580px; max-width: 95%;">
             <div class="modal-header">
                 <h3>Update Booking Status</h3>
                 <span class="close" onclick="closeModal()">&times;</span>

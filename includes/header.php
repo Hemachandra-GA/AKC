@@ -23,7 +23,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AKC - Packaging Technology & Research Centre</title>
+    <title><?php echo isset($pageTitle) ? $pageTitle : "AKC – Polymer Technology and Applied Research Centre"; ?></title>
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/images/FINAL Logo-Round (2).png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/FINAL Logo-Round (2).png">
@@ -56,12 +56,41 @@
     <link rel="stylesheet" href="assets/css/pe-info-cards.css">
     <link rel="stylesheet" href="assets/css/pe-pricing.css">
     <style>
+        /* HEADER CONTAINER & LAYOUT */
+        .header-container {
+            max-width: 1600px !important;
+            margin: 0 auto !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            padding: 0 clamp(16px, 2vw, 36px) !important;
+            height: 80px !important;
+            gap: 16px !important;
+        }
+
+        .logo {
+            flex-shrink: 0 !important;
+        }
+
+        .logo img {
+            height: 64px !important;
+            width: auto !important;
+            display: block !important;
+        }
+
+        .nav-menu {
+            flex: 1 1 auto !important;
+            display: flex !important;
+            justify-content: center !important;
+            min-width: 0 !important;
+        }
+
         /* MAIN MENU */
         .main-menu {
             display: flex !important;
             flex-direction: row !important;
             align-items: center !important;
-            gap: 32px !important;
+            gap: clamp(12px, 1.4vw, 22px) !important;
             list-style: none !important;
             margin: 0 !important;
             padding: 0 !important;
@@ -69,22 +98,94 @@
 
         .main-menu>li {
             position: relative !important;
+            flex-shrink: 0 !important;
         }
 
         .main-menu>li>a {
             display: flex !important;
             align-items: center !important;
-            gap: 6px !important;
+            gap: 5px !important;
             padding: 24px 0 !important;
             text-decoration: none !important;
-            color: #0f172a !important;
+            color: #1e293b !important;
             font-weight: 600 !important;
-            font-size: 14px !important;
+            font-size: 13px !important;
+            letter-spacing: 0.15px !important;
+            white-space: nowrap !important;
             transition: color 0.2s ease !important;
+        }
+
+        .main-menu>li>a i {
+            font-size: 10px !important;
+            opacity: 0.7 !important;
+            transition: transform 0.2s ease !important;
+        }
+
+        .main-menu>li.dropdown:hover>a i {
+            transform: rotate(180deg) !important;
         }
 
         .main-menu>li>a:hover {
             color: #2563eb !important;
+        }
+
+        /* HEADER ACTIONS & MEMBER LOGIN */
+        .header-actions {
+            flex-shrink: 0 !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 10px !important;
+        }
+
+        .member-login {
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 8px !important;
+            padding: 8px 16px !important;
+            border: 1.5px solid #e2e8f0 !important;
+            border-radius: 8px !important;
+            font-size: 13px !important;
+            font-weight: 600 !important;
+            color: #1c2b3a !important;
+            white-space: nowrap !important;
+            background: #ffffff !important;
+            transition: all 0.25s ease !important;
+        }
+
+        .member-login:hover {
+            background: #f8fafc !important;
+            border-color: #2563eb !important;
+            color: #2563eb !important;
+        }
+
+        .member-login i {
+            font-size: 13px !important;
+        }
+
+        @media (max-width: 1280px) and (min-width: 992px) {
+            .header-container {
+                padding: 0 14px !important;
+                gap: 10px !important;
+            }
+
+            .logo img {
+                height: 56px !important;
+            }
+
+            .main-menu {
+                gap: 10px !important;
+            }
+
+            .main-menu>li>a {
+                font-size: 12px !important;
+                gap: 4px !important;
+            }
+
+            .member-login {
+                padding: 7px 12px !important;
+                font-size: 12px !important;
+                gap: 6px !important;
+            }
         }
 
         /* DESKTOP SUBMENU */
@@ -221,7 +322,7 @@
         <!-- Top Notification Bar -->
         <div class="top-bar">
             <div class="container">
-                One-Stop Solution for Polymer Products
+                Partner in progress
             </div>
         </div>
 
@@ -247,7 +348,7 @@
                             <ul class="submenu">
                                 <li><a href="about.php"><i class="fa-solid fa-building"></i> About AKC-PTARC</a></li>
                                 <li><a href="our-team.php"><i class="fa-solid fa-users"></i> Our team</a></li>
-                                <li><a href="#"><i class="fa-solid fa-vr-cardboard"></i> Virtual tour</a></li>
+                                <li><a href="virtual-tour.php"><i class="fa-solid fa-vr-cardboard"></i> Virtual tour</a></li>
                             </ul>
                         </li>
 
@@ -288,8 +389,9 @@
                             </ul>
                         </li>
 
-                        <li><a href="technical-services.php">Technical Services</a></li>
-                        <li><a href="training-courses.php">Up-skilling Courses</a></li>
+                        <li><a href="advisory-service.php">Advisory Services</a></li>
+                        <li><a href="training-courses.php">Academic &amp; Upskilling</a></li>
+                        <li><a href="#">Applied Research</a></li>
                         <!-- <li><a href="sustainability.php">Sustainability</a></li> (Hidden for now) -->
                         <li><a href="contact-us.php">Contact Us</a></li>
                     </ul>
@@ -297,7 +399,7 @@
 
                 <!-- Action Button -->
                 <div class="header-actions">
-                    <a href="admin_dashboard.php" class="member-login">
+                    <a href="login.php" class="member-login">
                         <i class="fa-solid fa-lock"></i> Member Login
                     </a>
                     <button class="mobile-menu-toggle" id="menuToggleBtn" aria-label="Toggle Menu">
@@ -330,7 +432,7 @@
                     <ul class="submenu">
                         <li><a href="about.php">About AKC-PTARC</a></li>
                         <li><a href="our-team.php">Our team</a></li>
-                        <li><a href="#">Virtual tour</a></li>
+                        <li><a href="virtual-tour.php">Virtual tour</a></li>
                     </ul>
                 </li>
 
@@ -365,13 +467,14 @@
                     </ul>
                 </li>
 
-                <li><a href="technical-services.php">Technical Services</a></li>
-                <li><a href="training-courses.php">Up-skilling Courses</a></li>
+                <li><a href="advisory-service.php">Advisory Services</a></li>
+                <li><a href="training-courses.php">Academic &amp; Upskilling</a></li>
+                <li><a href="#">Applied Research</a></li>
                 <!-- <li><a href="sustainability.php">Sustainability</a></li> (Hidden for now) -->
                 <li><a href="contact-us.php">Contact Us</a></li>
             </ul>
-            <div class="drawer-actions">
-                <a href="admin_dashboard.php" class="member-login">
+            <div class="drawer-actions" style="display: flex; flex-direction: column; gap: 10px;">
+                <a href="login.php" class="member-login" style="justify-content: center;">
                     <i class="fa-solid fa-lock"></i> Member Login
                 </a>
             </div>

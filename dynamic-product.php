@@ -17,7 +17,7 @@ if (!$product) {
 }
 
 $prodName = htmlspecialchars($product['name']);
-$prodDesc = htmlspecialchars($product['description'] ? $product['description'] : "AKC provides comprehensive chemical, mechanical, thermal, and regulatory testing services for " . $prodName . ".");
+$prodDesc = htmlspecialchars($product['description'] ? $product['description'] : "AKC-PTARC provides comprehensive chemical, mechanical, thermal, and regulatory testing services for " . $prodName . ".");
 
 $productItemsMap = [
     'polymer-and-polymeric-products' => ['Plastic Films', 'Plastic Sheets', 'Plastic Laminates', 'Plastic Bottles', 'Plastic Containers', 'Plastic Pipes & Fittings', 'Plastic Rods', 'Plastic Granules/Pellets', 'Plastic Compounds', 'Masterbatches', 'Plastic Caps & Closures', 'Plastic Crates', 'Plastic Bags', 'Plastic Packaging Materials', 'Geomembranes', 'Thermoformed Products', 'Injection Molded Components', 'Blow Molded Products', 'Extruded Profiles', 'Engineering Plastics'],
@@ -50,7 +50,7 @@ $catSlug = isset($_GET['category']) ? trim($_GET['category']) : (isset($_GET['di
 
 // Define the 4 official testing disciplines
 $officialDisciplines = [
-    'Chemical'   => ['id' => 1, 'slug' => 'chemical'],
+    'Chemical' => ['id' => 1, 'slug' => 'chemical'],
     'Mechanical' => ['id' => 2, 'slug' => 'mechanical'],
     'Biological' => ['id' => 4, 'slug' => 'biological'],
     'Electrical' => ['id' => 5, 'slug' => 'electrical']
@@ -94,16 +94,21 @@ $defaultDisciplineTests = [
 ];
 
 // Helper to categorize any test into one of the 4 official disciplines
-function resolveDisciplineName($test) {
-    $dId = (int)($test['discipline_id'] ?? 0);
-    $dName = (string)($test['discipline_name'] ?? '');
-    $dSlug = (string)($test['discipline_slug'] ?? '');
-    $tName = (string)($test['name'] ?? '');
+function resolveDisciplineName($test)
+{
+    $dId = (int) ($test['discipline_id'] ?? 0);
+    $dName = (string) ($test['discipline_name'] ?? '');
+    $dSlug = (string) ($test['discipline_slug'] ?? '');
+    $tName = (string) ($test['name'] ?? '');
 
-    if ($dId === 1 || stripos($dName, 'chem') !== false || stripos($dSlug, 'chem') !== false) return 'Chemical';
-    if ($dId === 2 || stripos($dName, 'mech') !== false || stripos($dSlug, 'mech') !== false) return 'Mechanical';
-    if ($dId === 4 || stripos($dName, 'bio') !== false || stripos($dSlug, 'bio') !== false) return 'Biological';
-    if ($dId === 5 || stripos($dName, 'elec') !== false || stripos($dSlug, 'elec') !== false) return 'Electrical';
+    if ($dId === 1 || stripos($dName, 'chem') !== false || stripos($dSlug, 'chem') !== false)
+        return 'Chemical';
+    if ($dId === 2 || stripos($dName, 'mech') !== false || stripos($dSlug, 'mech') !== false)
+        return 'Mechanical';
+    if ($dId === 4 || stripos($dName, 'bio') !== false || stripos($dSlug, 'bio') !== false)
+        return 'Biological';
+    if ($dId === 5 || stripos($dName, 'elec') !== false || stripos($dSlug, 'elec') !== false)
+        return 'Electrical';
     return null;
 }
 
@@ -127,7 +132,8 @@ try {
             $mappedByDiscipline[$cat][] = $t;
         }
     }
-} catch (Throwable $e) {}
+} catch (Throwable $e) {
+}
 
 // 2. Fetch all tests by discipline from database
 $generalByDiscipline = [];
@@ -146,7 +152,8 @@ try {
             $generalByDiscipline[$cat][] = $t;
         }
     }
-} catch (Throwable $e) {}
+} catch (Throwable $e) {
+}
 
 // 3. Build testsByDiscipline ensuring all 4 categories ALWAYS have complete tests
 $testsByDiscipline = [];
@@ -160,7 +167,8 @@ foreach ($officialDisciplines as $dName => $dMeta) {
 
     // Ensure all 4 categories ALWAYS have rich, complete test cards populated
     if (empty($tests) || count($tests) < 3) {
-        $existingNames = array_map(function($t) { return strtolower($t['name'] ?? ''); }, $tests);
+        $existingNames = array_map(function ($t) {
+            return strtolower($t['name'] ?? ''); }, $tests);
         foreach (($defaultDisciplineTests[$dName] ?? []) as $dt) {
             if (!in_array(strtolower($dt['name']), $existingNames)) {
                 $tests[] = $dt;
@@ -270,64 +278,64 @@ foreach ($allProductsList as $p) {
 
 
 if ($slug === 'polymer-polymeric-products' || $slug === 'polymer-polymeric-products-testing') {
-    $pageTitle = "Polymer & Polymeric Products Testing | Multi-Discipline Compliance Testing - AKC";
-    $metaDescription = "AKC provides NABL-accredited testing across chemical, mechanical, biological, and electrical disciplines for polymers and polymeric products.";
+    $pageTitle = "Polymer & Polymeric Products Testing | Multi-Discipline Compliance Testing - AKC-PTARC";
+    $metaDescription = "AKC-PTARC provides NABL-accredited testing across chemical, mechanical, biological, and electrical disciplines for polymers and polymeric products.";
     $metaKeywords = "polymer testing lab India, NABL polymer testing, polymer compliance testing, polymer chemical testing, polymer mechanical testing India";
 } elseif ($slug === 'textiles-and-textile-products' || $slug === 'textile-textile-products' || $slug === 'textile-textile-products-testing') {
-    $pageTitle = "Textile & Textile Products Testing | Multi-Discipline Compliance Testing - AKC";
-    $metaDescription = "AKC provides NABL-accredited testing across chemical, mechanical, biological, and electrical disciplines for woven and non-woven textiles.";
+    $pageTitle = "Textile & Textile Products Testing | Multi-Discipline Compliance Testing - AKC-PTARC";
+    $metaDescription = "AKC-PTARC provides NABL-accredited testing across chemical, mechanical, biological, and electrical disciplines for woven and non-woven textiles.";
     $metaKeywords = "textile testing lab India, NABL textile testing, textile compliance testing, textile chemical testing, textile mechanical testing India";
 } elseif ($slug === 'leather-leatherite-products' || $slug === 'leather-leatherite-products-testing') {
-    $pageTitle = "Leather & Leatherite Products Testing | Multi-Discipline Compliance Testing - AKC";
-    $metaDescription = "AKC provides NABL-accredited testing across chemical, mechanical, biological, and electrical disciplines for leather and leatherite products.";
+    $pageTitle = "Leather & Leatherite Products Testing | Multi-Discipline Compliance Testing - AKC-PTARC";
+    $metaDescription = "AKC-PTARC provides NABL-accredited testing across chemical, mechanical, biological, and electrical disciplines for leather and leatherite products.";
     $metaKeywords = "leather testing lab India, NABL leather testing, leather compliance testing, leather chemical testing, leather mechanical testing India";
 } elseif ($slug === 'rubber-rubberic-products' || $slug === 'rubber-rubberic-products-testing') {
-    $pageTitle = "Rubber & Rubberic Products Testing | Multi-Discipline Compliance Testing - AKC";
-    $metaDescription = "AKC provides NABL-accredited testing across chemical, mechanical, biological, and electrical disciplines for rubber compounds and rubber products.";
+    $pageTitle = "Rubber & Rubberic Products Testing | Multi-Discipline Compliance Testing - AKC-PTARC";
+    $metaDescription = "AKC-PTARC provides NABL-accredited testing across chemical, mechanical, biological, and electrical disciplines for rubber compounds and rubber products.";
     $metaKeywords = "rubber testing lab India, NABL rubber testing, rubber compliance testing, rubber chemical testing, rubber mechanical testing India";
 } elseif ($slug === 'toys-similar-products' || $slug === 'toys-similar-products-testing') {
-    $pageTitle = "Toys & Similar Products Testing | Multi-Discipline Compliance Testing - AKC";
-    $metaDescription = "AKC provides NABL-accredited testing across chemical, mechanical, biological, and electrical disciplines for toys and similar consumer products.";
+    $pageTitle = "Toys & Similar Products Testing | Multi-Discipline Compliance Testing - AKC-PTARC";
+    $metaDescription = "AKC-PTARC provides NABL-accredited testing across chemical, mechanical, biological, and electrical disciplines for toys and similar consumer products.";
     $metaKeywords = "toy testing lab India, NABL toy testing, EN71 testing India, toy compliance testing, toy chemical testing, toy mechanical testing India";
 } elseif ($slug === 'packaging-specific-products' || $slug === 'packaging-specific-products-testing') {
-    $pageTitle = "Packaging Specific Products Testing | Multi-Discipline Compliance Testing - AKC";
-    $metaDescription = "AKC provides NABL-accredited testing across chemical, mechanical, biological, and electrical disciplines for food-grade and industrial packaging materials.";
+    $pageTitle = "Packaging Specific Products Testing | Multi-Discipline Compliance Testing - AKC-PTARC";
+    $metaDescription = "AKC-PTARC provides NABL-accredited testing across chemical, mechanical, biological, and electrical disciplines for food-grade and industrial packaging materials.";
     $metaKeywords = "packaging testing lab India, NABL packaging testing, food contact material testing, packaging compliance testing, migration testing India, seal strength testing, packaging mechanical testing";
 } elseif ($slug === 'animal-food-feed' || $slug === 'animal-food-feed-testing') {
-    $pageTitle = "Animal Food & Feed Testing | Multi-Discipline Compliance Testing - AKC";
-    $metaDescription = "AKC provides NABL-accredited testing across chemical, mechanical, biological, and electrical disciplines for animal food and feed materials and packaging.";
+    $pageTitle = "Animal Food & Feed Testing | Multi-Discipline Compliance Testing - AKC-PTARC";
+    $metaDescription = "AKC-PTARC provides NABL-accredited testing across chemical, mechanical, biological, and electrical disciplines for animal food and feed materials and packaging.";
     $metaKeywords = "animal feed testing lab India, NABL animal feed testing, feed contaminant testing, heavy metal feed testing, feed packaging testing, animal food compliance testing India";
 } elseif ($slug === 'food-agricultural-products' || $slug === 'food-agricultural-products-testing') {
-    $pageTitle = "Food & Agricultural Products Testing | Multi-Discipline Compliance Testing - AKC";
-    $metaDescription = "AKC provides NABL-accredited testing across chemical, mechanical, biological, and electrical disciplines for food and agricultural products and their packaging.";
+    $pageTitle = "Food & Agricultural Products Testing | Multi-Discipline Compliance Testing - AKC-PTARC";
+    $metaDescription = "AKC-PTARC provides NABL-accredited testing across chemical, mechanical, biological, and electrical disciplines for food and agricultural products and their packaging.";
     $metaKeywords = "food testing lab India, agricultural product testing, NABL food testing, food contact compliance India, food safety testing, FSSAI testing lab, food packaging testing India";
 } elseif ($slug === 'residue-contaminants-in-food' || $slug === 'residue-contaminants-in-food-testing' || $slug === 'residue-contaminants-food') {
-    $pageTitle = "Residue & Contaminants in Food Testing | Multi-Discipline Compliance Testing - AKC";
-    $metaDescription = "AKC provides NABL-accredited testing for residues and contaminants in food - covering pesticide residues, heavy metals, mycotoxins, adulterants, and chemical contaminants per FSSAI, CODEX, EU, and international regulatory standards.";
+    $pageTitle = "Residue & Contaminants in Food Testing | Multi-Discipline Compliance Testing - AKC-PTARC";
+    $metaDescription = "AKC-PTARC provides NABL-accredited testing for residues and contaminants in food - covering pesticide residues, heavy metals, mycotoxins, adulterants, and chemical contaminants per FSSAI, CODEX, EU, and international regulatory standards.";
     $metaKeywords = "food contaminant testing India, pesticide residue testing, NABL food residue testing, mycotoxin testing India, heavy metal food testing, FSSAI contaminant testing, food adulteration testing India";
 } elseif ($slug === 'atmospheric-pollution' || $slug === 'atmospheric-pollution-testing') {
-    $pageTitle = "Atmospheric Pollution Testing | Multi-Discipline Environmental Analysis - AKC";
-    $metaDescription = "AKC provides NABL-accredited atmospheric pollution testing - covering ambient air quality, stack emissions, VOCs, particulate matter, heavy metals in air, and industrial pollutant monitoring per CPCB, MoEFCC, and international environmental standards.";
+    $pageTitle = "Atmospheric Pollution Testing | Multi-Discipline Environmental Analysis - AKC-PTARC";
+    $metaDescription = "AKC-PTARC provides NABL-accredited atmospheric pollution testing - covering ambient air quality, stack emissions, VOCs, particulate matter, heavy metals in air, and industrial pollutant monitoring per CPCB, MoEFCC, and international environmental standards.";
     $metaKeywords = "atmospheric pollution testing India, ambient air quality testing, stack emission testing NABL, VOC air testing India, particulate matter testing, CPCB compliance testing, industrial emission monitoring India";
 } elseif ($slug === 'polymer-polymeric-products' || $slug === 'polymer-polymeric-products-testing') {
-    $pageTitle = "Polymer & Polymeric Products Testing | Multi-Discipline Compliance Testing - AKC";
-    $metaDescription = "AKC provides NABL-accredited testing across chemical, mechanical, biological, and electrical disciplines for polymers and polymeric products.";
+    $pageTitle = "Polymer & Polymeric Products Testing | Multi-Discipline Compliance Testing - AKC-PTARC";
+    $metaDescription = "AKC-PTARC provides NABL-accredited testing across chemical, mechanical, biological, and electrical disciplines for polymers and polymeric products.";
     $metaKeywords = "polymer testing lab India, NABL polymer testing, polymer compliance testing, polymer chemical testing, polymer mechanical testing India";
 } elseif ($slug === 'textile-textile-products' || $slug === 'textile-textile-products-testing') {
-    $pageTitle = "Textile & Textile Products Testing | Multi-Discipline Compliance Testing - AKC";
-    $metaDescription = "AKC provides NABL-accredited testing across chemical, mechanical, biological, and electrical disciplines for woven and non-woven textiles.";
+    $pageTitle = "Textile & Textile Products Testing | Multi-Discipline Compliance Testing - AKC-PTARC";
+    $metaDescription = "AKC-PTARC provides NABL-accredited testing across chemical, mechanical, biological, and electrical disciplines for woven and non-woven textiles.";
     $metaKeywords = "textile testing lab India, NABL textile testing, textile compliance testing, textile chemical testing, textile mechanical testing India";
 } elseif ($slug === 'leather-leatherite-products' || $slug === 'leather-leatherite-products-testing') {
     $pageTitle = "Leather & Leatherite Products Testing | Multi-Discipline Compliance Testing - AKC";
-    $metaDescription = "AKC provides NABL-accredited testing across chemical, mechanical, biological, and electrical disciplines for leather and leatherite products.";
+    $metaDescription = "AKC-PTARC provides NABL-accredited testing across chemical, mechanical, biological, and electrical disciplines for leather and leatherite products.";
     $metaKeywords = "leather testing lab India, NABL leather testing, leather compliance testing, leather chemical testing, leather mechanical testing India";
 } elseif ($slug === 'rubber-rubberic-products' || $slug === 'rubber-rubberic-products-testing') {
-    $pageTitle = "Rubber & Rubberic Products Testing | Multi-Discipline Compliance Testing - AKC";
-    $metaDescription = "AKC provides NABL-accredited testing across chemical, mechanical, biological, and electrical disciplines for rubber compounds and rubber products.";
+    $pageTitle = "Rubber & Rubberic Products Testing | Multi-Discipline Compliance Testing - AKC-PTARC";
+    $metaDescription = "AKC-PTARC provides NABL-accredited testing across chemical, mechanical, biological, and electrical disciplines for rubber compounds and rubber products.";
     $metaKeywords = "rubber testing lab India, NABL rubber testing, rubber compliance testing, rubber chemical testing, rubber mechanical testing India";
 } else {
-    $pageTitle = $prodName . " Testing | Chemical Analysis & Compliance - AKC";
-    $metaDescription = "AKC offers NABL-accredited testing for " . $prodName;
+    $pageTitle = $prodName . " Testing | Chemical Analysis & Compliance - AKC-PTARC";
+    $metaDescription = "AKC-PTARC offers NABL-accredited testing for " . $prodName;
     $metaKeywords = "testing lab India, NABL testing, " . $prodName;
 }
 include 'includes/header.php';
@@ -377,15 +385,14 @@ include 'includes/header.php';
             <div class="pr-section-label">
                 <span class="pr-label-line"></span> Contact Us
             </div>
-            <h2 class="pr-contact-phone"><a href="tel:+918860407220" style="color: inherit; text-decoration: none;">+91
-                    88604 07220</a></h2>
+            <h2 class="pr-contact-phone"><a href="tel:+911234567890" style="color: inherit; text-decoration: none;">+91 12345 67890</a></h2>
             <hr class="pr-card-divider">
             <div class="pr-contact-links">
                 <a href="mailto:info@akc-ptarc.com" class="pr-contact-email" style="text-decoration: none;">
                     <i class="bi bi-envelope"></i> Email Us: info@akc-ptarc.com
                 </a>
             </div>
-            <a href="mailto:info@akc-ptarc.com?subject=Inquiry from <?php echo htmlspecialchars(addslashes($prodName ?? 'Product Page')); ?>"
+            <a href="mailto:info@akc-ptarc.com?subject=Enquiry from <?php echo htmlspecialchars(addslashes($prodName ?? 'Product Page')); ?>"
                 class="pr-btn pr-btn-primary pr-btn-full">Send us a request</a>
         </div>
     </div>
@@ -1082,7 +1089,7 @@ include 'includes/header.php';
     <div class="container">
         <div class="pr-section-label"><span class="pr-label-line"></span> - Related Categories</div>
         <h2 class="pr-section-title">Products for <span class="pr-blue-italic">Testing</span></h2>
-        <p>Explore related chemical testing categories available at AKC:</p>
+        <p>Explore related chemical testing categories available at AKC-PTARC:</p>
 
         <div class="pr-products-grid">
             <div class="pr-product-card">
@@ -1206,7 +1213,8 @@ include 'includes/header.php';
                         <span class="pr-faq-icon active"><i class="bi bi-chevron-up"></i></span>
                     </button>
                     <div class="pr-faq-a">
-                        <p>AKC offers testing for polymer materials and polymeric products across all eight disciplines -
+                        <p>AKC-PTARC offers testing for polymer materials and polymeric products across all eight
+                            disciplines -
                             Chemical, Mechanical, Thermal, Rheological, Optical, Material Characterisation, Biological, and
                             Electrical & Electronics - through a single accredited laboratory platform.</p>
                     </div>
@@ -1239,7 +1247,7 @@ include 'includes/header.php';
                         <span class="pr-faq-icon active"><i class="bi bi-chevron-up"></i></span>
                     </button>
                     <div class="pr-faq-a">
-                        <p>AKC offers testing for textile fibres, yarns, and fabrics across all eight disciplines -
+                        <p>AKC-PTARC offers testing for textile fibres, yarns, and fabrics across all eight disciplines -
                             Chemical, Mechanical, Thermal, Rheological, Optical, Material Characterisation, Biological, and
                             Electrical & Electronics - through a single accredited laboratory platform.</p>
                     </div>
@@ -1272,7 +1280,8 @@ include 'includes/header.php';
                         <span class="pr-faq-icon active"><i class="bi bi-chevron-up"></i></span>
                     </button>
                     <div class="pr-faq-a">
-                        <p>AKC offers testing for leather and leatherite (synthetic leather) materials across all eight
+                        <p>AKC-PTARC offers testing for leather and leatherite (synthetic leather) materials across all
+                            eight
                             disciplines - Chemical, Mechanical, Thermal, Rheological, Optical, Material Characterisation,
                             Biological, and Electrical & Electronics - through a single accredited laboratory platform.</p>
                     </div>
@@ -1305,7 +1314,7 @@ include 'includes/header.php';
                         <span class="pr-faq-icon active"><i class="bi bi-chevron-up"></i></span>
                     </button>
                     <div class="pr-faq-a">
-                        <p>AKC offers testing for rubber compounds and rubber products across all eight disciplines -
+                        <p>AKC-PTARC offers testing for rubber compounds and rubber products across all eight disciplines -
                             Chemical, Mechanical, Thermal, Rheological, Optical, Material Characterisation, Biological, and
                             Electrical & Electronics - through a single accredited laboratory platform.</p>
                     </div>
@@ -1338,7 +1347,7 @@ include 'includes/header.php';
                         <span class="pr-faq-icon active"><i class="bi bi-chevron-up"></i></span>
                     </button>
                     <div class="pr-faq-a">
-                        <p>AKC offers testing for toys and similar products across all eight disciplines - Chemical,
+                        <p>AKC-PTARC offers testing for toys and similar products across all eight disciplines - Chemical,
                             Mechanical, Thermal, Rheological, Optical, Material Characterisation, Biological, and Electrical
                             & Electronics - through a single accredited laboratory platform.</p>
                     </div>
@@ -1371,7 +1380,7 @@ include 'includes/header.php';
                         <span class="pr-faq-icon active"><i class="bi bi-chevron-up"></i></span>
                     </button>
                     <div class="pr-faq-a">
-                        <p>AKC offers testing for packaging specific products across all eight disciplines - Chemical,
+                        <p>AKC-PTARC offers testing for packaging specific products across all eight disciplines - Chemical,
                             Mechanical, Thermal, Rheological, Optical, Material Characterisation, Biological, and Electrical
                             & Electronics - through a single accredited laboratory platform.</p>
                     </div>
@@ -1404,7 +1413,8 @@ include 'includes/header.php';
                         <span class="pr-faq-icon active"><i class="bi bi-chevron-up"></i></span>
                     </button>
                     <div class="pr-faq-a">
-                        <p>AKC offers testing for residues and contaminants in food across all eight disciplines - Chemical,
+                        <p>AKC-PTARC offers testing for residues and contaminants in food across all eight disciplines -
+                            Chemical,
                             Mechanical, Thermal, Rheological, Optical, Material Characterisation, Biological, and Electrical
                             & Electronics - through a single accredited laboratory platform.</p>
                     </div>
@@ -1437,7 +1447,8 @@ include 'includes/header.php';
                         <span class="pr-faq-icon active"><i class="bi bi-chevron-up"></i></span>
                     </button>
                     <div class="pr-faq-a">
-                        <p>AKC offers testing for atmospheric pollution samples and environmental matrices across all eight
+                        <p>AKC-PTARC offers testing for atmospheric pollution samples and environmental matrices across all
+                            eight
                             disciplines - Chemical, Mechanical, Thermal, Rheological, Optical, Material Characterisation,
                             Biological, and Electrical & Electronics - through a single accredited laboratory platform.</p>
                     </div>
@@ -1470,7 +1481,7 @@ include 'includes/header.php';
                         <span class="pr-faq-icon active"><i class="bi bi-chevron-up"></i></span>
                     </button>
                     <div class="pr-faq-a">
-                        <p>AKC provides a full spectrum of chemical testing services including chemical composition
+                        <p>AKC-PTARC provides a full spectrum of chemical testing services including chemical composition
                             analysis, restricted substance testing (REACH, RoHS, Prop 65), polymer and material testing,
                             contaminant screening, heavy metal analysis, formulation testing, and regulatory compliance
                             certification. Our accredited laboratories are equipped to handle a wide range of sample types
@@ -1490,11 +1501,11 @@ include 'includes/header.php';
                 </div>
                 <div class="pr-faq-item">
                     <button class="pr-faq-q">
-                        Do AKC laboratories follow international standards?
+                        Do AKC-PTARC laboratories follow international standards?
                         <span class="pr-faq-icon"><i class="bi bi-chevron-down"></i></span>
                     </button>
                     <div class="pr-faq-a" style="display:none;">
-                        <p>Yes. All testing at AKC is performed in accordance with ISO, ASTM, REACH, EN 71, FDA, and
+                        <p>Yes. All testing at AKC-PTARC is performed in accordance with ISO, ASTM, REACH, EN 71, FDA, and
                             NABL-accredited methodologies, ensuring results are accepted by regulators, certification
                             bodies, and international buyers.</p>
                     </div>
@@ -1505,7 +1516,8 @@ include 'includes/header.php';
                         <span class="pr-faq-icon"><i class="bi bi-chevron-down"></i></span>
                     </button>
                     <div class="pr-faq-a" style="display:none;">
-                        <p>Yes. AKC issues NABL-formatted test and certification reports suitable for product certification
+                        <p>Yes. AKC-PTARC issues NABL-formatted test and certification reports suitable for product
+                            certification
                             submissions, regulatory filings, customer quality audits, and import-export compliance.</p>
                     </div>
                 </div>

@@ -81,13 +81,15 @@ header {
 .member-login {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 10px 22px;
+    gap: 8px;
+    padding: 8px 16px;
     border: 1.5px solid #e5e7eb;
     border-radius: 8px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     color: #1c2b3a;
+    white-space: nowrap;
+    flex-shrink: 0;
     transition: all 0.3s ease;
 }
 

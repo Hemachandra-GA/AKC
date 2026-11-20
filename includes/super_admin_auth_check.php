@@ -9,7 +9,7 @@ header("Cache-Control: post-check=0, pre-check=0", false);
 header("Pragma: no-cache");
 
 if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true || $_SESSION['role'] !== 'super_admin') {
-    header("Location: ../login.php");
+    header("Location: ../admin_login.php");
     exit();
 }
 ?>

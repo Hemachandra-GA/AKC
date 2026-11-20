@@ -256,8 +256,8 @@
 
             <!-- Left Side: Features -->
             <div class="reveal-left">
-                <div class="pr-section-label"><span class="pr-label-line"></span> Book a Test</div>
-                <h2 class="pr-section-title">Request <span class="pr-blue">a Test</span></h2>
+                <div class="pr-section-label"><span class="pr-label-line"></span> ENQUIRY</div>
+                <h2 class="pr-section-title">Send Us <span class="pr-blue">an Enquiry</span></h2>
                 <p style="font-size: 16px; color: #555; margin-top: 0; margin-bottom: 40px; line-height: 1.7;">Ash
                     Provides comprehensive support services tailored to your needs, ensuring high quality, safety, and
                     regulatory compliance across multiple industry sectors.</p>
@@ -425,7 +425,7 @@
                     </div>
 
                     <button type="button" class="pr-btn pr-btn-primary pr-btn-full"
-                        style="padding: 16px; font-size: 16px;">Book a Test</button>
+                        style="padding: 16px; font-size: 16px;">Submit Enquiry</button>
                 </form>
             </div>
 

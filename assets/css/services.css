@@ -26,8 +26,8 @@
     margin: 0 auto;
     padding: 0 40px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
     position: relative;
     z-index: 2;
 }
@@ -110,17 +110,18 @@
 }
 
 .card-content h3 {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 500;
     line-height: 1.25;
-    max-width: 300px;
+    max-width: 260px;
     margin: 0 auto;
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
     .services-container {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
     }
 }
 

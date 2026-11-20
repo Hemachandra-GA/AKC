@@ -6,3 +6,5 @@ scratch/
 before/
 .env.local
 *-journal
+
+.vercel

@@ -1,7 +1,7 @@
 <?php
-$pageTitle = "About AKC | India's Premier Polymer & Packaging Research Centre – UFlex";
-$metaDescription = "AKC is a UFlex initiative and India's leading multidisciplinary polymer testing, R&D, and training centre. Discover our vision, mission, core values, and the team behind our scientific excellence.";
-$metaKeywords = "about AKC, polymer research centre India, UFlex testing centre, AKC vision mission, packaging technology research, NABL lab India";
+$pageTitle = "About AKC-PTARC | India's Premier Polymer Technology & Applied Research Centre – UFlex";
+$metaDescription = "AKC-PTARC is a UFlex initiative and India's leading multidisciplinary polymer testing, R&D, and training centre. Discover our vision, mission, core values, and the team behind our scientific excellence.";
+$metaKeywords = "about AKC, polymer research centre India, UFlex testing centre, AKC-PTARC vision mission, packaging technology research, NABL lab India";
 include 'includes/header.php';
 ?>
 
@@ -14,7 +14,7 @@ include 'includes/header.php';
         <div class="hero-overlay"></div>
         <div class="hero-content" style="max-width: 1050px;">
             <div class="badge">
-                <i class="fa-solid fa-shield-halved"></i> ABOUT AKC
+                <i class="fa-solid fa-shield-halved"></i> ABOUT AKC-PTARC
             </div>
             <h1 style="font-size: 36px; font-weight: 600;">Your Trusted Partner in Polymer Science, Testing & Industrial
                 Innovation</h1>
@@ -67,75 +67,192 @@ include 'includes/header.php';
     </section>
 
     <!-- Who We Are Section -->
+    <style>
+        .trusted-partner {
+            padding: 90px 0;
+            background: #ffffff;
+        }
+
+        .trusted-grid {
+            display: grid !important;
+            grid-template-columns: 0.95fr 1.15fr !important;
+            gap: 55px !important;
+            align-items: stretch !important;
+        }
+
+        .trusted-image-col {
+            display: flex !important;
+            height: 100% !important;
+        }
+
+        .trusted-image-col .image-wrapper {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+            width: 100%;
+            height: 100%;
+            min-height: 460px;
+            display: flex;
+        }
+
+        .trusted-image-col .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            aspect-ratio: auto !important;
+        }
+
+        .trusted-content-col {
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+        }
+
+        .highlight-principles {
+            background: #eff6ff;
+            color: #0d47a1;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            border-bottom: 2px solid #2563eb;
+        }
+
+        .story-pillars-strip {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .story-pillar-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .story-pillar-item .pillar-icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 12px;
+            background: #eff6ff;
+            border: 1.5px solid #bfdbfe;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 19px;
+            color: #0d47a1;
+            transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+        }
+
+        .story-pillar-item:hover .pillar-icon {
+            transform: translateY(-2px);
+            background: #0d47a1;
+            border-color: #0d47a1;
+            color: #ffffff;
+        }
+
+        .story-pillar-item .pillar-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.25;
+        }
+
+        .story-pillar-item .pillar-text strong {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .story-pillar-item .pillar-text span {
+            font-size: 13px;
+            font-weight: 600;
+            color: #475569;
+        }
+
+        @media (max-width: 991px) {
+            .trusted-grid {
+                grid-template-columns: 1fr !important;
+                gap: 40px !important;
+            }
+
+            .trusted-image-col .image-wrapper {
+                min-height: 380px;
+                max-height: 440px;
+            }
+
+            .story-pillars-strip {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .story-pillars-strip {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
     <section id="our-story" class="trusted-partner">
         <div class="container">
             <div class="trusted-grid reveal-group">
                 <div class="trusted-image-col reveal-left">
                     <div class="image-wrapper">
-                        <img src="assets/images/about_handshake.png" alt="AKC Packaging Technology & Research Centre">
+                        <img src="assets/images/about_handshake.png"
+                            alt="AKC-PTARC Polymer Technology & Applied Research Centre">
                     </div>
                 </div>
                 <div class="trusted-content-col reveal-right">
                     <div class="section-badge">
                         <span class="line"></span> OUR STORY
                     </div>
-                    <h2 style="font-size: 32px; font-weight: 600; margin-top: 0; margin-bottom: 8px;">Established to
-                        Solve. Built to Excel.</h2>
-                    <p class="lead" style="font-size: 16px; line-height: 1.7;">AKC – Polymer Technology and Research
-                        Centre was established as an independent
-                        multidisciplinary platform for advanced testing, material characterization, research,
-                        innovation, and industry-focused training. Built on the principles of <strong>independence,
-                            impartiality, and technical excellence</strong>, AKC brings together scientific expertise
-                        and state-of-the-art infrastructure under one accredited roof.</p>
-                    <p style="font-size: 16px; line-height: 1.7;">We bridge the gap between industry requirements and
-                        reliable technical solutions by combining
-                        advanced laboratory facilities with applied research and practical learning. Serving industries,
-                        academic institutions, startups, and government organizations, AKC delivers trusted testing,
-                        certification, and technical services that support quality, compliance, and innovation across
-                        diverse sectors.</p>
+                    <h2 style="font-size: 32px; font-weight: 600; margin-top: 0; margin-bottom: 12px; color: #081D33;">Established to Solve. Built to Excel.</h2>
+                    <p class="lead" style="font-size: 16px; line-height: 1.75; color: #334155; margin-top: 0; margin-bottom: 18px;">
+                        Established as an independent, multidisciplinary centre, AKC-PTARC brings together advanced testing, research, innovation and industry-focused training under one roof. Built on the principles of <span class="highlight-principles">independence, impartiality and technical excellence</span>, we combine scientific expertise with state-of-the-art infrastructure to deliver trusted solutions.
+                    </p>
+                    <p style="font-size: 16px; line-height: 1.75; color: #475569; margin-bottom: 10px;">
+                        Bridging industry needs with scientific capabilities, we serve manufacturers, academic institutions, startups and government organisations through reliable testing, certification, technical advisory and applied research—driving quality, compliance and innovation across diverse sectors.
+                    </p>
 
-                    <div class="trusted-features">
-                        <div class="feature-box">
-                            <i class="fa-solid fa-certificate"></i>
-                            <div>
-                                <h4>NABL-Accredited Laboratories</h4>
-                                <span style="display:block; margin-top:5px;">Every test result is backed by rigorous
-                                    quality management systems and international accreditation you can rely on for
-                                    regulatory submissions.</span>
+                    <div class="story-pillars-strip">
+                        <div class="story-pillar-item">
+                            <div class="pillar-icon">
+                                <i class="fa-solid fa-microscope"></i>
+                            </div>
+                            <div class="pillar-text">
+                                <strong>Advanced</strong>
+                                <span>Testing</span>
                             </div>
                         </div>
-                        <div class="feature-box">
-                            <i class="fa-solid fa-microscope"></i>
-                            <div>
-                                <h4>Advanced Testing Methods</h4>
-                                <span style="display:block; margin-top:5px;">Our labs use state-of-the-art analytical
-                                    instruments — from GC-MS and FTIR to electron microscopy and thermal analysis
-                                    systems.</span>
+                        <div class="story-pillar-item">
+                            <div class="pillar-icon">
+                                <i class="fa-solid fa-flask-vial"></i>
+                            </div>
+                            <div class="pillar-text">
+                                <strong>Applied</strong>
+                                <span>Research</span>
                             </div>
                         </div>
-                        <div class="feature-box">
-                            <i class="fa-solid fa-bolt"></i>
-                            <div>
-                                <h4>Fast Turnaround</h4>
-                                <span style="display:block; margin-top:5px;">We understand your production timelines.
-                                    Our processes are designed to deliver accurate results without unnecessary
-                                    delays.</span>
+                        <div class="story-pillar-item">
+                            <div class="pillar-icon">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <div class="pillar-text">
+                                <strong>Industry-Focused</strong>
+                                <span>Training</span>
                             </div>
                         </div>
-                        <div class="feature-box">
-                            <i class="fa-solid fa-handshake-angle"></i>
-                            <div>
-                                <h4>End-to-End Support</h4>
-                                <span style="display:block; margin-top:5px;">From enquiry to report to regulatory
-                                    compliance — our team stays with you through every step of the process.</span>
+                        <div class="story-pillar-item">
+                            <div class="pillar-icon">
+                                <i class="fa-solid fa-clipboard-check"></i>
                             </div>
-                        </div>
-                        <div class="feature-box">
-                            <i class="fa-solid fa-bolt-lightning"></i>
-                            <div>
-                                <h4>Express Testing</h4>
-                                <span style="display:block; margin-top:5px;">Express testing available on a priority
-                                    basis, subject to availability of slots.</span>
+                            <div class="pillar-text">
+                                <strong>Trusted</strong>
+                                <span>Certification</span>
                             </div>
                         </div>
                     </div>
@@ -155,19 +272,10 @@ include 'includes/header.php';
                     Between Industry and Science</h2>
                 <p
                     style="font-size: 16px; max-width: 1000px; margin: 0 auto 20px; color: var(--text-muted); line-height: 1.7;">
-                    India's
-                    rapidly evolving industries require reliable testing, certification, and technical services to meet
-                    growing quality, safety, and compliance standards. However, access to advanced infrastructure and
-                    trusted technical expertise remains limited, creating challenges for industries, researchers, and
-                    academic institutions alike.</p>
+                    As industries face increasingly stringent quality, safety and compliance requirements, access to reliable testing and technical expertise remains a challenge. AKC bridges this gap by bringing industry, academia and research together on a common platform.</p>
                 <p
                     style="font-size: 16px; max-width: 1000px; margin: 0 auto 50px; color: var(--text-muted); line-height: 1.7;">
-                    AKC was
-                    established to bridge these gaps by serving as a common platform for industry, academia, and
-                    research. As an <strong>independent, impartial, and confidential</strong> organization, AKC provides
-                    <strong>metrologically traceable testing</strong> and technical services with <strong>digital sample
-                        tracking</strong>, ensuring accuracy, transparency, and reliability across diverse industry
-                    sectors.
+                    Built on the principles of <strong>independence, impartiality and confidentiality</strong>, AKC delivers <strong>metrologically traceable testing</strong> and technical services, backed by <strong>digital sample tracking</strong> for accuracy, transparency and reliability.
                 </p>
             </div>
 
@@ -537,54 +645,93 @@ include 'includes/header.php';
     </section>
 
     <!-- Core Values Section -->
-    <section class="core-values" style="background: var(--bg-light);">
+    <section class="core-values" style="background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%); padding: 85px 0;">
         <div class="container">
-            <div class="section-header center reveal">
+            <div class="section-header center reveal" style="text-align: center; margin-bottom: 35px;">
                 <div class="section-badge center">
                     <span class="line"></span> WHAT WE STAND FOR
                 </div>
-                <h2 style="font-size: 32px; font-weight: 600; color: #081D33; margin-top: 0; margin-bottom: 8px;">Our
-                    Core Values</h2>
-                <p style="font-size: 16px; line-height: 1.7; margin-top: 0;">Principles that guide our work and ensure
-                    we consistently deliver<br>excellence to every client.</p>
+                <h2 style="font-size: 34px; font-weight: 800; color: #081D33; margin-top: 0; margin-bottom: 0;">Our Core Values</h2>
             </div>
 
             <div class="values-grid reveal-group">
                 <div class="value-card reveal-child">
-                    <div class="icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                    <div class="value-icon-circle">
+                        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#081D33" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 3v18"/>
+                            <path d="M6 7l6-2 6 2"/>
+                            <path d="M6 7l-3 6h6l-3-6z"/>
+                            <path d="M18 7l-3 6h6l-3-6z"/>
+                            <path d="M8 21h8"/>
+                        </svg>
+                        <span class="badge-check"><i class="fa-solid fa-check"></i></span>
+                    </div>
                     <h3>Integrity</h3>
-                    <p>We uphold complete transparency in our processes, reporting, and client relationships. Every
-                        result we issue reflects our commitment to scientific honesty.</p>
                 </div>
+
                 <div class="value-card reveal-child">
-                    <div class="icon"><i class="fa-solid fa-crosshairs"></i></div>
+                    <div class="value-icon-circle">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#081D33" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="9"/>
+                            <circle cx="12" cy="12" r="5" stroke="#60A5FA"/>
+                            <circle cx="12" cy="12" r="1.5" fill="#0A58CA" stroke="#0A58CA"/>
+                            <path d="M21 3l-7.5 7.5" stroke="#0A58CA" stroke-width="2"/>
+                            <path d="M17 3h4v4" stroke="#0A58CA" stroke-width="1.8"/>
+                        </svg>
+                    </div>
                     <h3>Precision</h3>
-                    <p>Our work demands exactness. We apply meticulous attention to detail across every test,
-                        calibration, and analysis we perform.</p>
                 </div>
+
                 <div class="value-card reveal-child">
-                    <div class="icon"><i class="fa-regular fa-lightbulb"></i></div>
+                    <div class="value-icon-circle">
+                        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#081D33" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 18h6"/>
+                            <path d="M10 21h4"/>
+                            <path d="M12 2v2" stroke="#0A58CA"/>
+                            <path d="M12 6a4.5 4.5 0 0 0-2.8 8c.6.5.8 1.1.8 1.8h4c0-.7.2-1.3.8-1.8A4.5 4.5 0 0 0 12 6z"/>
+                            <path d="M5 5l1.5 1.5" stroke="#0A58CA"/>
+                            <path d="M19 5l-1.5 1.5" stroke="#0A58CA"/>
+                            <path d="M2 12h2" stroke="#0A58CA"/>
+                            <path d="M20 12h2" stroke="#0A58CA"/>
+                        </svg>
+                    </div>
                     <h3>Innovation</h3>
-                    <p>We continuously advance our methods, adopt emerging technologies, and support novel research to
-                        stay ahead of evolving industry needs.</p>
                 </div>
+
                 <div class="value-card reveal-child">
-                    <div class="icon"><i class="fa-solid fa-shield-cat"></i></div>
+                    <div class="value-icon-circle">
+                        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#081D33" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="M9 12l2 2 4-4" stroke="#0A58CA" stroke-width="2.2"/>
+                        </svg>
+                    </div>
                     <h3>Safety</h3>
-                    <p>Laboratory and operational safety is non-negotiable. We maintain strict protocols to protect our
-                        teams, clients, and the environment.</p>
                 </div>
+
                 <div class="value-card reveal-child">
-                    <div class="icon"><i class="fa-regular fa-handshake"></i></div>
+                    <div class="value-icon-circle">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#081D33" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M11 15h2"/>
+                            <path d="M6.8 11.5l2.7-2.7a2 2 0 0 1 2.8 0L14 10.5l4-4a2 2 0 0 1 2.8 0l1.2 1.2"/>
+                            <path d="M2 13.5l1.2-1.2a2 2 0 0 1 2.8 0L10 16.3l1.5-1.5"/>
+                            <path d="M14 14l2.5 2.5a2 2 0 0 0 2.8 0l2.7-2.7"/>
+                            <path d="M9 3.5l.6 1.5" stroke="#0A58CA" stroke-width="1.6"/>
+                            <path d="M12 2v2" stroke="#0A58CA" stroke-width="1.6"/>
+                            <path d="M15 3.5l-.6 1.5" stroke="#0A58CA" stroke-width="1.6"/>
+                        </svg>
+                    </div>
                     <h3>Customer Commitment</h3>
-                    <p>Our clients' timelines, compliance goals, and business objectives are our priorities. We deliver
-                        to their needs, not just to standard protocols.</p>
                 </div>
+
                 <div class="value-card reveal-child">
-                    <div class="icon"><i class="fa-solid fa-wrench"></i></div>
+                    <div class="value-icon-circle">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#081D33" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+                            <circle cx="12" cy="12" r="7"/>
+                            <polygon points="12 8.5 13.1 10.7 15.5 11.1 13.8 12.7 14.2 15.1 12 14 9.8 15.1 10.2 12.7 8.5 11.1 10.9 10.7 12 8.5" fill="#0A58CA" stroke="#0A58CA" stroke-width="0.8"/>
+                        </svg>
+                    </div>
                     <h3>Technical Excellence</h3>
-                    <p>We invest in expertise — continuously training our scientists and upgrading our facilities to
-                        maintain the highest technical standards.</p>
                 </div>
             </div>
         </div>
@@ -608,72 +755,61 @@ include 'includes/header.php';
             </div>
 
             <div class="reveal-group"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px;">
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px;">
                 <!-- Card 1: Certified Industry Experts -->
                 <div class="reveal-child"
-                    style="background: linear-gradient(135deg, #0A58CA 0%, #081D33 100%); border-radius: 16px; padding: 35px 30px; color: #ffffff; box-shadow: 0 10px 25px rgba(8,29,51,0.12); display: flex; flex-direction: column; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.1);"
+                    style="background: linear-gradient(135deg, #0A58CA 0%, #081D33 100%); border-radius: 16px; padding: 32px 26px; color: #ffffff; box-shadow: 0 10px 25px rgba(8,29,51,0.12); display: flex; flex-direction: column; justify-content: space-between; min-height: 180px; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.1);"
                     onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 18px 35px rgba(10,88,202,0.3)';"
                     onmouseout="this.style.transform='none'; this.style.boxShadow='0 10px 25px rgba(8,29,51,0.12)';">
                     <div
-                        style="width: 60px; height: 60px; border-radius: 12px; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin-bottom: 25px; color: #ffffff; border: 1px solid rgba(255,255,255,0.2);">
+                        style="width: 56px; height: 56px; border-radius: 12px; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 1.65rem; margin-bottom: 22px; color: #ffffff; border: 1px solid rgba(255,255,255,0.2);">
                         <i class="fa-solid fa-user-check"></i>
                     </div>
                     <h3
-                        style="font-size: 20px; font-weight: 600; margin-bottom: 15px; color: #ffffff; line-height: 1.3;">
+                        style="font-size: 20px; font-weight: 600; margin: 0; color: #ffffff; line-height: 1.35;">
                         Certified Industry Experts</h3>
-                    <p style="font-size: 0.95rem; line-height: 1.65; color: rgba(255,255,255,0.9); margin: 0;">Our team
-                        holds 30+ nationally and internationally recognized certifications across testing disciplines.
-                    </p>
                 </div>
 
                 <!-- Card 2: Advanced Testing Methods -->
                 <div class="reveal-child"
-                    style="background: linear-gradient(135deg, #0A58CA 0%, #081D33 100%); border-radius: 16px; padding: 35px 30px; color: #ffffff; box-shadow: 0 10px 25px rgba(8,29,51,0.12); display: flex; flex-direction: column; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.1);"
+                    style="background: linear-gradient(135deg, #0A58CA 0%, #081D33 100%); border-radius: 16px; padding: 32px 26px; color: #ffffff; box-shadow: 0 10px 25px rgba(8,29,51,0.12); display: flex; flex-direction: column; justify-content: space-between; min-height: 180px; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.1);"
                     onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 18px 35px rgba(10,88,202,0.3)';"
                     onmouseout="this.style.transform='none'; this.style.boxShadow='0 10px 25px rgba(8,29,51,0.12)';">
                     <div
-                        style="width: 60px; height: 60px; border-radius: 12px; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin-bottom: 25px; color: #ffffff; border: 1px solid rgba(255,255,255,0.2);">
+                        style="width: 56px; height: 56px; border-radius: 12px; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 1.65rem; margin-bottom: 22px; color: #ffffff; border: 1px solid rgba(255,255,255,0.2);">
                         <i class="fa-solid fa-flask-vial"></i>
                     </div>
                     <h3
-                        style="font-size: 20px; font-weight: 600; margin-bottom: 15px; color: #ffffff; line-height: 1.3;">
+                        style="font-size: 20px; font-weight: 600; margin: 0; color: #ffffff; line-height: 1.35;">
                         Advanced Testing Methods</h3>
-                    <p style="font-size: 0.95rem; line-height: 1.65; color: rgba(255,255,255,0.9); margin: 0;">
-                        State-of-the-art laboratory infrastructure with cutting-edge precision instruments and validated
-                        processes.</p>
                 </div>
 
                 <!-- Card 3: Fast Turnaround -->
                 <div class="reveal-child"
-                    style="background: linear-gradient(135deg, #0A58CA 0%, #081D33 100%); border-radius: 16px; padding: 35px 30px; color: #ffffff; box-shadow: 0 10px 25px rgba(8,29,51,0.12); display: flex; flex-direction: column; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.1);"
+                    style="background: linear-gradient(135deg, #0A58CA 0%, #081D33 100%); border-radius: 16px; padding: 32px 26px; color: #ffffff; box-shadow: 0 10px 25px rgba(8,29,51,0.12); display: flex; flex-direction: column; justify-content: space-between; min-height: 180px; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.1);"
                     onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 18px 35px rgba(10,88,202,0.3)';"
                     onmouseout="this.style.transform='none'; this.style.boxShadow='0 10px 25px rgba(8,29,51,0.12)';">
                     <div
-                        style="width: 60px; height: 60px; border-radius: 12px; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin-bottom: 25px; color: #ffffff; border: 1px solid rgba(255,255,255,0.2);">
+                        style="width: 56px; height: 56px; border-radius: 12px; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 1.65rem; margin-bottom: 22px; color: #ffffff; border: 1px solid rgba(255,255,255,0.2);">
                         <i class="fa-solid fa-bolt-lightning"></i>
                     </div>
                     <h3
-                        style="font-size: 20px; font-weight: 600; margin-bottom: 15px; color: #ffffff; line-height: 1.3;">
+                        style="font-size: 20px; font-weight: 600; margin: 0; color: #ffffff; line-height: 1.35;">
                         Fast Turnaround</h3>
-                    <p style="font-size: 0.95rem; line-height: 1.65; color: rgba(255,255,255,0.9); margin: 0;">Rapid
-                        48-72 hour reporting cycles without compromising on accuracy or detail quality.</p>
                 </div>
 
                 <!-- Card 4: End-to-End Support -->
                 <div class="reveal-child"
-                    style="background: linear-gradient(135deg, #0A58CA 0%, #081D33 100%); border-radius: 16px; padding: 35px 30px; color: #ffffff; box-shadow: 0 10px 25px rgba(8,29,51,0.12); display: flex; flex-direction: column; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.1);"
+                    style="background: linear-gradient(135deg, #0A58CA 0%, #081D33 100%); border-radius: 16px; padding: 32px 26px; color: #ffffff; box-shadow: 0 10px 25px rgba(8,29,51,0.12); display: flex; flex-direction: column; justify-content: space-between; min-height: 180px; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.1);"
                     onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 18px 35px rgba(10,88,202,0.3)';"
                     onmouseout="this.style.transform='none'; this.style.boxShadow='0 10px 25px rgba(8,29,51,0.12)';">
                     <div
-                        style="width: 60px; height: 60px; border-radius: 12px; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin-bottom: 25px; color: #ffffff; border: 1px solid rgba(255,255,255,0.2);">
+                        style="width: 56px; height: 56px; border-radius: 12px; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 1.65rem; margin-bottom: 22px; color: #ffffff; border: 1px solid rgba(255,255,255,0.2);">
                         <i class="fa-solid fa-headset"></i>
                     </div>
                     <h3
-                        style="font-size: 20px; font-weight: 600; margin-bottom: 15px; color: #ffffff; line-height: 1.3;">
+                        style="font-size: 20px; font-weight: 600; margin: 0; color: #ffffff; line-height: 1.35;">
                         End-to-End Support</h3>
-                    <p style="font-size: 0.95rem; line-height: 1.65; color: rgba(255,255,255,0.9); margin: 0;">From
-                        consultation and testing through to reporting and post-audit support, we're with you throughout.
-                    </p>
                 </div>
             </div>
         </div>
@@ -758,17 +894,6 @@ include 'includes/header.php';
             </div>
 
             <div class="industries-grid reveal-group">
-                <a href="dynamic-discipline.php?slug=mechanical" class="industry-card reveal-child"
-                    style="text-decoration: none; color: inherit; display: block; cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                    <div class="ind-icon-wrap"><i class="fa-solid fa-gear" style="color: #94A3B8;"></i></div>
-                    <h3 style="color: var(--dark-blue);">Mechanical Testing</h3>
-                    <p>Tensile strength, hardness, fatigue, impact resistance, and structural integrity testing using
-                        precision instruments and ASTM/ISO methods.</p>
-                    <div class="pills">
-                        <span>Tensile</span><span>Hardness</span>
-                        <span>Fatigue</span><span>Impact</span>
-                    </div>
-                </a>
                 <a href="dynamic-discipline.php?slug=chemical" class="industry-card reveal-child"
                     style="text-decoration: none; color: inherit; display: block; cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease;">
                     <div class="ind-icon-wrap"><i class="fa-solid fa-flask" style="color: #10B981;"></i></div>
@@ -778,6 +903,17 @@ include 'includes/header.php';
                     <div class="pills">
                         <span>Composition</span><span>Corrosion</span>
                         <span>Elemental</span><span>Polymer</span>
+                    </div>
+                </a>
+                <a href="dynamic-discipline.php?slug=mechanical" class="industry-card reveal-child"
+                    style="text-decoration: none; color: inherit; display: block; cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="ind-icon-wrap"><i class="fa-solid fa-gear" style="color: #94A3B8;"></i></div>
+                    <h3 style="color: var(--dark-blue);">Mechanical Testing</h3>
+                    <p>Tensile strength, hardness, fatigue, impact resistance, and structural integrity testing using
+                        precision instruments and ASTM/ISO methods.</p>
+                    <div class="pills">
+                        <span>Tensile</span><span>Hardness</span>
+                        <span>Fatigue</span><span>Impact</span>
                     </div>
                 </a>
                 <a href="dynamic-discipline.php?slug=biological" class="industry-card reveal-child"
@@ -816,7 +952,7 @@ include 'includes/header.php';
                 <h2 style="font-size: 32px; font-weight: 600; color: #ffffff; margin-top: 0; margin-bottom: 8px;">Our
                     Testing Process</h2>
                 <p style="font-size: 16px; line-height: 1.7; color: rgba(255, 255, 255, 0.7); margin-top: 0;">From
-                    inquiry to report — a transparent, structured workflow
+                    enquiry to report — a transparent, structured workflow
                     designed<br>around your needs.</p>
             </div>
 
@@ -824,7 +960,7 @@ include 'includes/header.php';
                 <!-- Row 1 -->
                 <div class="process-step reveal-child">
                     <div class="step-badge">1</div>
-                    <h4>Fill the Inquiry Form</h4>
+                    <h4>Fill the Enquiry Form</h4>
                     <p>Submit your testing requirements through our contact form — specifying materials, standards,
                         timelines, and any special conditions.</p>
                 </div>
@@ -887,7 +1023,7 @@ include 'includes/header.php';
                     <h2 style="font-size: 32px; font-weight: 600; color: #081D33; margin-top: 0; margin-bottom: 8px;">
                         What Our Clients Say</h2>
                     <p style="font-size: 16px; line-height: 1.7; color: var(--text-muted); margin-top: 0;">Real feedback
-                        from the industry leaders who trust AKC to deliver<br>precision testing and quality
+                        from the industry leaders who trust AKC-PTARC to deliver<br>precision testing and quality
                         assurance that makes a difference.</p>
                 </div>
                 <div class="rating-box">
@@ -903,7 +1039,8 @@ include 'includes/header.php';
             <div class="testimonials-slider reveal-group">
                 <div class="testimonial-card reveal-child">
                     <div class="quote-mark">"</div>
-                    <p>AKC has been our go-to testing partner for over 5 years. Their precision and turnaround times are
+                    <p>AKC-PTARC has been our go-to testing partner for over 5 years. Their precision and turnaround
+                        times are
                         unmatched. The quality of their reports has helped us achieve full regulatory compliance without
                         delays.</p>
                     <div class="client-info">
@@ -916,7 +1053,8 @@ include 'includes/header.php';
                 </div>
                 <div class="testimonial-card active reveal-child">
                     <div class="quote-mark">"</div>
-                    <p>The technical expertise at AKC is phenomenal. They handled our complex aerospace material testing
+                    <p>The technical expertise at AKC-PTARC is phenomenal. They handled our complex aerospace material
+                        testing
                         with incredible accuracy and professionalism. An indispensable partner for critical quality
                         requirements.</p>
                     <div class="client-info">
@@ -929,7 +1067,8 @@ include 'includes/header.php';
                 </div>
                 <div class="testimonial-card reveal-child">
                     <div class="quote-mark">"</div>
-                    <p>From biocompatibility to electrical safety testing, AKC delivers end-to-end quality solutions
+                    <p>From biocompatibility to electrical safety testing, AKC-PTARC delivers end-to-end quality
+                        solutions
                         that integrate seamlessly with our production. Reliable, thorough, and always on time.</p>
                     <div class="client-info">
                         <div class="avatar">P</div>
@@ -955,32 +1094,47 @@ include 'includes/header.php';
             </div>
 
             <div class="reveal-group"
-                style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 900px; margin: 0 auto;">
+                style="display: flex; flex-wrap: wrap; justify-content: center; gap: 18px 20px; max-width: 1050px; margin: 0 auto;">
                 <div class="reveal-child"
-                    style="background: var(--white); padding: 20px 30px; border-radius: 50px; border: 1px solid var(--border-color); display: flex; align-items: center; gap: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
-                    <i class="fa-solid fa-award" style="color: var(--primary-blue); font-size: 1.5rem;"></i>
+                    style="background: var(--white); padding: 18px 28px; border-radius: 50px; border: 1px solid var(--border-color); display: flex; align-items: center; gap: 14px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); transition: transform 0.25s ease, box-shadow 0.25s ease;">
+                    <i class="fa-solid fa-award" style="color: var(--primary-blue); font-size: 1.4rem;"></i>
                     <span style="font-weight: 700; color: var(--dark-blue);">NABL Accreditation – ISO/IEC
                         17025:2017</span>
                 </div>
                 <div class="reveal-child"
-                    style="background: var(--white); padding: 20px 30px; border-radius: 50px; border: 1px solid var(--border-color); display: flex; align-items: center; gap: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
-                    <i class="fa-solid fa-shield-halved" style="color: var(--primary-blue); font-size: 1.5rem;"></i>
+                    style="background: var(--white); padding: 18px 28px; border-radius: 50px; border: 1px solid var(--border-color); display: flex; align-items: center; gap: 14px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); transition: transform 0.25s ease, box-shadow 0.25s ease;">
+                    <i class="fa-solid fa-check-double" style="color: var(--primary-blue); font-size: 1.4rem;"></i>
+                    <span style="font-weight: 700; color: var(--dark-blue);">ISO 9001 Quality Management System</span>
+                </div>
+                <div class="reveal-child"
+                    style="background: var(--white); padding: 18px 28px; border-radius: 50px; border: 1px solid var(--border-color); display: flex; align-items: center; gap: 14px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); transition: transform 0.25s ease, box-shadow 0.25s ease;">
+                    <i class="fa-solid fa-seedling" style="color: var(--primary-blue); font-size: 1.4rem;"></i>
+                    <span style="font-weight: 700; color: var(--dark-blue);">ISO 14001 Environmental Management System</span>
+                </div>
+                <div class="reveal-child"
+                    style="background: var(--white); padding: 18px 28px; border-radius: 50px; border: 1px solid var(--border-color); display: flex; align-items: center; gap: 14px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); transition: transform 0.25s ease, box-shadow 0.25s ease;">
+                    <i class="fa-solid fa-shield-heart" style="color: var(--primary-blue); font-size: 1.4rem;"></i>
+                    <span style="font-weight: 700; color: var(--dark-blue);">ISO 45001 Occupational Health &amp; Safety</span>
+                </div>
+                <div class="reveal-child"
+                    style="background: var(--white); padding: 18px 28px; border-radius: 50px; border: 1px solid var(--border-color); display: flex; align-items: center; gap: 14px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); transition: transform 0.25s ease, box-shadow 0.25s ease;">
+                    <i class="fa-solid fa-graduation-cap" style="color: var(--primary-blue); font-size: 1.4rem;"></i>
+                    <span style="font-weight: 700; color: var(--dark-blue);">ISO 21001 Educational Organizations Management</span>
+                </div>
+                <div class="reveal-child"
+                    style="background: var(--white); padding: 18px 28px; border-radius: 50px; border: 1px solid var(--border-color); display: flex; align-items: center; gap: 14px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); transition: transform 0.25s ease, box-shadow 0.25s ease;">
+                    <i class="fa-solid fa-shield-halved" style="color: var(--primary-blue); font-size: 1.4rem;"></i>
                     <span style="font-weight: 700; color: var(--dark-blue);">GMP Certified Laboratory Practices</span>
                 </div>
                 <div class="reveal-child"
-                    style="background: var(--white); padding: 20px 30px; border-radius: 50px; border: 1px solid var(--border-color); display: flex; align-items: center; gap: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
-                    <i class="fa-solid fa-leaf" style="color: var(--primary-blue); font-size: 1.5rem;"></i>
+                    style="background: var(--white); padding: 18px 28px; border-radius: 50px; border: 1px solid var(--border-color); display: flex; align-items: center; gap: 14px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); transition: transform 0.25s ease, box-shadow 0.25s ease;">
+                    <i class="fa-solid fa-leaf" style="color: var(--primary-blue); font-size: 1.4rem;"></i>
                     <span style="font-weight: 700; color: var(--dark-blue);">OECD GLP Compliance</span>
                 </div>
                 <div class="reveal-child"
-                    style="background: var(--white); padding: 20px 30px; border-radius: 50px; border: 1px solid var(--border-color); display: flex; align-items: center; gap: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
-                    <i class="fa-solid fa-globe" style="color: var(--primary-blue); font-size: 1.5rem;"></i>
+                    style="background: var(--white); padding: 18px 28px; border-radius: 50px; border: 1px solid var(--border-color); display: flex; align-items: center; gap: 14px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); transition: transform 0.25s ease, box-shadow 0.25s ease;">
+                    <i class="fa-solid fa-globe" style="color: var(--primary-blue); font-size: 1.4rem;"></i>
                     <span style="font-weight: 700; color: var(--dark-blue);">ILAC-MRA Member</span>
-                </div>
-                <div class="reveal-child"
-                    style="background: var(--white); padding: 20px 30px; border-radius: 50px; border: 1px solid var(--border-color); display: flex; align-items: center; gap: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
-                    <i class="fa-solid fa-check-double" style="color: var(--primary-blue); font-size: 1.5rem;"></i>
-                    <span style="font-weight: 700; color: var(--dark-blue);">ISO 9001 Quality Management System</span>
                 </div>
             </div>
         </div>

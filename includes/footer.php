@@ -16,9 +16,10 @@
             <!-- Column 1: Brand & Newsletter -->
             <div class="footer-info">
                 <div class="footer-logo">
-                    <img src="assets/images/FINAL Logo.png" alt="AKC Logo">
+                    <img src="assets/images/FINAL Logo.png" alt="AKC-PTARC Logo">
                 </div>
-                <p>AKC is a total quality assurance provider delivering world-class testing, inspection, certification
+                <p>AKC-PTARC is a total quality assurance provider delivering world-class testing, inspection,
+                    certification
                     and training services to industry.</p>
 
                 <form class="newsletter-form">
@@ -27,10 +28,14 @@
                 </form>
 
                 <div class="social-icons">
-                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i
+                            class="fa-brands fa-twitter"></i></a>
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i
+                            class="fa-brands fa-youtube"></i></a>
                 </div>
             </div>
 
@@ -38,11 +43,11 @@
             <div class="footer-col">
                 <h4>Company</h4>
                 <ul>
-                    <li><a href="about.php">About AKC</a></li>
+                    <li><a href="about.php">About AKC-PTARC</a></li>
                     <li><a href="#services">Our Services</a></li>
                     <li><a href="#industries">Industries</a></li>
                     <li><a href="training-courses.php">Training Courses</a></li>
-                  
+
                 </ul>
             </div>
 
@@ -51,7 +56,7 @@
                 <h4>Services</h4>
                 <ul>
                     <li><a href="testing-and-certification.php">Testing & Analysis</a></li>
-                    <li><a href="support-services.php">Support Services</a></li>
+                    <li><a href="advisory-service.php">Advisory Services</a></li>
                     <li><a href="training-courses.php">Education & Training</a></li>
                 </ul>
             </div>
@@ -64,7 +69,7 @@
                     <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
                     <div class="contact-text">
                         <h5>Phone</h5>
-                        <p><a href="tel:+918860407220" style="color: inherit; text-decoration: none;">+91 88604 07220</a></p>
+                        <p><a href="tel:+911234567890" style="color: inherit; text-decoration: none;">+91 12345 67890</a></p>
                         <p>Mon–Sat, 9:00 AM – 6:30 PM</p>
                     </div>
                 </div>
@@ -90,14 +95,17 @@
 
         <!-- Footer Bottom Bar -->
         <div class="footer-bottom">
-            <p>&copy; <?php echo date('Y'); ?> AKC Packaging Technology & Research Centre | All rights reserved.</p>
+            <p>&copy; <?php echo date('Y'); ?> AKC - Polymer Technology & Applied Research Centre | All rights reserved.
+            </p>
             <p>Designed and Developed by <b>Two35 Playtform</b></p>
         </div>
     </div>
 </footer>
 
 <!-- Scroll to Top Button -->
-<button id="scrollToTopBtn" title="Go to top" style="display: none; position: fixed; bottom: 30px; right: 30px; z-index: 999; font-size: 20px; border: none; outline: none; background-color: #0A58CA; color: white; cursor: pointer; border-radius: 50%; box-shadow: 0px 4px 10px rgba(0,0,0,0.3); width: 50px; height: 50px; justify-content: center; align-items: center; transition: background-color 0.3s, opacity 0.3s; opacity: 0; pointer-events: none;" onmouseover="this.style.backgroundColor='#0d6efd'" onmouseout="this.style.backgroundColor='#0A58CA'">
+<button id="scrollToTopBtn" title="Go to top"
+    style="display: none; position: fixed; bottom: 30px; right: 30px; z-index: 999; font-size: 20px; border: none; outline: none; background-color: #0A58CA; color: white; cursor: pointer; border-radius: 50%; box-shadow: 0px 4px 10px rgba(0,0,0,0.3); width: 50px; height: 50px; justify-content: center; align-items: center; transition: background-color 0.3s, opacity 0.3s; opacity: 0; pointer-events: none;"
+    onmouseover="this.style.backgroundColor='#0d6efd'" onmouseout="this.style.backgroundColor='#0A58CA'">
     <i class="fa-solid fa-arrow-up"></i>
 </button>
 
@@ -106,7 +114,7 @@
     const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
     // When the user scrolls down 300px from the top of the document, show the button
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
             scrollToTopBtn.style.display = "flex";
             setTimeout(() => {
@@ -126,7 +134,7 @@
     });
 
     // When the user clicks on the button, scroll to the top of the document
-    scrollToTopBtn.onclick = function() {
+    scrollToTopBtn.onclick = function () {
         window.scrollTo({
             top: 0,
             behavior: "smooth"

@@ -43,15 +43,14 @@
             <div class="pr-section-label">
                 <span class="pr-label-line"></span> CONTACT US
             </div>
-            <h2 class="pr-contact-phone"><a href="tel:+918860407220" style="color: inherit; text-decoration: none;">+91
-                    88604 07220</a></h2>
+            <h2 class="pr-contact-phone"><a href="tel:+911234567890" style="color: inherit; text-decoration: none;">+91 12345 67890</a></h2>
             <hr class="pr-card-divider">
             <div class="pr-contact-links">
                 <a href="mailto:info@akc-ptarc.com" class="pr-contact-email" style="text-decoration: none;">
                     <i class="bi bi-envelope"></i> Email Us: info@akc-ptarc.com
                 </a>
             </div>
-            <a href="mailto:info@akc-ptarc.com?subject=Inquiry from Ash Content Testing Page"
+            <a href="mailto:info@akc-ptarc.com?subject=Enquiry from Ash Content Testing Page"
                 class="pr-btn pr-btn-primary pr-btn-full">Send us a request</a>
         </div>
     </div>
@@ -384,7 +383,7 @@
                     </div>
                     <div class="pr-form-group">
                         <label class="pr-form-label">Phone Number <span>*</span></label>
-                        <input type="tel" class="pr-input" placeholder="+91 88604 07220">
+                        <input type="tel" class="pr-input" placeholder="+91 12345 67890">
                     </div>
                 </div>
                 <div class="pr-form-group">

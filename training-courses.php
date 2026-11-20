@@ -5,7 +5,9 @@
 <!-- Google Fonts CDN links for modern typography -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
 <style>
     /* Custom Styles for Training & Courses Page */
@@ -544,8 +546,10 @@
             <div class="tc-subtitle">
                 <span class="line"></span> PROFESSIONAL DEVELOPMENT
             </div>
-            <h1 class="tc-title" style="font-weight: 600 !important;">Training & <br><span style="font-weight: 600 !important;">Courses</span></h1>
-            <p class="tc-desc">At the onset of 2027, we will be launching various basic training classes &amp; certification courses</p>
+            <h1 class="tc-title" style="font-weight: 600 !important;">Training & <br><span
+                    style="font-weight: 600 !important;">Courses</span></h1>
+            <p class="tc-desc">At the onset of 2027, we will be launching various basic training classes &amp;
+                certification courses</p>
         </div>
 
         <!-- Right: Image Grid -->
@@ -583,7 +587,7 @@
                 </div>
             </div>
             <div class="tc-feature-item">
-               <div class="tc-feature-icon" style="color: #10b981;"><i class="bi bi-recycle"></i></div>
+                <div class="tc-feature-icon" style="color: #10b981;"><i class="bi bi-recycle"></i></div>
 
                 <div class="tc-feature-text">
                     <h4>Sustainable Packaging</h4>
@@ -803,7 +807,8 @@
                     <div class="tc-faq-icon-right"><i class="bi bi-plus-lg"></i></div>
                 </div>
                 <div class="tc-faq-a">
-                    Yes, all participants who successfully complete the programme will receive a globally recognised AKC
+                    Yes, all participants who successfully complete the programme will receive a globally recognised
+                    AKC-PTARC
                     Certificate of Completion.
                 </div>
             </div>
@@ -850,7 +855,8 @@
             <div class="pr-section-label" style="color: #fff;"><span class="pr-label-line"
                     style="background: #fff;"></span> READY TO BEGIN?</div>
             <h2>Start Your Learning <br>Journey Today</h2>
-            <p>Enrol in a course and gain industry-recognised expertise backed by AKC's world-class research and testing
+            <p>Enrol in a course and gain industry-recognised expertise backed by AKC-PTARC's world-class research and
+                testing
                 facilities.</p>
         </div>
         <div>

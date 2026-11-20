@@ -1,5 +1,9 @@
 RewriteEngine On
 
+# If requested file with .php exists, serve it
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/.]+)$ $1.php [L,QSA]
+
 # If the request is for a real directory or file, serve it directly
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

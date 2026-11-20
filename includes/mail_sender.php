@@ -297,7 +297,7 @@ function akc_send_booking_confirmation($booking) {
             </ol>
 
             <p style='margin-top: 30px; font-size: 13px; color: #64748b;'>
-                Need urgent assistance? Call our lab helpdesk directly at <strong>+91 88604 07220</strong> or email <strong>info@akc-ptarc.com</strong>.
+                Need urgent assistance? Call our lab helpdesk directly at <strong>+91 12345 67890</strong> or email <strong>info@akc-ptarc.com</strong>.
             </p>
         </div>
         <div style='background: #f1f5f9; padding: 20px; text-align: center; font-size: 12px; color: #64748b; border-top: 1px solid #e2e8f0;'>
@@ -416,7 +416,7 @@ function akc_get_service_display_info($service_key) {
                 'badge_color' => '#059669',
                 'bg_color' => '#ecfdf5',
                 'border_color' => '#a7f3d0',
-                'description' => 'Management of client advisory inquiries, industry consultancy requests, and customer support coordination.'
+                'description' => 'Management of client advisory enquiries, industry consultancy requests, and customer support coordination.'
             ];
         default:
             $formatted = !empty($service_key) ? ucwords(str_replace(['_', '-'], ' ', $service_key)) : 'General Administration';

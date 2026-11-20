@@ -1,6 +1,6 @@
 <?php
-$pageTitle = "Contact Us | AKC Packaging Technology & Research Centre";
-$metaDescription = "Reach out to AKC's technical specialists for testing specifications, quotes, and sample submissions.";
+$pageTitle = "Contact Us | AKC - Polymer Technology & Applied Research Centre";
+$metaDescription = "Reach out to AKC-PTARC's technical specialists for testing specifications, quotes, and sample submissions.";
 include 'includes/header.php';
 ?>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -401,19 +401,19 @@ include 'includes/header.php';
         gap: 10px;
     }
 
-    /* ---- INQUIRY & VALUES SECTION ---- */
-    .contact-inquiry {
+    /* ---- ENQUIRY & VALUES SECTION ---- */
+    .contact-enquiry {
         background-color: var(--bg-light);
     }
 
-    .inquiry-grid {
+    .enquiry-grid {
         display: grid;
         grid-template-columns: 1.4fr 1fr;
         gap: 40px;
         align-items: start;
     }
 
-    .inquiry-form-card {
+    .enquiry-form-card {
         background: var(--white);
         border: 1px solid #e2e8f0;
         border-radius: 16px;
@@ -512,7 +512,7 @@ include 'includes/header.php';
     }
 
     /* Value Cards Right Column */
-    .inquiry-values {
+    .enquiry-values {
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -1081,7 +1081,7 @@ include 'includes/header.php';
             font-size: 44px;
         }
 
-        .inquiry-grid,
+        .enquiry-grid,
         .location-grid,
         .hours-grid,
         .faq-grid {
@@ -1128,7 +1128,7 @@ include 'includes/header.php';
             grid-column: span 1;
         }
 
-        .inquiry-form-card {
+        .enquiry-form-card {
             padding: 25px;
         }
 
@@ -1151,15 +1151,15 @@ include 'includes/header.php';
     <section class="contact-hero">
         <div class="container">
             <div class="contact-hero-inner">
-                <span class="contact-hero-badge">AKC PACKAGING TECHNOLOGY & RESEARCH CENTRE</span>
+                <span class="contact-hero-badge">AKC-PTARC PACKAGING TECHNOLOGY & RESEARCH CENTRE</span>
                 <h1 class="contact-hero-title">Let's Connect & Build<br>Better Solutions</h1>
                 <p class="contact-hero-desc">Connect with our experts for testing, quality assessment, and
                     certification queries. We are ready to assist you build a safer, better world.</p>
                 <div class="contact-hero-buttons">
                     <a href="javascript:void(0)"
-                        onclick="document.getElementById('inquiry').scrollIntoView({behavior: 'smooth'})"
-                        class="btn btn-white">Request a Test</a>
-                    <a href="tel:+918860407220" class="btn btn-outline-white"><i
+                        onclick="document.getElementById('enquiry').scrollIntoView({behavior: 'smooth'})"
+                        class="btn btn-white">Send us enquiry</a>
+                    <a href="tel:+911234567890" class="btn btn-outline-white"><i
                             class="bi bi-telephone-fill btn-icon-bi"></i> Call Us Now</a>
                 </div>
             </div>
@@ -1206,10 +1206,10 @@ include 'includes/header.php';
                     </div>
                     <div class="info-card-title">Phone Number</div>
                     <div class="info-card-text">
-                        +91 88604 07220<br>
+                        +91 12345 67890<br>
                         Mon-Sat, 9:00 AM to 6:30 PM
                     </div>
-                    <a href="tel:+918860407220" class="info-card-link">Call Now <i class="bi bi-arrow-right"></i></a>
+                    <a href="tel:+911234567890" class="info-card-link">Call Now <i class="bi bi-arrow-right"></i></a>
                 </div>
 
 
@@ -1218,25 +1218,25 @@ include 'includes/header.php';
         </div>
     </section>
 
-    <!-- Send Us an Inquiry Form Section -->
-    <section class="contact-inquiry" id="inquiry">
+    <!-- Send Us an Enquiry Form Section -->
+    <section class="contact-enquiry" id="enquiry">
         <div class="container text-center">
 
             <div class="reveal" style="margin-bottom: 40px;">
                 <div class="section-subtitle center">
                     <span class="line"></span> Reach Us <span class="line"></span>
                 </div>
-                <h2 class="section-title">Send Us an Inquiry</h2>
+                <h2 class="section-title">Send Us an Enquiry</h2>
                 <p class="section-desc">Reach out with your testing specifications and our technical specialists will
                     respond within 24 hours.</p>
             </div>
 
-            <div class="inquiry-grid reveal-group">
+            <div class="enquiry-grid reveal-group">
 
                 <!-- Left: Interactive Form -->
-                <div class="inquiry-form-card reveal-left">
+                <div class="enquiry-form-card reveal-left">
                     <div class="contact-form-header">
-                        <h3>Inquiry Details</h3>
+                        <h3>Enquiry Details</h3>
                         <p>All fields are required unless marked optional</p>
                     </div>
 
@@ -1277,20 +1277,20 @@ include 'includes/header.php';
                         </div>
 
                         <div class="form-group full-width">
-                            <label for="message">Message / Inquiry Details</label>
+                            <label for="message">Message / Enquiry Details</label>
                             <textarea id="message"
                                 placeholder="Provide detailed testing specifications, material types, standards to comply (e.g. ISO, ASTM), and sample quantities..."
                                 required></textarea>
                         </div>
 
                         <button type="submit" class="btn-submit">
-                            <span>Submit Inquiry</span> <i class="bi bi-chevron-right"></i>
+                            <span>Submit Enquiry</span> <i class="bi bi-chevron-right"></i>
                         </button>
                     </form>
                 </div>
 
                 <!-- Right: Values Column -->
-                <div class="inquiry-values reveal-right">
+                <div class="enquiry-values reveal-right">
 
                     <!-- Dark Premium Card -->
                     <div class="value-dark-card">
@@ -1357,7 +1357,7 @@ include 'includes/header.php';
                 <!-- Left: Embedded Map -->
                 <div class="location-map-container reveal-left">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14031.598374784537!2d77.44506212773935!3d28.452442978237144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cc20e22ffd7fd%3A0xb7d2cc733a642ff!2sSector%20155%2C%20Noida%2C%20Uttar%20Pradesh%20201304!5e0!3m2!1sen!2sin!4v1793789265792!5m2!1sen!2sin"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.867213135782!2d77.44790647549442!3d28.45341897576258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cc3a5b9c7f151%3A0x4eed9fb02e1832e6!2sUFlex%20Recycling%20Division!5e0!3m2!1sen!2sin!4v1794892733340!5m2!1sen!2sin"
                         width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 </div>
@@ -1385,9 +1385,8 @@ include 'includes/header.php';
                         <div class="location-item">
                             <div class="location-item-icon"><i class="bi bi-telephone-fill"></i></div>
                             <div class="location-item-text">
-                                <strong>Phone Inquiries</strong>
-                                <a href="tel:+918860407220" style="color: inherit; text-decoration: none;">+91 88604
-                                    07220</a>
+                                <strong>Phone Enquiries</strong>
+                                <a href="tel:+911234567890" style="color: inherit; text-decoration: none;">+91 12345 67890</a>
                             </div>
                         </div>
 
@@ -1547,7 +1546,8 @@ include 'includes/header.php';
                                 </div>
                             </summary>
                             <div class="accordion-content">
-                                AKC provides comprehensive testing across polymers, plastics, packaging, rubber, paper,
+                                AKC-PTARC provides comprehensive testing across polymers, plastics, packaging, rubber,
+                                paper,
                                 textiles, chemicals, composites, medical devices and allied materials. Our expertise
                                 spans physical, mechanical, chemical, thermal, rheological, electrical and analytical
                                 testing in accordance with national and international standards.
@@ -1562,7 +1562,7 @@ include 'includes/header.php';
                                     <span
                                         style="font-size: 12px; font-weight: 500; color: var(--primary-blue); letter-spacing: 0.3px;">Testing
                                         Standards</span>
-                                    <span>Which standards can AKC test against?</span>
+                                    <span>Which standards can AKC-PTARC test against?</span>
                                 </div>
                             </summary>
                             <div class="accordion-content">
@@ -1579,7 +1579,7 @@ include 'includes/header.php';
                                     <span
                                         style="font-size: 12px; font-weight: 500; color: var(--primary-blue); letter-spacing: 0.3px;">Technical
                                         Guidance</span>
-                                    <span>I'm unsure which tests apply to my product. Can AKC help?</span>
+                                    <span>I'm unsure which tests apply to my product. Can AKC-PTARC help?</span>
                                 </div>
                             </summary>
                             <div class="accordion-content">
@@ -1619,7 +1619,8 @@ include 'includes/header.php';
                                 </div>
                             </summary>
                             <div class="accordion-content">
-                                Yes. AKC provides digital sample tracking, allowing customers to monitor the status of
+                                Yes. AKC-PTARC provides digital sample tracking, allowing customers to monitor the
+                                status of
                                 their samples from receipt through testing to final report issuance. This ensures
                                 complete transparency, traceability and faster communication throughout the testing
                                 process.
@@ -1655,7 +1656,7 @@ include 'includes/header.php';
                                     <span
                                         style="font-size: 12px; font-weight: 500; color: var(--primary-blue); letter-spacing: 0.3px;">Quality
                                         & Accreditation</span>
-                                    <span>Are AKC laboratories NABL accredited?</span>
+                                    <span>Are AKC-PTARC laboratories NABL accredited?</span>
                                 </div>
                             </summary>
                             <div class="accordion-content">
@@ -1690,7 +1691,7 @@ include 'includes/header.php';
                                 <div style="display: flex; flex-direction: column; gap: 4px;">
                                     <span
                                         style="font-size: 12px; font-weight: 500; color: var(--primary-blue); letter-spacing: 0.3px;">Confidentiality</span>
-                                    <span>How does AKC protect confidential product information?</span>
+                                    <span>How does AKC-PTARC protect confidential product information?</span>
                                 </div>
                             </summary>
                             <div class="accordion-content">
@@ -1708,7 +1709,7 @@ include 'includes/header.php';
                                     <span
                                         style="font-size: 12px; font-weight: 500; color: var(--primary-blue); letter-spacing: 0.3px;">Product
                                         Development</span>
-                                    <span>Can AKC support product development and failure analysis?</span>
+                                    <span>Can AKC-PTARC support product development and failure analysis?</span>
                                 </div>
                             </summary>
                             <div class="accordion-content">
@@ -1726,7 +1727,7 @@ include 'includes/header.php';
                                     <span
                                         style="font-size: 12px; font-weight: 500; color: var(--primary-blue); letter-spacing: 0.3px;">Training
                                         & Consultancy</span>
-                                    <span>Does AKC provide technical training and consultancy?</span>
+                                    <span>Does AKC-PTARC provide technical training and consultancy?</span>
                                 </div>
                             </summary>
                             <div class="accordion-content">
@@ -1762,7 +1763,7 @@ include 'includes/header.php';
                         <h4 style="font-size: 22px; font-weight: 600; margin-bottom: 12px;">Still have questions?</h4>
                         <p style="margin-bottom: 20px; color: rgba(255,255,255,0.9); font-size: 15px;">Our technical
                             team is happy to walk you through any specific requirements or concerns you may have.</p>
-                        <a href="tel:+918860407220" class="btn btn-white"
+                        <a href="tel:+911234567890" class="btn btn-white"
                             style="background: white; color: var(--primary-blue); padding: 12px 24px; border-radius: 8px; font-weight: 500; text-decoration: none; display: inline-block;">Ask
                             Our Team &rarr;</a>
                     </div>
